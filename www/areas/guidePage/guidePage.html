@@ -1,0 +1,38 @@
+<!-- 引导页的视图模板 -->
+<ion-view id="guidePage" view-title="引导页" cache-view="false" >
+  <!-- 幻灯片的容器 ，快捷方式i1slidebox -->
+  <ion-slide-box id="guideSlide" on-slide-changed="slideHasChanged($index)">
+    <ion-slide>
+      <div class="item-logo" style="background-image: url({{data[0].imgUrl}}?a={{param}})">
+        <a href="#">Mall</a>
+        <!-- 做动画 -->
+        <div id="tips-0" class="animate guide-show">
+          <h2 class="animated bounceInDown">{{data[0].adTitle}}</h2>
+          <li class="animated bounceInLeft">{{data[0].adLeft}}</li>
+          <li class="animated bounceInRight">{{data[0].adRight}}</li>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="item-logo" style="background-image: url({{data[1].imgUrl}}?a={{param}})">
+        <a href="#">Mall</a>
+        <!-- 做动画 -->
+        <div id="tips-1" class="animate hidden">
+          <h2 class="animated bounceInDown">{{data[1].adTitle}}</h2>
+          <li class="animated bounceInLeft">{{data[1].adLeft}}</li>
+          <li class="animated bounceInRight">{{data[1].adRight}}</li>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="item-logo" style="background-image: url({{data[2].imgUrl}}?a={{param}})">
+        <a href="#">Mall</a>
+        <!-- 做动画 -->
+        <div class="animate guide-show">
+          <button id="close" ng-click="goHome()">立即体验</button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  
+</ion-view>
