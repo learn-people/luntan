@@ -45,7 +45,7 @@ ADDED from D:\code\vscode\chapter08\myApp\platforms\android\AndroidManifest.xml:
 		ADDED from D:\code\vscode\chapter08\myApp\platforms\android\AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from D:\code\vscode\chapter08\myApp\platforms\android\AndroidManifest.xml:5:53-82
-activity#com.ionicframework.myapp847095.MainActivity
+activity#com.ionicframework.myapp466823.MainActivity
 ADDED from D:\code\vscode\chapter08\myApp\platforms\android\AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from D:\code\vscode\chapter08\myApp\platforms\android\AndroidManifest.xml:6:97-134
