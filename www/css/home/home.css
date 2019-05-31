@@ -1,6 +1,14 @@
+/* 顶部导航栏的ionic原css样式改 */
+.tabs-top > .tabs, .tabs.tabs-top{
+  top:35px;
+}
 /*
-*商城首页样式代码
+*论坛首页样式代码
 */
+#home {
+  background-color:#efefef;
+}
+
 #home ion-header-bar{
   margin: 0;
   padding: 0;
@@ -16,8 +24,8 @@
 }
 /*搜索区域*/
 #home .headerBar {
-  background-color: transparent;
-  position: fixed;
+  position:absolute;
+  background-color: rgb(255, 255, 255);
   top: 0;
   z-index: 2;
   display: inline-block;
@@ -25,8 +33,6 @@
   height: 35px;
 }
 #home #headerBar-bg{
-  background-color: #c91523;
-  opacity: 0;
   height: 35px;
   position: absolute;
   width: 100%;
@@ -43,22 +49,19 @@
   display: inline-block;
   height:21px;
   width: 56px;
-  background: url("../../img/common/sprites.png") no-repeat;
-  background-position: 0 -109px;
-  background-size: 200px 200px;
   margin-left: 7px;
   margin-top: 7px;
 }
 #home .headerBar-search {
   position:absolute;
-  left: 66px;
-  right: 40px;
+  left: 60px;
+  right: 65px;
   width: auto;
   height: 25px;
-  margin-top: 5px;
-  color: #ffffff;
+  margin-top:5px;
+  color: #fffafa;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   border-radius: 15px;
 }
 #home .headerBar-search span{
@@ -86,7 +89,7 @@
   width: 100%;
   vertical-align: middle;
   margin-top: -15px;
-  color: #989191;
+  color: #0a0a0a;
 }
 #home .headerBar-login {
   width: 30px;
@@ -97,22 +100,14 @@
 }
 #home .headerBar-login span{
   margin-top: 7px;
-  color:#ffffff;
+  color:#fa1b1b;
   font-size: 15px;
   display: inline-block;
 }
-/*头部轮播图*/
-#home .headerSlider {
-  height: 182px;
-  width: 100%;
-}
-#home .headerSlider img {
-  height: 100%;
-  width: 100%;
-}
+
 /*功能导航*/
 #home #nav{
-  height:160px;
+  height:100px;
   width:100%;
   padding:0 3%;
   background-color:#fff;
@@ -138,132 +133,82 @@
   text-align:center;
   margin-top: 10px;
 }
-/*掌上秒杀*/
-#home a{
-  text-decoration : none;
+
+/* 轮播图 */
+#home .headerSlider {
+  height: 184px;
+  width: 100%;
+  margin-top:28px;
 }
-#home #centent{
-  margin:10px 5px;
-  background-color:#fff;
-  box-shadow:0 1px 1px #dcdcdc;
+#home .headerSlider img {
+  height: 100%;
+  width: 100%;
 }
-#home .centent-top{
-  height:32px;
-  overflow:hidden;
+
+/* 贴子模块 */
+#home .post{
+  position: relative;
+  background-color:#ffffff;
+  min-height:90px;
+  max-height:170px;
+  width:100%;
+  margin-top:10px;
 }
-#home .centent-top span{
-  display:block;
-  width:16px;
-  height:20px;
-  margin:4px 4px 0 4px;
-  background-image:url(../../img/home/seckill-icon.png);
-  background-size:16px 20px;
-  float:left;
+
+#home .post .title{
+  overflow:hidden; /* 超出的文本隐藏*/
+  text-overflow:ellipsis; /*溢出用省略号显示*/
+  white-space:nowrap; /*溢出不换行*/
+  height:35px;
+  width:100%;
+  line-height: 35px;
+  left:10px;
+  font-size:24px;
 }
-#home .centent-top h2{
-  float:left;
-  font-size:15px;
-  color:#f00;
-  line-height:30px;
-  margin-right:10px;
-  margin-top: 0px;
+
+#home .post .post-content{
+  position: relative; 
+  min-height:20px;
+  max-height:100px;
+  width:100%;
+  color:#5f5f5f;
 }
-#home .centent-time span{
-  background-image:none;
-  margin:5px 1px;
-  width:5px;
-  color:#5d5d5d;
-  font-size:14px;
-  font-weight:700;
-  text-align:center;
+
+#home .post .post-content span{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;  /*这里是在第几行有省略号*/
+  overflow: hidden;
+  font-size:18px;
+  min-height: 20px;
 }
-#home .centent-top .time-text{
-  color:#fff;
+
+/* 内容中的图片 */
+#home .post .post-content img{
+  width:60px;
+  height:60px;
+}
+
+#home .post .auth{
+  position:relative;
+  height:35px;
   font-size:16px;
-  width:15px;
-  font-weight:300;
-  background-color:#5d5d5d;
-}
-#home .centent-more{
-  float:right;
-  line-height:30px;
-  margin-right:5px;
-  font-size:14px;
-}
-#home .centent-bottom{
-  padding-top:7px;
-  overflow:hidden;
-}
-#home .centent-bottom li{
-  width:33.3%;
-  float:left;
-}
-#home .centent-bottom li img{
-  display:block;
-  border-right:1px solid #e6e6e6;
-  margin: 0;
-  padding: 0;
-  height: 100px;
-  width: 100%;
-}
-#home .centent-bottom li span{
-  display:block;
-  text-align:center;
-  font-size:14px;
-}
-#home .seckill-now{
-  color:#f15353;
-}
-#home .seckill-old{
-  text-decoration:line-through;
-}
-/*广告轮播图*/
-#home .ad ion-slide {
-  text-align: center;
-  margin-top: 5px;
-}
-#home .ad ion-slide img {
-  height: 15%;
-  width: 100%;
-}
-/*超值购*/
-#home .floor{
-  margin:0 5px 5px;
-  background-color:#fff;
-  box-shadow:0 1px 1px #dcdcdc;
-  overflow:hidden;
-}
-#home .floor-title{
-  font-size:15px;
-  padding-top:8px;
-  padding-left:7px;
-  padding-bottom:5px;
-}
-#home .floor-title:before{
-  display:inline-block;
-  content:'';
-  width:3px;
-  height:12px;
-  background-color:#d8505c;
-  margin:1px 7px 0 0;
-}
-#home .floor-product{
   width:100%;
+  line-height: 35px;
 }
-#home .floor-product-list{
-  width:50%;
-  overflow:hidden;
-  float:left;
+
+/* 标志 */
+#home .sign{
+  height:inherit;
+  position: absolute;
+  right: 20px;
+  display: inline-block;
 }
-#home .floor-product-list img{
-  width:100%;
-  display:block;
-  border-top:1px solid #eee;
+
+#home .sign #like{
+  color:red;
 }
-#home .floor-left{
-  border-right:1px solid #eee;
-  margin-left:-1px;
-}
+
 /*回到顶部div*/
 #home .back_top{
   width: 35px;
@@ -277,8 +222,4 @@
   transition: all .3s ease 0s;
   -webkit-transition: all .3s ease 0s;
   z-index: 100;
-}
-/* 隐藏滑轮 */
-::-webkit-scrollbar{
-  display:none;
 }

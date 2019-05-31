@@ -13,7 +13,7 @@
 
 .icon {
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +21,14 @@
 
 .icon:before{
   line-height: 1;
+}
+
+.icon-cameraaddfill:before {
+  content: "\e727";
+}
+
+.icon-album:before {
+  content: "\e734";
 }
 
 .icon-steamsquare:before {
@@ -35,8 +43,32 @@
   content: "\e62a";
 }
 
+.icon-qq:before {
+  content: "\e600";
+}
+
+.icon-weixin:before {
+  content: "\e73b";
+}
+
+.icon-liuyan:before {
+  content: "\e60c";
+}
+
+.icon-QQfang:before {
+  content: "\e61a";
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e638";
+}
+
 .icon-icon_tianjia:before {
   content: "\eb89";
+}
+
+.icon-baocun:before {
+  content: "\ec09";
 }
 
 .icon-message:before {
@@ -55,7 +87,7 @@
   content: "\e7ae";
 }
 
-.icon-like:before {
+.icon-like-outline:before {
   content: "\e7c8";
 }
 
@@ -65,6 +97,10 @@
 
 .icon-camera:before {
   content: "\e7d7";
+}
+
+.icon-image:before {
+  content: "\e7de";
 }
 
 .icon-share:before {
@@ -81,6 +117,10 @@
 
 .icon-gengduo:before {
   content: "\ec1c";
+}
+
+.icon-close-circle-fill:before {
+  content: "\e844";
 }
 
 .icon-appstore-fill:before {
@@ -103,6 +143,10 @@
   content: "\e887";
 }
 
+.icon-tupian1:before {
+  content: "\e62d";
+}
+
 .icon-steam:before {
   content: "\f23b";
 }
@@ -111,7 +155,7 @@
   content: "\ec7d";
 }
 
-.icon-dianzan_kuai:before {
+.icon-like:before {
   content: "\ec8c";
 }
 
@@ -137,6 +181,14 @@
 
 .icon-fangkuai:before {
   content: "\ed1a";
+}
+
+.icon-tupian-:before {
+  content: "\e61b";
+}
+
+.icon-agreement:before {
+  content: "\e697";
 }
 
 .icon-fenxiangfangshi:before {

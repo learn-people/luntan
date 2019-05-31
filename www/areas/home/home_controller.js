@@ -4,20 +4,21 @@
 angular.module('home.controller',[])
 
 .controller('HomeController',function($scope,$window){
-
+    
     goTop();
-    countdown();
-    headerChangeColor();
-    //改变头部搜索区域的颜色
-    function headerChangeColor(){
-        var bg = window.document.getElementById('home-content');
-        var newOpacity = 0;
-        bg.onscroll = function(event){
-            if(this.scrollTop/250 < .85){
-                newOpacity = this.scrollTop/250;
-            }
-            document.getElementById('headerBar-bg').style.opacity=newOpacity;
+
+    /* 点赞设置 */
+    $scope.clickIcon = function($event,iconName){   
+        var buttonClasses = $event.currentTarget.className;
+        var colorStyle = document.getElementById('like');
+
+        if(buttonClasses.indexOf(iconName + '-outline') > 0){
+            buttonClasses = buttonClasses.replace('-outline','');
+            colorStyle = colorStyle.style.color = 'red';    
+        }else{
+            buttonClasses = buttonClasses.replace(iconName,iconName + '-outline');
         }
+        $event.currentTarget.className = buttonClasses;
     }
     //回到顶部
     function goTop(){
@@ -36,46 +37,4 @@ angular.module('home.controller',[])
             bg.scrollTop = 0;
         }
     };
-    //秒杀计时器
-    function countdown(){
-        if($window.timer){
-            clearInterval($window.timer);
-        }
-        //倒计时
-        var timeObj = {
-            h:1,
-            m:37,
-            s:13
-        };
-        var 
-        timeStr = toDouble(timeObj.h)+toDouble(timeObj.m)+toDouble(timeObj.s);
-        var timeList = document.getElementsByClassName('time-text');
-        for(var i = 0;i<timeList.length;i++){
-            timeList[i].innerHTML = timeStr[i];
-        }
-        function toDouble(num){
-            if(num<10){
-                return '0'+num;
-            }else{
-                return '' + num;
-            }
-        }
-        $window.timer = setInterval(function(){
-            timeObj.s--;
-            if(timeObj.s == -1){
-                timeObj.m--;
-                timeObj.s = 59;
-            }
-            if(timeObj.m == -1){
-                timeObj.h = 0;
-                timeObj.m = 0;
-                timeObj.s = 0;
-                clearInterval($window.timer);
-            }
-            timeStr = toDouble(timeObj.h)+toDouble(timeObj.m)+toDouble(timeObj.s);
-            for(var i=0;i<timeList.length;i++){
-                timeList[i].innerHTML = timeStr[i];
-            }
-        },1000);
-    }
 })
