@@ -11,6 +11,8 @@
   url('../../font/iconfont.svg#iconfont') format('svg');
 }
 
+
+
 .icon {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -21,6 +23,14 @@
 
 .icon:before{
   line-height: 1;
+}
+
+.icon-cameraaddfill:before {
+  content: "\e727";
+}
+
+.icon-album:before {
+  content: "\e734";
 }
 
 .icon-steamsquare:before {
@@ -35,8 +45,24 @@
   content: "\e62a";
 }
 
+.icon-qq:before {
+  content: "\e600";
+}
+
+.icon-weixin:before {
+  content: "\e73b";
+}
+
+.icon-QQfang:before {
+  content: "\e61a";
+}
+
 .icon-icon_tianjia:before {
   content: "\eb89";
+}
+
+.icon-baocun:before {
+  content: "\ec09";
 }
 
 .icon-message:before {
@@ -67,6 +93,10 @@
   content: "\e7d7";
 }
 
+.icon-image:before {
+  content: "\e7de";
+}
+
 .icon-share:before {
   content: "\e7e7";
 }
@@ -81,6 +111,10 @@
 
 .icon-gengduo:before {
   content: "\ec1c";
+}
+
+.icon-close-circle-fill:before {
+  content: "\e844";
 }
 
 .icon-appstore-fill:before {
@@ -137,6 +171,10 @@
 
 .icon-fangkuai:before {
   content: "\ed1a";
+}
+
+.icon-agreement:before {
+  content: "\e697";
 }
 
 .icon-fenxiangfangshi:before {
