@@ -17,7 +17,7 @@
 }
 /*搜索区域*/
 #home .headerBar {
-  background-color: darkgray;
+  
   position: fixed;
   top: 0;
   z-index: 2;
