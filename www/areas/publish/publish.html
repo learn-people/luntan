@@ -1,38 +1,52 @@
 <ion-view id="publish" view-title="发布" cache-view="false">
     <!--头部-->
     
-    <ion-header-bar align-title="center" class="bar-positive">
+    <ion-header-bar align-title="left">
       <div class="bar bar-header">
-        <button class="button icon icon-left"></button>
-        <h1 class="title">发表帖子</h1>
-        <button class="button">发布</button>
+        <button class="button-icon icon ion-chevron-left"></button>
+        <h1 class="title1">发表帖子</h1>
+        <button class="button-icon title2">发布</button>
       </div>
     </ion-header-bar>
-    
     <ion-content>
-        
-        <div>
-            <div>
+       
+        <div class="add">
+            <div class="add-title">
                 添加标题
             </div>
-            <div>
+            <div class="add-content">
                 添加内容
             </div>
         </div>
-        <div>
-            <div>
+        <div class="choice">
+            <div class="choice-title">
                 选择板块模块
             </div>
+            <div class="choice-button">
+                <button class="button-icon icon ion-chevron-right"></button>
+            </div>
         </div>
-        <div>
-            <div>
-                <img src="/www/img/file.png" alt="">
+        <div class="upload">
+            <div class="upload-1">
+                <button  class="button-icon icon icon-folder-add" id="upload-button1">
+                </button>
+                <div class="upload-1-title">
+                    上传文件
+                </div>
             </div>
-            <div>
-                <img src="/www/img/album.png" alt="">
+            <div class="upload-1">
+                <button  class="button-icon icon icon-gengduotupian" id="upload-button2">
+                </button>
+                <div class="upload-1-title">
+                    上传本地图片
+                </div>
             </div>
-            <div>
-                <img src="/www/img/camera_add_fill.png" alt="">
+            <div class="upload-1">
+                <button  class="button-icon icon icon-cameraaddfill" id="upload-button3">
+                </button>
+                <div class="upload-1-title">
+                    拍照上传
+                </div>
             </div>
         </div>
     </ion-content>

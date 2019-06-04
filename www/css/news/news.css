@@ -1,0 +1,10 @@
+/*
+* 新闻详情界面css代码
+*/
+#publish .title1{
+    width: 74%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 25px
+}
