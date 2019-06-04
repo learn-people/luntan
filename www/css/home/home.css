@@ -24,13 +24,8 @@
 }
 /*搜索区域*/
 #home .headerBar {
-<<<<<<< HEAD
-  
-  position: fixed;
-=======
   position:absolute;
   background-color: rgb(255, 255, 255);
->>>>>>> 79a26b353beb817aa4c855569fa3167c396e628b
   top: 0;
   z-index: 2;
   display: inline-block;
@@ -150,17 +145,6 @@
   width: 100%;
 }
 
-<<<<<<< HEAD
-}
-
-#home a{
-  text-decoration : none;
-}
-#home #centent{
-  margin:10px 5px;
-  background-color:#fff;
-  box-shadow:0 1px 1px #dcdcdc;
-=======
 /* 贴子模块 */
 #home .post{
   background-color:#ffffff;
@@ -184,7 +168,6 @@
   line-height: 35px;
   left:10px;
   font-size:24px;
->>>>>>> 79a26b353beb817aa4c855569fa3167c396e628b
 }
 
 #home .post .post-content{
