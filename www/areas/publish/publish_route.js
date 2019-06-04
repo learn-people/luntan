@@ -4,7 +4,6 @@
 
  angular.module('publish.route',['publish.controller'])
 
-
 .config(function($stateProvider){
   $stateProvider
     .state('tab.publish',{

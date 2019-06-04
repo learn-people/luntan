@@ -1,0 +1,58 @@
+/* 对顶部的一些处理 */
+#detail ion-header-bar {
+  background-color:#ffffff;
+  height:44px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  background-image: none;
+}
+
+#detail ion-content{
+  background-color:#efefef;
+  overflow:scroll;
+}
+
+#detail #headerBar a{
+  font-size:28px;
+  line-height: 44px;
+  margin-left:10px;
+  color:#696868;
+}
+
+/* 贴子内容区 */
+#detail #detail-content #main{
+  background-color:#ffffff;
+}
+#detail #detail-content #main #title{
+  min-height:30px;
+  width:100%;
+  font-size:20px;
+  line-height: 30px;
+  margin:0 5px;
+}
+
+#detail #detail-content #main .other{
+  position:relative;
+  margin-top:5px;
+  color:#7a7a7a;
+  height:20px;
+}
+
+#detail #detail-content #main .other .time{
+  position: absolute;
+  margin-left:5px;
+  display:inline-block;
+}
+
+#detail #detail-content #main .other .plate{
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+}
+
+#detail #detail-content #main hr{
+  border:0.5px solid #cfcfcf;
+  width:97%;
+}
