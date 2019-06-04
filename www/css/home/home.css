@@ -147,12 +147,16 @@
 
 /* 贴子模块 */
 #home .post{
-  position: relative;
   background-color:#ffffff;
   min-height:90px;
   max-height:170px;
   width:100%;
-  margin-top:10px;
+  margin-top:5px;
+}
+
+#home .post .jump{
+  text-decoration:none;
+  color:black;
 }
 
 #home .post .title{
@@ -205,21 +209,8 @@
   display: inline-block;
 }
 
-#home .sign #like{
+#home .sign a{
   color:red;
 }
 
-/*回到顶部div*/
-#home .back_top{
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  bottom: 55px;
-  right: 10px;
-  background: url("../../img/home/scroll-to-top-icon.png") no-repeat;
-  background-size: 35px 35px;
-  opacity: 0;
-  transition: all .3s ease 0s;
-  -webkit-transition: all .3s ease 0s;
-  z-index: 100;
-}
+

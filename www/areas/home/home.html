@@ -20,7 +20,7 @@
 
   <ion-content id="home-content" class="scroll-content" scroll="false">
     <!--头部轮播图-->
-    <div class="headerSlider">
+    <div class="headerSlider" >
       <ion-slide-box   auto-play="3000" >
         <ion-slide>
           <img ng-src="img/home/home-headerSlide-1.jpg">
@@ -60,28 +60,31 @@
     </nav>
 
     <!-- 推荐贴子 -->
+    <!-- 点击事件跳转到贴子详情页 -->
     <div class="post">
-      <!-- 贴纸的标题 -->
-      <div class="title">
-        标题
-      </div>
-      <!-- 贴子的内容 -->
-      <div class="post-content">
-        <span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
-        <!-- 图片预留位 -->
-        <img src="img/home/home-headerSlide-1.jpg"/>
-      </div>
-      <!-- 贴子的作者及一些信息 -->
-      <div class="auth">
-        <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
-        <span class="time">2019/5/1</span>&nbsp;
-        <span class="icon icon-eye">1</span>
-        <!-- 点赞和留言数 -->
-        <div class="sign">
-          <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
-          <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
+      <a class="jump" ng-href="#/detail">
+        <!-- 贴纸的标题 -->
+        <div class="title">
+          标题
         </div>
-      </div>
+        <!-- 贴子的内容 -->
+        <div class="post-content">
+          <span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+          <!-- 图片预留位 -->
+          <img src="img/home/home-headerSlide-1.jpg"/>
+        </div>
+        <!-- 贴子的作者及一些信息 -->
+        <div class="auth">
+          <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
+          <span class="time">2019/5/1</span>&nbsp;
+          <span class="icon icon-eye">1</span>
+          <!-- 点赞和留言数 -->
+          <div class="sign">
+            <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
+            <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
+          </div>
+        </div>
+      </a>
     </div>
     <!--回到顶部的区块-->
     <div class="back_top" ></div>
