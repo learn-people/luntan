@@ -1,0 +1,97 @@
+/* 注册界面css */
+
+.registerClose{
+    width:100%;
+    height:40px;
+    padding-top:10%;
+    padding-left: 85%;
+}
+#registerNamer,#registerPw{
+    width:80%;
+    height:50px;
+    margin-left: 10%;
+    border-bottom: 1px solid #E0E0E0;
+}
+.registerBtn{
+    width:80%;
+    height:20px;
+    border-radius: 55px;
+    margin-left: 10%;
+    margin-top:35px;
+}
+/* 注册详情css */
+.registerDetailTop{
+    width:100%;
+    height:50px;
+    float: left;
+}
+.registerDetailTop a{
+    float: left;
+    color:#BEBEBE;
+    border-radius: 25px;
+}
+/* 上一步 */
+.reginsterDetailBtn{
+    width:70px;
+    top:10px;
+    right:5%;
+    border-radius: 25px;
+    border:1px solid #BEBEBE;
+    position: absolute;
+}
+/* 标题 */
+.registerDetailTop p{
+    top: 13px;
+    left: 5%;
+    float: left;
+    font-size: 16px;
+    position: absolute;
+}
+.registerDetailInfo{
+    width:90%;
+    height:500px;
+    top: 80px;
+    left: 5%;
+    position: absolute;
+}
+.infoPart{
+    height:50px;
+    border-bottom: 1px solid #ADADAD;
+}
+.infoPart p{
+    float: left;
+    font-size: 16px;
+    padding-top:20px;
+}
+/* 添加图片icon */
+.addInfoIcon{
+    position: absolute;
+    font-size: 35px;
+    color:#ADADAD;
+    top:8px;
+    right: 1%;
+}
+/* 性别 */
+.infoSex{
+    right:1%;
+    top:75px;
+    position: absolute;
+}
+/* 出生日期 */
+#infoDate{
+    top:110px;
+    right:1%;
+    border:none;
+    position:absolute;
+}
+.infoBtn{
+    width:100%;
+    height:40px;
+    margin-top:35px;
+    border-radius: 25px;
+}
+.registerDetailInfo .button{
+    line-height: 36px;
+    min-width: 0;
+    min-height: 0;
+}

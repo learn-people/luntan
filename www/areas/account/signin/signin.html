@@ -1,0 +1,32 @@
+<!-- 登录模块 -->
+
+<ion-view id="signin" view-title="登录" cache-view="false">
+  <!-- 导航栏 -->
+  <ion-header-bar class="bar-light" align-title="center">
+    <a class="icon ion-chevron-left signinBar" ng-href="#/tab/account"></a>
+    <p class="title">登录</p>
+  </ion-header-bar>
+  <!-- 登录模块 -->
+  <ion-content>
+    <div class="signin">
+      <div class="signin-top">
+        <img ng-src="img/signin/steam.png">
+        <div class="signin-name">steam</div>
+      </div>
+
+      <div class="signin-input">
+        <label class="item item-input" id="userName">
+          <input type="text" placeholder="请输入账号">
+        </label>
+        <label class="item item-input" id="userPw">
+          <input type="password" placeholder="请输入密码">
+        </label>
+      </div>
+
+      <div class="signin-button">
+        <button id="signin-button-up" class="button button-balanced">登录</button>
+        <a id="signin-button-down" class="button button-calm" ng-href="#/register">注册</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
