@@ -1,0 +1,55 @@
+<!-- 设置页面 -->
+
+<ion-view id="option" view-title="设置" cache-view="false">
+  <!-- 导航栏 -->
+  <ion-header-bar class="bar-balanced" align-title="center">
+    <a class="icon ion-chevron-left optionBar" ng-href="#/tab/account"></a>
+    <p class="title">设置</p>
+  </ion-header-bar>
+
+  <!-- 设置模块 -->
+  <ion-content style="background-color: rgb(226, 221, 221)">
+    <div>
+      <li class="item item-toggle">
+        消息提醒
+        <label class="toggle toggle-calm">
+          <input type="checkbox" checked="">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </div>
+
+    <a ng-href="#/tab/account" style="text-decoration:none;">
+      <li class="item item-toggle">
+        检测新版本
+        <label class="toggle toggle-calm">
+          <div class="icon ion-chevron-right right-color"></div>
+        </label>
+      </li>
+    </a>
+
+    <a ng-href="#/tab/account" style="text-decoration:none;">
+      <li class="item item-toggle">
+        意见反馈
+        <label class="toggle toggle-calm">
+          <div class="icon ion-chevron-right right-color"></div>
+        </label>
+      </li>
+    </a>
+
+    <a ng-href="#/changePw" style="text-decoration:none;">
+      <li class="item item-toggle">
+        修改密码
+        <label class="toggle toggle-calm">
+          <div class="icon ion-chevron-right right-color"></div>
+        </label>
+      </li>
+    </a>
+  </ion-content>
+
+  <div class="bar bar-footer option-footer" style="">
+    <button class="button button-assertive option-btn">退出登录</button>
+  </div>
+</ion-view>
