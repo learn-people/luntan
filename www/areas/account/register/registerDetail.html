@@ -10,7 +10,8 @@
     <div class="registerDetailInfo">
       <div class="infoPart">
         <p>头像</p>
-        <div class="icon ion-plus-circled addInfoIcon"></div>
+        <div class="icon ion-plus-circled addInfoIcon" ng-click="uploads('photo')"></div>
+        <input type="file" hidden  id="photo">
       </div>
       <div class="infoPart">
         <p>性别</p>
@@ -27,3 +28,4 @@
     </div>
   </form>
 </ion-view>
+
