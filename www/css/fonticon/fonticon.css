@@ -3,12 +3,12 @@
 */
 @font-face {
   font-family: 'iconfont';
-  src: url('../../font/iconfont.eot');
-  src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'),
-  url('../../font/iconfont.woff2') format('woff2'),
-  url('../../font/iconfont.woff') format('woff'),
-  url('../../font/iconfont.ttf') format('truetype'),
-  url('../../font/iconfont.svg#iconfont') format('svg');
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
 }
 
 .icon {
@@ -205,4 +205,14 @@
 
 .icon-zengjia:before {
   content: "\e63e";
+}
+
+.icon-qukuai-shutiao:before {
+  content: "\e625";
+  color:#1296db;
+}
+
+.icon-dengji:before {
+  content: "\e603";
+  color:#1296db;
 }
