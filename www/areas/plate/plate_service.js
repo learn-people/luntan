@@ -2,9 +2,9 @@
 *导航标签页的服务模块
 */
 
-angular.module('news.service',[])
+angular.module('plate.service',[])
 
-.factory('newsService',function(){
+.factory('plateService',function(){
   return{
     
     getData:function(){
