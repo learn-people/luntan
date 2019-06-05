@@ -1,0 +1,45 @@
+<!-- 修改密码界面 -->
+
+<ion-view id="changePw" view-title="修改密码" cache-view="false">
+  <ion-header-bar class="bar-light" align-title="center">
+    <a class="icon ion-chevron-left changePwBar" ng-href="#/option"></a>
+    <h1 class="title" style="font-size: 16px">修改密码</h1>
+  </ion-header-bar>
+
+  <ion-content>
+
+    <div class="signin-input">
+      <div class="content has-header oldPw">
+        <div class="list list-inset">
+          <label class="item item-input changePwInput" style="border-radius: 25px">
+            <i class="icon ion-ios-locked placeholder-icon lock"></i>
+            <input type="text" placeholder="填写旧密码" id="oldPw">
+          </label>
+        </div>
+      </div>
+
+      <div class="content has-header newPw">
+        <div class="list list-inset">
+          <label class="item item-input changePwInput" style="border-radius: 25px">
+            <i class="icon ion-ios-locked placeholder-icon lock"></i>
+            <input type="password" placeholder="填写新密码" id="newPw">
+          </label>
+        </div>
+      </div>
+
+      <div class="content has-header newPw1">
+        <div class="list list-inset">
+          <label class="item item-input changePwInput" style="border-radius: 25px">
+            <i class="icon ion-ios-locked placeholder-icon lock"></i>
+            <input type="password" placeholder="重新填写新密码" id="newPw1">
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="button button-positive changePwBtn">
+      确认修改
+    </button>
+  </ion-content>
+</ion-view>
