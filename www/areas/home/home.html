@@ -3,12 +3,11 @@
   <div id="headerBar" class="headerBar">
     <div id="headerBar-bg"></div>
     <div class="headerBar-logo">
-      <i class="icon icon-steam"></i>
+      <i class="icon icon-steam" id="steam"></i>
     </div>
     <a class="headerBar-search"  ng-href="#">
       <span></span>
-      <div>
-        <input  maxlength="20" autocomplete="true" value="请输入搜索内容"/>
+      <div focus-input>
       </div>
     </a>
     <a class="headerBar-login" ng-href="#">
@@ -23,19 +22,13 @@
     <div class="headerSlider" >
       <ion-slide-box   auto-play="3000" >
         <ion-slide>
-          <img ng-src="img/home/home-headerSlide-1.jpg">
+          <img src="img/home/home-headerSlide-1.jpg">
         </ion-slide>
         <ion-slide>
-          <img ng-src="img/home/home-headerSlide-2.jpg">
+          <img src="img/home/home-headerSlide-2.jpg">
         </ion-slide>
         <ion-slide>
-          <img ng-src="img/home/home-headerSlide-3.jpg">
-        </ion-slide>
-        <ion-slide>
-          <img ng-src="img/home/home-headerSlide-4.jpg">
-        </ion-slide>
-        <ion-slide>
-          <img ng-src="img/home/home-headerSlide-5.jpg">
+          <img src="img/home/home-headerSlide-3.jpg">
         </ion-slide>
       </ion-slide-box>
     </div>
@@ -69,7 +62,7 @@
         </div>
         <!-- 贴子的内容 -->
         <div class="post-content">
-          <span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+          <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
           <!-- 图片预留位 -->
           <img src="img/home/home-headerSlide-1.jpg"/>
         </div>
@@ -89,7 +82,5 @@
     <!--回到顶部的区块-->
     <div class="back_top" ></div>
   </ion-content>
-
-
-
+  
 </ion-view>

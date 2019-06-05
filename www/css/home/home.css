@@ -1,7 +1,4 @@
-/* 顶部导航栏的ionic原css样式改 */
-.tabs-top > .tabs, .tabs.tabs-top{
-  top:35px;
-}
+
 /*
 *论坛首页样式代码
 */
@@ -9,16 +6,6 @@
   background-color:#efefef;
 }
 
-#home ion-header-bar{
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: 0;
-  background-image: none;
-}
-#home .has-header{
-  top: 0;
-}
 #home ion-content{
   overflow:scroll;
 }
@@ -30,10 +17,10 @@
   z-index: 2;
   display: inline-block;
   width: 100%;
-  height: 35px;
+  height: 40px;
 }
 #home #headerBar-bg{
-  height: 35px;
+  height: 40px;
   position: absolute;
   width: 100%;
 }
@@ -42,9 +29,15 @@
   margin: 0;
   padding: 0;
   width: 56px;
-  height: 35px;
+  height: 40px;
   display: inline-block;
 }
+
+#steam::before{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
 #home .headerBar-logo i {
   display: inline-block;
   height:21px;
@@ -84,8 +77,8 @@
   display: inline-block;
   background: 0;
   font-size: 13px;
-  line-height: 1.2em;
-  height: 1.4em;
+  line-height: 18px;
+  height: 18px;
   width: 100%;
   vertical-align: middle;
   margin-top: -15px;
@@ -128,7 +121,7 @@
   margin:0px auto;
 }
 #home #nav span h2{
-  font-size:14px;
+  font-size:13.5px;
   font-weight:300;
   text-align:center;
   margin-top: 10px;
@@ -138,7 +131,7 @@
 #home .headerSlider {
   height: 184px;
   width: 100%;
-  margin-top:28px;
+  margin-top:40px;
 }
 #home .headerSlider img {
   height: 100%;
@@ -178,7 +171,7 @@
   color:#5f5f5f;
 }
 
-#home .post .post-content span{
+#home .post .post-content .content{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;  /*这里是在第几行有省略号*/

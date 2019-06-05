@@ -1,3 +1,16 @@
+a{
+  text-decoration:none;
+}
+.button{
+  min-height:28px;
+  line-height:28px;
+  font-size:16px;
+  margin-top:10px;
+}
+.icon{
+  font-size:14px;
+  line-height:0;
+}
 /* 对顶部的一些处理 */
 #detail ion-header-bar {
   background-color:#ffffff;
@@ -15,7 +28,7 @@
 }
 
 #detail #headerBar a{
-  font-size:28px;
+  font-size:24px;
   line-height: 44px;
   margin-left:10px;
   color:#696868;
@@ -27,7 +40,6 @@
 }
 #detail #detail-content #main #title{
   min-height:30px;
-  width:100%;
   font-size:20px;
   line-height: 30px;
   margin:0 5px;
@@ -56,3 +68,136 @@
   border:0.5px solid #cfcfcf;
   width:97%;
 }
+
+#detail #detail-content #main #post-content .auth img{
+  height:36px;
+  width:36px;
+  vertical-align:middle;
+}
+#detail #detail-content #main #post-content .auth  span{
+  font-size:20px;
+  margin-left:5px;
+  line-height:36px;
+  vertical-align:middle;
+}
+#detail #detail-content #main #post-content .content{
+  margin-bottom:25px;
+}
+/* 评论区 */
+#detail #comment{
+  margin-top:10px;
+}
+#detail #comment .comment-title{
+  background-color:#ffffff;
+  height:30px;
+  line-height: 30px;
+  border-bottom:1px solid #eeeeee;
+}
+#detail #comment .comment-title span{
+  margin-left:5px;
+}
+/* 评论区内容设置 */
+#detail #comment .comment-content{
+  background-color:#ffffff;
+  min-height:70px;
+  /* 但事实是，当不指定容器的高度时，overflow: hidden
+   会自动撑开容器的高度，以便使浮动层不发生溢出现象。 */
+  overflow: hidden;
+  width:100%;
+}
+#detail #comment .comment-content .avater{
+  width:12%;
+  float:left;
+  margin-top:5px;
+}
+#detail #comment .comment-content .avater img{
+  width:36px;
+  height:36px;
+}
+/* 评论者信息 */
+#detail #comment .comment-content .info{
+  float:left;
+  width:88%;
+  margin-top:5px;
+}
+#detail #comment .comment-content .info .name span{
+  font-family:"华文新魏";
+  font-size:20px;
+  /* 是图片居中 */
+  vertical-align: middle;
+}
+#detail #comment .comment-content .info .name img{
+  vertical-align: middle;
+}
+#detail #comment .symbol{
+  height:25px;
+  margin-bottom:50px;
+  background-color:#ffffff;
+  color:#999999;
+}
+#detail #comment .symbol span{
+  margin-left:40px;
+}
+#detail #comment .symbol .pictures{
+  position: absolute;
+  right: 20px;
+  display: inline-block;
+}
+#detail #comment .symbol .pictures a{
+  margin-right:10px;
+}
+/* 固定底边栏 */
+#detail #comment-bar{
+  width:100%;
+  height:50px;
+  position: fixed;
+  bottom:0;
+  border-top:0.5px solid #d3cece;
+  background-color:#ffffff;
+}
+/* 输入框 */
+#detail .commentLeft{
+  width:70%;
+  height:50px;
+  float:left;
+}
+#detail .commentLeft .inp{
+  width:75%;
+  float:left;
+}
+#detail .commentLeft .inp input{
+  margin:10px 0 0 10px;
+  width:180px;
+  font-size:16px;
+  line-height: 30px;
+  padding-inline-start: 10px;
+  background-color:#ebebeb;
+  height:30px;
+  color:#555555;
+  border-radius:15px;
+}
+#detail .commentLeft .fason{
+  width:25%;
+  float:left;
+}
+#detail .commentLeft .fason .button{
+  border-radius:15px;
+}
+/* 图标功能区 */
+#detail .commentRight{
+  width:30%;
+  height:50px;
+  float:left;
+  color:#696868;
+  text-align:center;
+  line-height:50px;
+}
+#detail .commentRight a{
+  margin-right:5px;
+  height:20px;
+}
+
+/* 隐藏滚轮 */
+::-webkit-scrollbar {/*隐藏滚轮*/
+  display: none;
+  }
