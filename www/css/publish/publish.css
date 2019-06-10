@@ -2,117 +2,130 @@
 * 发布界面css代码
 */
 #publish .title1{
-    width: 74%;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#publish .title2{
+    width: 15%;
     height: 100%;
     text-align: center;
-    margin: 0;
-    font-size: 25px
+    font-size: 15px;
+    border: 0;
+    padding: 0;
+    background-color: white
 }
-
 #publish .add{
     width: 100%;
-    height: 410px;
+    height: 300px;
     margin-top: 1px;
 }
 
 #publish .add-title{
-    
-    width: 100%;
-    height: 10%;
+    width: 99%;
+    height: 13%;
     font-size: 30px;
-    border-style: solid;
-    border-width: 1px;
-    line-height: 40px;
-    border-color:gray;
-    
+    line-height: 30px;
+    margin: 1px;margin: 1%;
+    text-align: left;
+}
+
+#publish .add-title-span{
+    width: 20%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+#publish .add-title-input{
+    width: 80%;
+    height: 100%;
+    font-size: 20px;
+    text-align: left;
+    float: left;
+    line-height: 20px;
 }
 
 #publish .add-content{
-    width: 100%;
-    height: 90%;
+    width: 99%;
+    height: 350px;
     font-size: 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-color:gray;
     line-height: 20px;
+    margin: 1px;
+    float: left;
 }
 
 #publish .choice{
     width: 100%;
-    height: 40px;
-    border-style: solid;
-    border-width: 1px;
-    border-color:gray;
+    height: 32px;
 }
 
 #publish .choice-title{
-    width: 85%;
-    height: 90%;
-    font-size: 25px;
+    width: 80%;
+    height: 100%;
+    font-size: 20px;
     float:left;
-    line-height: 25px;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 #publish .choice-button{
-    width: 15%;
-    height: 39px;
-    float: right;
-   
+    width: 32px;
+    height: 32px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
 }
 
 #publish .upload{
     width: 100%;
-    height: 120px;
-    border-style: solid;
-    border-width: 1px;
-    border-color:gray;
+    height: 45px;
+    background-color: rgb(228, 224, 224);
 }
 
 #publish .upload-1{
-    width: 33%;
-    height: 100%;
+    width: 20%;
     float: left;
 }
 
-#publish .upload-1-title{
-    width: 100%;
-    height: 25%;
-    font-size: 20px;
-    text-align: center;
-}
-
 #upload-button1{
-    width: 100%;
+    width:100%;
     height: 65%;
+    margin-left: 15px;
     
 }
 
 #upload-button1::before{
-    margin-bottom: 20px;
-    font-size: 80px;
+    
+    font-size: 30px;
     overflow:visible;
 }
 
 #upload-button2{
     width: 100%;
     height: 65%;
-    
+    margin-left: 15px;
 }
 
 #upload-button2::before{
-    margin-bottom: 20px;
-    font-size: 80px;
+    font-size: 30px;
     overflow:visible;
 }
 
 #upload-button3{
     width: 100%;
     height: 65%;
-    
+    margin-left: 15px;
 }
 
 #upload-button3::before{
-    margin-bottom: 20px;
-    font-size: 80px;
+    font-size: 30px;
     overflow:visible;
 }
