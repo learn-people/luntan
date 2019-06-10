@@ -1,0 +1,81 @@
+/* 关注/粉丝页面的css */
+
+.myFollow{
+    width:100%;
+    height:60px;
+    z-index: 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+.myFollow .myFollowPhoto img{
+    margin-top:10px;
+    margin-left:10px;
+    width:40px;
+    height:40px;
+    float: left;
+}
+.myFollow .myFollowNSA{
+    width:30%;
+    height:60px;
+    float: left;
+    margin-left:15px;
+}
+.myFollow .myFollowName{
+    color:black;
+    margin-top:10px;
+    font-size: 18px;
+}
+.myFollow .myFollowSA{
+    width:26px;
+    height:16px;
+    color:white;
+    margin-top:5px;
+    border-radius: 3px;
+    background-color: #FF0080;
+}
+.myFollow .myFollowSA1{
+    width:26px;
+    height:16px;
+    color:white;
+    margin-top:5px;
+    border-radius: 3px;
+    background-color: #0080FF;
+}
+.myFollow .myFollowSA i{
+    float: left;
+    color:white;
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 14px;
+}
+.myFollowSA1 i{
+    float: left;
+    color:white;
+    margin-left: 2px;
+    margin-top: 3px;
+    font-size: 12px;
+}
+.myFollow .myFollowSA p,.myFollowSA1 p{
+    float: left;
+    color:white;
+    margin-left: 4px;
+    margin-top:-1px;
+    font-size: 12px;
+}
+.myFollow .myFollowBtn{
+    width:60px;
+    height:25px;
+    right:5%;
+    z-index: 1;
+    margin-top:15px;
+    position: absolute;
+    border:1px solid #ADADAD;
+    border-radius: 2px;
+}
+.myFollow .button{
+    z-index: 1;
+    min-width: 0px;
+    min-height: 0px;
+    line-height: 10px;
+    color:#ADADAD;
+    font-size:14px;
+}

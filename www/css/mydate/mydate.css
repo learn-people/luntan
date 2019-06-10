@@ -1,0 +1,361 @@
+/* 我的信息css */
+
+#mydate{
+    background: url("../../img/account/2.png") no-repeat;
+    background-size: 100% 100%;
+}
+#mydate .mydateAll{
+    width:100%;
+    height:100%;
+}
+/* 编辑图标 */
+#mydate .mydateEdit{
+    position: absolute;
+    right: 4%;
+    top:6px;
+    color:white;
+    font-size: 28px;
+}
+/* 第一块 */
+.mydateAll .mydateTop{
+    width:100%;
+    height:25%;
+    margin-top: 25%;
+    background-color: rgba(255,255,255,0.6);
+}
+/* 中间块 */
+.mydateAll .mydateMiddle{
+    width:100%;
+    height:20%;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+/* 底部块 */
+.mydateAll .mydateDown{
+    width:100%;
+    height:30%;
+    margin-top:10px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* top第一块div */
+.mydateAll .mydateINLA{
+    width:100%;
+    height:40%;
+}
+/* 头部快图像 */
+.mydateAll .mydateINLA img{
+    width:100%;
+    height:100%;
+}
+.mydateAll #imgWidth{
+    height:100%;
+    float: left;
+    margin-top: -10px;
+    margin-left: 5%;
+}
+/* 昵称及小图标 */
+.mydateAll .INLAContain{
+    height:100%;
+    width:60%;
+    float: left;
+    margin:0;
+
+}
+.mydateAll .INLAContain .mydateName{
+    width:100%;
+    height:50%;
+    margin:0;
+    padding-top: 2%;
+    margin-left: 15px;
+    font-size: 24px;
+}
+.mydateAll .INLAContain .mydateBaseInfo{
+    width:100%;
+    height:50%;
+    margin-left: 15px;
+}
+/* 小图标 */
+.mydateAll .INLAContain .mydateLevle{
+    width:24px;
+    height:14px;
+    color:#fff;
+    float: left;
+    padding-left: 4px;
+    line-height: 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: #33cd5f;
+}
+.mydateAll .INLAContain .mydateSA{
+    width:30px;
+    height:14px;
+    margin-left: 30px;
+    padding-left: 4px;
+    border-radius: 3px;
+    background-color: rgba(99 ,190, 240);
+}
+.mydateAll .INLAContain .mydateMale{
+    padding-top: 2px;
+    color:white;
+    float: left;
+    font-size: 12px;
+}
+.mydateAll .INLAContain .mydateAge{
+    line-height: 15px;
+    padding-left: 15px;
+    color:white;
+    font-size: 12px;
+}
+/* 经验条 */
+.mydateAll .mydateTopExe{
+    width:100%;
+    height:25%;
+    margin:0;
+    border-bottom: 1px solid rgba(248,248,255,0.4);
+}
+.mydateAll .myAll{
+    width:100%;
+    height:35%;
+}
+.mydateAll .mydateTopExeCon{
+    width:60%;
+    height:100%;
+    margin-left: 100px;
+}
+.mydateTopExe .contribution{
+    width:80px;
+    height:100%;
+    float: left;
+    padding-top: 4%;
+}
+.mydateTopExe .integral{
+    width:80px;
+    height:100%;
+    float: left;
+    padding-top: 4%;
+}
+.myAll .mydatePart{
+    width:20%;
+    height:100%;
+    float: left;
+    color: black;
+}
+.myAll .mydatePartA{
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+
+.myAll #myAll1,#myAll2,#myAll3,#myAll4,#myAll5{
+    height:50%;
+    width:100%;
+    margin:0;
+    font-size: 14px;
+    padding-top:5px;
+}
+
+.myAll .myAllName {
+    height:50%;
+    width:100%;
+    font-size: 14px;
+}
+.mydateMiddle .mydateMiddle1{
+    width:95%;
+    height:30%;
+    font-size: 18px;
+    padding-top:2%;
+    margin:0;
+    margin-left: 5%;
+}
+.mydateMiddle .mydateMiddle2{
+    width:100%;
+    height:70%;
+    margin-left: 5%;
+}
+.mydateMiddle .mydateMiddle2.mydateMiddleImg{
+    width:80px;
+    height:80px;
+    border-radius: 5px;
+}
+.mydateMiddle .mydateMiddle2 #mydatePhoto{
+    width:80px;
+    height:80px;
+    border-radius: 5px;
+}
+.mydateDownCon{
+    width:90%;
+    height:20%;
+    margin:0;
+    margin-left: 5%;
+    font-size: 18px;
+    padding-top:2%;
+}
+.mydateDownPart{
+    width:90%;
+    height:20%;
+    margin-left: 5%;
+}
+.autograph{
+    width:15%;
+    height:100%;
+    float: left;
+    color:#8B8989;
+    padding-top:2%;
+}
+.showAutograph{
+    width:85%;
+    height:100%;
+    color:#D3D3D3;
+    padding-top: 2%;
+}
+/* 编辑资料界面 */
+#mydateEdit{
+    background-color: #F0F0F0;
+}
+.mydateEdithead{
+    position: absolute;
+    color:white;
+    top:12px;
+    right:5%;
+    margin:0;
+}
+/* 编辑资料头部 */
+.editTop{
+    width:100%;
+    height:130px;
+    background-color: white;
+}
+.editTop p{
+    font-size: 16px;
+    width:100%;
+    height:40px;
+    padding-left: 10px;
+    padding-top:10px;
+}
+.editTop .editPhoto{
+    width:100%;
+    height:100px;
+}
+.editTop .editImg{
+    width:80px;
+    height:80px;
+    float: left;
+    margin-left: 10px;
+    margin-top:-5px;
+    border-radius: 5px;
+}
+.editTop #editAddPhoto{
+    width:80px;
+    height:80px;
+    float: left;
+    font-size: 50px;
+    border:1px dashed #D3D3D3;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin-top:-5px;
+    border-radius: 5px;
+}
+
+/* 基本资料 */
+.editMiddle{
+    width:100%;
+    height:160px;
+    margin-top:15px;
+    background-color: white;
+}
+.editFont{
+    width:100%;
+    height:40px;
+    margin:0;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top:10px;
+    font-size: 16px;
+}
+.editMiddle .editMiddle1{
+    width:100%;
+    height:40px;
+    margin:0;
+    font-size: 14px;
+    border-bottom: 1px solid #D3D3D3;
+    padding-left: 10px;
+    padding-top:10px;
+}
+.editMiddle .editMiddle1 .editMiddle1Name{
+    width:50%;
+    height:100%;
+    margin:0;
+    float: left;
+}
+.editMiddle .editMiddle1 .mydateEditUserName,.mydateEditUserSex{
+    position: absolute;
+    margin:0;
+    right:2%;
+}
+.editMiddle .editMiddle1 .mydateEditUserBir{
+    position: absolute;
+    right:0%;
+}
+.editDown{
+    width:100%;
+    height:240px;
+    margin-top: 15px;
+    background-color: white;
+}
+.editDown .editHome,.editJob,.editSchool,.editFont{
+    width:100%;
+    height:40px;
+    margin:0;
+    font-size: 14px;
+    border-bottom: 1px solid #D3D3D3;
+    padding-left: 10px;
+    padding-top:10px;
+}
+.editAutography{
+    width:100%;
+    height:80px;
+    margin:0;
+    padding-left: 10px;
+    padding-top:10px;
+    border-bottom: 1px solid #D3D3D3;
+}
+.editDownPart{
+    width:100%;
+    height:30px;
+    margin:0;
+    color:black;
+}
+.editDownPart1{
+    width:80%;
+    height:40px;
+    font-size: 12px;
+    color:#8B8989;
+    border-radius: 5px;
+}
+.editHomeP1 ,.editJobP1,.editSchoolP1{
+    color: black;
+    float: left;
+}
+.editHomeP2,.editJobP2,.editSchoolP2{
+    color:black;
+    position: absolute;
+    right:2%;
+}
+/* 签名编辑css */
+.autographyContent{
+    background-color: 	#F0F0F0;
+}
+.autographyTop{
+    width:100%;
+    height:150px;
+    background-color: white;
+}
+#autographyInput{
+    width:90%;
+    margin-top: 15px;
+    margin-left: 5%;
+    border:1px solid #bebebe;
+    border-radius: 5px;
+}

@@ -1,0 +1,67 @@
+<!-- 我的关注页面 -->
+
+<ion-view id="follow" view-title="我的关注" cache-view="false">
+
+  <ion-header-bar class="bar-positive" align-title="center">
+    <a class="icon ion-chevron-left signinBar" ng-href="#/tab/account"></a>
+    <p class="title">我的关注</p>
+  </ion-header-bar>
+  <ion-content>
+    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" pulling-icon="icon ion-arrow-up-c">
+    </ion-refresher>
+    <div class="myFollow" >
+      <a ng-href="#/mydate">
+
+        <div class="myFollowPhoto">
+          <img ng-src="img/signin/steam.png" alt="图片丢失">
+        </div>
+
+        <div class="myFollowNSA">
+          <div class="myFollowName">木木晶华开</div>
+          <div class="myFollowSA">
+            <i class="icon ion-female"></i>
+            <p>{{test}}</p>
+          </div>
+        </div>
+
+      </a>
+        <button class="button button-icon button-small myFollowBtn" ng-click="zz()">已关注</button>
+
+      </div>
+    <a ng-href="#/mydate">
+      <div class="myFollow" >
+
+        <div class="myFollowPhoto">
+          <img ng-src="img/signin/steam.png" alt="图片丢失">
+        </div>
+
+        <div class="myFollowNSA">
+          <div class="myFollowName">木木晶华开</div>
+          <div class="myFollowSA">
+            <i class="icon ion-female"></i>
+            <p>{{test}}</p>
+          </div>
+        </div>
+
+        <button class="button button-icon button-small myFollowBtn" ng-click="zz()">已关注</button>
+
+      </div>
+    </a>
+
+    <a ng-href="#/mydate">
+    <div class="myFollow">
+      <div class="myFollowPhoto">
+        <img ng-src="img/signin/steam.png" alt="图片丢失">
+      </div>
+      <div class="myFollowNSA">
+        <div class="myFollowName">木木晶华开</div>
+        <div class="myFollowSA1">
+          <i class="icon ion-male"></i>
+          <p>{{test1}}</p>
+        </div>
+      </div>
+      <button class="button button-icon button-small myFollowBtn">已关注</button>
+      </a>
+
+  </ion-content>
+</ion-view>

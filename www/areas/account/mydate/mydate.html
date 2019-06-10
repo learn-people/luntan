@@ -1,0 +1,103 @@
+<!-- 资料详情界面 -->
+
+<ion-view id="mydate" view-title="资料详情" cache-view="false">
+  <ion-header-bar class="bar-positive" align-title="center">
+    <a class="icon ion-chevron-left signinBar" ng-click="goBack()"></a>
+    <p class="title">个人信息</p>
+    <a class="icon ion-ios-compose-outline mydateEdit" ng-href="#/mydateEdit"></a>
+  </ion-header-bar>
+  <ion-content scroll="false">
+    <div class="mydateAll">
+      <div class="mydateTop">
+        <div class="mydateINLA">
+          <div id="imgWidth">
+            <img src="img/account/2.png" alt="">
+          </div>
+          <div class="INLAContain">
+            <p class="mydateName">hhh</p>
+            <div class="mydateBaseInfo">
+              <div class="mydateLevle ">lv{{test}}</div>
+              <div class="mydateSA">
+                <i class="icon ion-male mydateMale"></i>
+                <p class="mydateAge">{{test1}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mydateTopExe">
+          <div class="mydateTopExeCon">
+            <div class="contribution">
+              <p>{{test}} 贡献</p>
+            </div>
+            <div class="integral">
+              <p>{{test1}} 积分</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="myAll">
+          <a class="mydatePart" ng-href="#/tab/account">
+            <div class="mydatePartA">
+              <p id="myAll1">{{test1}}</p>
+              <p class="myAllName">帖子</p>
+            </div>
+          </a>
+          <a class="mydatePart" ng-href="#/">
+            <div class="mydatePartA">
+              <p id="myAll2">{{test1}}</p>
+              <p class="myAllName">回复</p>
+            </div>
+          </a>
+          <a class="mydatePart" ng-href="#/">
+            <div class="mydatePartA">
+              <p id="myAll3">{{test1}}</p>
+              <p class="myAllName">关注</p>
+            </div>
+          </a>
+          <a class="mydatePart" ng-href="#/">
+            <div class="mydatePartA">
+              <p id="myAll4">{{test1}}</p>
+              <p class="myAllName">粉丝</p>
+            </div>
+          </a>
+          <a class="mydatePart" ng-href="#/">
+            <div class="mydatePartA">
+              <p id="myAll5">{{test1}}</p>
+              <p class="myAllName">收藏</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="mydateMiddle">
+        <p class="mydateMiddle1">我的照片</p>
+        <div class="mydateMiddle2">
+          <div class="mydateMiddleImg">
+            <img src="img/account/9.png" id="mydatePhoto" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="mydateDown">
+        <p class="mydateDownCon">个人信息</p>
+        <div class="mydateDownPart">
+          <div class="autograph">签名</div>
+          <div class="showAutograph">因为懒所以没有签名</div>
+        </div>
+        <div class="mydateDownPart">
+          <div class="autograph">家乡</div>
+          <div class="showAutograph">无-无</div>
+        </div>
+        <div class="mydateDownPart">
+          <div class="autograph">职业</div>
+          <div class="showAutograph">打酱油的</div>
+        </div>
+        <div class="mydateDownPart">
+          <div class="autograph">学校</div>
+          <div class="showAutograph">填写学校，发现校友</div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

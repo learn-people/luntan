@@ -1,0 +1,13 @@
+/* 我的帖子css */
+
+.myPostPart{
+    width:100%;
+
+    background-color: antiquewhite;
+}
+.myPostPart .myPostPartTop{
+    width:98%;
+    height:35px;
+    padding-left: 5px;
+    background-color: aliceblue;
+}
