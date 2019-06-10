@@ -45,4 +45,41 @@ angular.module('account.route',['account.controller'])
       templateUrl:'areas/account/register/registerDetail.html',
       controller:'AccountController'
     })
+    //我的关注界面路由
+    .state('follow',{
+      url:'/follow',
+      templateUrl:'areas/account/follow/follow.html',
+      controller:'AccountController'
+    })
+    //我的粉丝界面路由
+    .state('fans',{
+      url:'/fans',
+      templateUrl:'areas/account/fans/fans.html',
+      controller:'AccountController'
+    })
+    //资料详情界面路由
+    .state('mydate',{
+      url:'/mydate',
+      templateUrl:'areas/account/mydate/mydate.html',
+      controller:'AccountController'
+    })
+    //编辑资料界面路由
+    .state('mydateEdit',{
+      url:'/mydateEdit',
+      templateUrl:'areas/account/mydate/mydateEdit.html',
+      controller:'AccountController'
+    })
+    //编辑签名界面路由
+    .state('autography',{
+      url:'/autography',
+      templateUrl:'areas/account/mydate/autography.html',
+      controller:'AccountController'
+    })
+    //编辑签名界面路由
+    .state('myPost',{
+      url:'/myPost',
+      templateUrl:'areas/account/myPost/myPost.html',
+      controller:'AccountController'
+    })
+    
 })

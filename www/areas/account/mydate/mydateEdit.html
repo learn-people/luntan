@@ -1,0 +1,63 @@
+<!-- 资料编辑界面 -->
+
+<ion-view id="mydateEdit">
+  <ion-header-bar class="bar-positive" align-title="center">
+    <a class="icon ion-chevron-left signinBar" ng-href="#/mydate"></a>
+    <p class="title">编辑资料</p>
+    <a class="mydateEdithead" ng-href="#/">保存</a>
+  </ion-header-bar>
+  <ion-content>
+    <div >
+      <div class="editTop">
+        <p>图片{{test1}}/8</p>
+        <div class="editPhoto">
+          <img src="img/account/2.png" class="editImg" />
+          <a id="editAddPhoto" onclick="changeEditAddBtnBg(this)">
+            <i class="icon ion-plus-round"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="editMiddle">
+        <p class="editFont">基本资料</p>
+        <div class="editMiddle1">
+          <p class="editMiddle1Name">昵称</p>
+          <p class="mydateEditUserName">hhh</p>
+        </div>
+        <div class="editMiddle1">
+          <p class="editMiddle1Name">性别</p>
+          <div class="mydateEditUserSex">
+            <input type="radio" name="sex" value="male" checked>男&nbsp
+            <input type="radio" name="sex" value="female">女
+          </div>
+        </div>
+        <div class="editMiddle1">
+          <p class="editMiddle1Name">生日</p>
+          <input type="date" class="mydateEditUserBir" />
+        </div>
+      </div>
+
+      <div class="editDown">
+        <p class="editFont">个人信息</p>
+        <div class="editAutography" ng-click="">
+            <p class="editDownPart">个性签名</p>
+            <div class="editDownPart1">有没有像说的呢？</div>
+        </div>
+
+        <div class="editHome" ng-click="">
+            <p class="editHomeP1">家乡</p>
+            <p class="editHomeP2">无 无</p>
+        </div>
+        <div class="editJob" ng-click="">
+            <P class="editJobP1">职业</P>
+            <p class="editJobP2">选择行业</p>
+        </div>
+        <div class="editSchool" ng-click="" style="border:none">
+            <p class="editSchoolP1">学校</p>
+            <p class="editSchoolP2">填写就读学校</p>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
