@@ -32,6 +32,12 @@
   height: 40px;
   display: inline-block;
 }
+
+#steam::before{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
 #home .headerBar-logo i {
   display: inline-block;
   height:21px;
