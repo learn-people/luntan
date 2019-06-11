@@ -75,10 +75,22 @@ angular.module('account.route',['account.controller'])
       templateUrl:'areas/account/mydate/autography.html',
       controller:'AccountController'
     })
-    //编辑签名界面路由
+    //我的帖子界面路由
     .state('myPost',{
       url:'/myPost',
       templateUrl:'areas/account/myPost/myPost.html',
+      controller:'AccountController'
+    })
+    //我的回复界面路由
+    .state('myReply',{
+      url:'/myReply',
+      templateUrl:'areas/account/myReply/myReply.html',
+      controller:'AccountController'
+    })
+    //我的收藏界面路由
+    .state('myCollection',{
+      url:'/myCollection',
+      templateUrl:'areas/account/myCollection/myCollection.html',
       controller:'AccountController'
     })
     
