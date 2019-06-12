@@ -1,13 +1,70 @@
 /* 我的帖子css */
-
+.myPostBar{
+    color:#fff;
+    font-size: 24px;
+    padding-left: 2%;
+    padding-top: 4px;
+}
 .myPostPart{
     width:100%;
-
-    background-color: antiquewhite;
+    color:black;
+    border-bottom: 1px solid #D0D0D0;
 }
 .myPostPart .myPostPartTop{
-    width:98%;
+    width:97%;
     height:35px;
     padding-left: 5px;
-    background-color: aliceblue;
+    padding-top:5px;
+}
+.myPostPartMiddle{
+    width:97%;
+    padding-left: 10px;
+}
+.myPostPartMiddleImg{
+    width:100%;
+    height:100px;
+}
+.myPostImg{
+    width:85px;
+    height:85px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.myPostImg1{
+    width:85px;
+    height:85px;
+    border-radius: 5px;
+}
+/* 昵称日期 */
+.myPostPartDown{
+    width:97%;
+    height:30px;
+    padding-left: 10px;
+}
+.myPostUserName{
+    float: left;
+    padding-top: 3px;
+}
+.myPostDate{
+    float: left;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+.myPostSeeNum{
+    float: left;
+    right:15%;
+    font-size: 14px;
+    padding-top: 3px;
+    position: absolute;
+}
+.myPostI1,.myPostI2{
+    color:#D0D0D0;
+    font-size: 14px;
+}
+.myPostCommetNum{
+    float: left;
+    right: 5%;
+    font-size: 14px;
+    padding-top: 3px;
+    position: absolute;
 }
