@@ -4,6 +4,12 @@
     width:100%;
     background-color: antiquewhite;
 }
+.myHopeBar{
+    font-size: 30px;
+    color:white;
+    padding-left: 1%;
+    padding-top:3px;
+}
 .myHopeImg{
     width:60px;
     height:60px;
