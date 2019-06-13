@@ -2,8 +2,8 @@
 
 <ion-view id="fans" view-title="我的粉丝" cache-view="false">
 
-        <ion-header-bar class="bar-positive" align-title="center">
-          <a class="icon ion-chevron-left signinBar" ng-href="#/tab/account"></a>
+        <ion-header-bar class="bar-dark" align-title="center">
+          <a class="icon ion-ios-arrow-left followBar"  ng-click="goBack()"></a>
           <p class="title">我的粉丝</p>
         </ion-header-bar>
         <ion-content>
@@ -18,9 +18,9 @@
       
               <div class="myFollowNSA">
                 <div class="myFollowName">木木晶华开</div>
-                <div class="myFollowSA">
-                  <i class="icon ion-female"></i>
-                  <p>{{test}}</p>
+                <div class="sexAgeBtnBoy">
+                  <i class="icon ion-male"></i>
+                  <p>{{test1}}{{test}}</p>
                 </div>
               </div>
             </div>
@@ -33,8 +33,8 @@
             </div>
             <div class="myFollowNSA">
               <div class="myFollowName">木木晶华开</div>
-              <div class="myFollowSA1">
-                <i class="icon ion-male"></i>
+              <div class="sexAgeBtnGirl">
+                <i class="icon ion-female"></i>
                 <p>{{test1}}</p>
               </div>
             </div>

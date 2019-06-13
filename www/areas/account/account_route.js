@@ -2,7 +2,7 @@
  * 我的的子路由模块
 */
 
-angular.module('account.route',['account.controller'])
+angular.module('account.route',['account.controller','follow.controller','mydate.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -49,7 +49,7 @@ angular.module('account.route',['account.controller'])
     .state('follow',{
       url:'/follow',
       templateUrl:'areas/account/follow/follow.html',
-      controller:'AccountController'
+      controller:'FollowController'
     })
     //我的粉丝界面路由
     .state('fans',{
@@ -61,12 +61,12 @@ angular.module('account.route',['account.controller'])
     .state('mydate',{
       url:'/mydate',
       templateUrl:'areas/account/mydate/mydate.html',
-      controller:'AccountController'
+      controller:'MydateController'
     })
     //编辑资料界面路由
     .state('mydateEdit',{
       url:'/mydateEdit',
-      templateUrl:'areas/account/mydate/mydateEdit.html',
+      templateUrl:'areas/account/mydateEdit/mydateEdit.html',
       controller:'AccountController'
     })
     //编辑签名界面路由
@@ -91,6 +91,12 @@ angular.module('account.route',['account.controller'])
     .state('myCollection',{
       url:'/myCollection',
       templateUrl:'areas/account/myCollection/myCollection.html',
+      controller:'AccountController'
+    })
+    //我的愿望单界面路由
+    .state('myHope',{
+      url:'/myHope',
+      templateUrl:'areas/account/myHope/myHope.html',
       controller:'AccountController'
     })
     

@@ -1,0 +1,192 @@
+/* 编辑资料界面 */
+#mydateEdit {
+    background-color: #F0F0F0;
+  }
+  
+  .mydateEdithead {
+    position: absolute;
+    color: white;
+    top: 12px;
+    right: 5%;
+    margin: 0;
+  }
+  
+  /* 编辑资料头部 */
+  .editTop {
+    width: 100%;
+    height: 130px;
+    background-color: white;
+  }
+  
+  .editTop p {
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .editTop .editPhoto {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .editTop .editImg {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left: 10px;
+    margin-top: -5px;
+    border-radius: 5px;
+  }
+  
+  .editTop #editAddPhoto {
+    width: 80px;
+    height: 80px;
+    float: left;
+    font-size: 50px;
+    border: 1px dashed #D3D3D3;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin-top: -5px;
+    border-radius: 5px;
+  }
+  
+  /* 基本资料 */
+  .editMiddle {
+    width: 100%;
+    height: 160px;
+    margin-top: 15px;
+    background-color: white;
+  }
+  
+  .editFont {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+  }
+  
+  .editMiddle .editMiddle1 {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #D3D3D3;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .editMiddle .editMiddle2 {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #D3D3D3;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+  }
+  
+  .editMiddle .editMiddle1 .editMiddle1Name {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    float: left;
+  }
+  
+  .editMiddle .editMiddle1 .mydateEditUserName,
+  .mydateEditUserSex {
+    position: absolute;
+    margin: 0;
+    right: 2%;
+  }
+  
+  .editMiddle .editMiddle2 .mydateEditUserBir {
+    position: absolute;
+    right: 0%;
+    top: 0;
+  }
+  
+  .editDown {
+    width: 100%;
+    height: 240px;
+    margin-top: 15px;
+    background-color: white;
+  }
+  
+  .editDown .editHome,
+  .editJob,
+  .editSchool,
+  .editFont {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #D3D3D3;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .editAutography {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #D3D3D3;
+  }
+  
+  .editDownPart {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    color: black;
+  }
+  
+  .editDownPart1 {
+    width: 80%;
+    height: 40px;
+    font-size: 12px;
+    color: #8B8989;
+    border-radius: 5px;
+  }
+  
+  .editHomeP1,
+  .editJobP1,
+  .editSchoolP1 {
+    color: black;
+    float: left;
+  }
+  
+  .editHomeP2,
+  .editJobP2,
+  .editSchoolP2 {
+    color: black;
+    position: absolute;
+    right: 2%;
+  }
+  
+  /* 签名编辑css */
+  .autographyContent {
+    background-color: #F0F0F0;
+  }
+  
+  .autographyTop {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+  }
+  
+  #autographyInput {
+    width: 90%;
+    margin-top: 15px;
+    margin-left: 5%;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+  }
+  
