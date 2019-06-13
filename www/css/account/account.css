@@ -1,6 +1,56 @@
 /**
 *我的 页面样式代码
 */
+/* 头部标题大小 */
+.platform-android .bar .title{
+  font-size: 16px;
+}
+.bar .title {
+  font-size: 16px;
+}
+/* 男女小div */
+.sexAgeBtnBoy{
+  width:28px;
+  height:16px;
+  position: relative;
+  border-radius: 3px;
+  background-color: #46A3FF;
+}
+.sexAgeBtnGirl{
+  width:28px;
+  height:16px;
+  position: relative;
+  border-radius: 3px;
+  background-color: #FF0080;
+}
+.sexAgeBtnBoy i{
+  font-size: 8px;
+  color: white;
+  position: absolute;
+  top:-1px;
+  left: 4px;
+}
+.sexAgeBtnGirl i{
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top:-2px;
+  left: 4px;
+}
+.sexAgeBtnBoy p{
+  color: white;
+  right: 4px;
+  top:-2px;
+  font-size: 8px;
+  position: absolute;
+}
+.sexAgeBtnGirl p{
+  color: white;
+  right: 5px;
+  top:-2px;
+  font-size: 10px;
+  position: absolute;
+}
 #account ion-header-bar {
   margin: 0;
   padding: 0;
@@ -18,12 +68,9 @@
   overflow: scroll;
 }
 
-#account .icon {
-  font-size: 25px;
-  color: black;
-}
-#account .icon{
+#account #headerBar .icon{
   color:white;
+  font-size: 24px;
 }
 /* 登录区域 */
 #account .headerBar {
@@ -40,7 +87,7 @@
   width: 100%;
   height: 170px;
   opacity: 75%;
-  background: url("../../img/account/1.png") no-repeat;
+  background: url("../../img/account/20.jpg") no-repeat;
   background-size: cover;
 }
 #account .header img{
@@ -113,7 +160,7 @@
 /* 关注人数 */
 #account #headerDownLeft .left{
   float: left;
-  top: 12px;
+  top: 14px;
   left: 20%;
   font-size: 18px;
   color:greenyellow;
@@ -122,7 +169,7 @@
 /* 关注 */
 #account #headerDownLeft .right{
   float: left;
-  top: 12px;
+  top: 14px;
   left: 25%;
   color:rgb(54, 51, 51);
   position: absolute;
@@ -130,7 +177,7 @@
 /* 粉丝人数 */
 #account #headerDownRight .left{
   float: left;
-  top: 12px;
+  top: 14px;
   right: 28%;
   font-size: 18px;
   color:greenyellow;
@@ -139,7 +186,7 @@
 /* 粉丝 */
 #account #headerDownRight .right{
   float: left;
-  top: 12px;
+  top: 14px;
   right: 18%;
   color:rgb(54, 51, 51);
   position: absolute;
@@ -158,7 +205,7 @@
   float: left;
   background-color: rgb(255, 255, 255);
 }
-.accountMain #myCollection-icon{
+.accountMain .myCollection-icon{
   width:15%;
   height:50px;
   color:orange;
@@ -167,7 +214,25 @@
   padding-top:10px;
   float: left;
 }
-.accountMain #myCollection{
+.accountMain .myCollection-icon1{
+  width:15%;
+  height:50px;
+  color:#84C1FF;
+  font-size: 30px;
+  text-align: center;
+  padding-top:10px;
+  float: left;
+}
+.accountMain .myCollection-icon2{
+  width:15%;
+  height:50px;
+  color:#FF5151;
+  font-size: 30px;
+  text-align: center;
+  padding-top:10px;
+  float: left;
+}
+.accountMain .myCollection{
   width:85%;
   height:50px;
   font-size: 16px;
@@ -181,11 +246,12 @@
   float: left;
   color:black;
 }
-.accountMain #collection-icon{
+.accountMain .collection-icon{
   width:60%;
   height:50px;
   padding-left:50%;
   float: left;
+  font-size: 24px;
   color:#BEBEBE;
 }
 #accountDown{
@@ -194,7 +260,7 @@
   margin-top: 15px;
   background-color: white;
 }
-#myCollection-moon{
+.myCollection-moon{
   width:15%;
   height:50px;
   text-align: center;
@@ -213,4 +279,8 @@
   width:45%;
   height:50px;
   float: left;
+}
+.myCollectionToggle{
+  height:50px;
+  border:none;
 }

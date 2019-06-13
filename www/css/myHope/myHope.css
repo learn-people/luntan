@@ -1,0 +1,35 @@
+/* 愿望单css */
+
+.myHopePart{
+    width:100%;
+    background-color: antiquewhite;
+}
+.myHopeImg{
+    width:60px;
+    height:60px;
+}
+.myHopePart1{
+    float: left;
+    margin-left: 2%;
+}
+.myHopeName{
+    float: left;
+    height:60px;
+    width:40%;
+    margin-left: 2%;
+}
+.myHopeName p{
+    padding-top:5px;
+}
+.gameDate{
+    height:100%;
+    float: left;
+    padding-top: 20px;
+}
+.gameDetail{
+    right: 2%;
+    height: 100%;
+    float: left;
+    margin-top:20px;
+    position: absolute;
+}

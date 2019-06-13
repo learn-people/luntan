@@ -1,7 +1,7 @@
 /* 
  *项目的启动模块，实现依赖其他各主要模块，保留官方模板的run函数
 */
-angular.module('starter', ['ionic','route','config'])
+angular.module('starter', ['ionic','route','config','ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

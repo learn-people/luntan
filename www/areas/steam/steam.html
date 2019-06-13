@@ -1,4 +1,12 @@
 <!-- steam -->
-<ion-view>
+<!-- <ion-view>
     <h1>hello {{test}}</h1>
+</ion-view> -->
+<ion-view view-title="拍照demo" id="steam">
+        <ion-content>
+          <button ng-click="openImagePicker()">点击拍照</button>
+          <div>
+            <img ng-repeat="item in imgList " ng-src="{{item}}">
+          </div>
+        </ion-content>
 </ion-view>

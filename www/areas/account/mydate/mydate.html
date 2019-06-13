@@ -1,12 +1,12 @@
 <!-- 资料详情界面 -->
 
 <ion-view id="mydate" view-title="资料详情" cache-view="false">
-  <ion-header-bar class="bar-positive" align-title="center">
-    <a class="icon ion-chevron-left signinBar" ng-click="goBack()"></a>
+  <ion-header-bar class="bar-dark" align-title="center">
+    <a class="icon ion-ios-arrow-left mydateBar" ng-click="goBack()" ng-href="#/tab/account"></a>
     <p class="title">个人信息</p>
     <a class="icon ion-ios-compose-outline mydateEdit" ng-href="#/mydateEdit"></a>
   </ion-header-bar>
-  <ion-content scroll="false">
+  <ion-content scroll="false" id="mydateContent">
     <div class="mydateAll">
       <div class="mydateTop">
         <div class="mydateINLA">
@@ -16,10 +16,10 @@
           <div class="INLAContain">
             <p class="mydateName">hhh</p>
             <div class="mydateBaseInfo">
-              <div class="mydateLevle ">lv{{test}}</div>
-              <div class="mydateSA">
-                <i class="icon ion-male mydateMale"></i>
-                <p class="mydateAge">{{test1}}</p>
+              <div class="mydateLevle ">LV{{test}}</div>
+              <div class="sexAgeBtnGirl mydateSAB">
+                <i class="icon ion-male"></i>
+                <p>{{test1}}</p>
               </div>
             </div>
           </div>
@@ -37,31 +37,31 @@
         </div>
 
         <div class="myAll">
-          <a class="mydatePart" ng-href="#/tab/account">
+          <a class="mydatePart" ng-href="#/myPost">
             <div class="mydatePartA">
               <p id="myAll1">{{test1}}</p>
               <p class="myAllName">帖子</p>
             </div>
           </a>
-          <a class="mydatePart" ng-href="#/">
+          <a class="mydatePart" ng-href="#/myReply">
             <div class="mydatePartA">
               <p id="myAll2">{{test1}}</p>
               <p class="myAllName">回复</p>
             </div>
           </a>
-          <a class="mydatePart" ng-href="#/">
+          <a class="mydatePart" ng-href="#/follow">
             <div class="mydatePartA">
               <p id="myAll3">{{test1}}</p>
               <p class="myAllName">关注</p>
             </div>
           </a>
-          <a class="mydatePart" ng-href="#/">
+          <a class="mydatePart" ng-href="#/fans">
             <div class="mydatePartA">
               <p id="myAll4">{{test1}}</p>
               <p class="myAllName">粉丝</p>
             </div>
           </a>
-          <a class="mydatePart" ng-href="#/">
+          <a class="mydatePart" ng-href="#/myCollection">
             <div class="mydatePartA">
               <p id="myAll5">{{test1}}</p>
               <p class="myAllName">收藏</p>
@@ -100,4 +100,14 @@
       </div>
     </div>
   </ion-content>
+  
+  <ion-footer-bar id="mydateFooter">
+    <div class="mydateDownBtnL1 button" id="mydateFooterL"ng-click="mydateAdd()">
+      <i class="icon ion-android-person" id="mydateDownBtnLI">已关注</i>
+    </div>
+    <div class="mydateDownBtnR button " ng-click="showConfirm1()">
+      <i class="icon icon ion-nuclear">举报</i>
+    </div>
+  </ion-footer-bar>
+  
 </ion-view>

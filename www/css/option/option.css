@@ -3,7 +3,8 @@
 .optionBar{
     padding-top:1%;
     padding-left: 1%;
-    color:white;
+    font-size: 30px;
+    color:#ADADAD;
     border-radius: 2px;
 }
 .setting-name{
@@ -20,6 +21,7 @@
 }
 .right-color{
     color:#ADADAD;
+    font-size: 24px;
 }
 .option-btn{
     width:100%;

@@ -14,7 +14,7 @@
         </span>
       </a>
       <div class="btn-signIn">
-        <a class="icon ion-email" ng-href="#/tab/massage" id="accountMassageBtn" style="margin-left: 5%"></a>
+        <a class="icon ion-email" ng-href="#/tab/massage" id="accountMassageBtn"></a>
       </div>
       <div class="header-down">
         <a id="headerDownLeft" ng-href="#/follow">
@@ -37,43 +37,43 @@
   <div class="accountMain">
 
     <a class="accountMain1" ng-href="#/myPost">
-      <div id="myCollection-icon" class="icon ion-ios-paper"></div>
-      <div id="myCollection">
+      <div class="icon ion-ios-paper myCollection-icon"></div>
+      <div class="myCollection">
         <div class="collectionName">我的帖子</div>
-        <div class="icon ion-chevron-right" id="collection-icon"></div>
+        <div class="icon ion-ios-arrow-right collection-icon"></div>
       </div>
     </a>
 
     <a class="accountMain1" ng-href="#/myReply">
-      <div id="myCollection-icon" class="icon ion-android-textsms" style="color: #84C1FF"></div>
-      <div id="myCollection">
+      <div class="icon ion-android-textsms myCollection-icon1"></div>
+      <div class="myCollection">
         <div class="collectionName">我的回复</div>
-        <div class="icon ion-chevron-right" id="collection-icon"></div>
+        <div class="icon ion-ios-arrow-right collection-icon"></div>
       </div>
     </a>
 
-    <a class="accountMain1" ng-href="#/tab/steam">
-      <div id="myCollection-icon" class="icon ion-android-favorite" style="color: #FF5151"></div>
-      <div id="myCollection">
+    <a class="accountMain1" ng-href="#/myHope">
+      <div class="icon ion-android-favorite myCollection-icon2"></div>
+      <div class="myCollection">
         <div class="collectionName">我的愿望单</div>
-        <div class="icon ion-chevron-right" id="collection-icon"></div>
+        <div class="icon ion-ios-arrow-right collection-icon"></div>
       </div>
     </a>
     
     <a class="accountMain1" ng-href="#/myCollection">
-      <div id="myCollection-icon" class="icon ion-android-star"></div>
-      <div id="myCollection" style="border-bottom: none">
+      <div class="icon ion-android-star myCollection-icon"></div>
+      <div class="myCollection" style="border-bottom: none">
         <div class="collectionName">我的收藏</div>
-        <div class="icon ion-chevron-right" id="collection-icon"></div>
+        <div class="icon ion-ios-arrow-right collection-icon"></div>
       </div>
     </a>
   </div>
 
   <div id="accountDown">
-    <div class="icon ion-ios-moon" id="myCollection-moon" style="color:#B15BFF;font-size:50px"></div>
-    <div id="myCollection">
+    <div class="icon ion-ios-moon myCollection-moon"></div>
+    <div class="myCollection">
       <div id="moon">夜间模式</div>
-      <ion-toggle ng-change="" toggle-class="toggle-balanced" style="height:50px;border:none;"></ion-toggle>
+      <ion-toggle toggle-class="toggle-balanced" class="myCollectionToggle"></ion-toggle>
     </div>
   </div>
 </ion-view>
