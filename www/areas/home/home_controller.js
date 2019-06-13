@@ -12,12 +12,55 @@ app.controller('HomeController',function($scope,$window){
 
         if(buttonClasses.indexOf(iconName + '-outline') > 0){
             buttonClasses = buttonClasses.replace('-outline','');
-            colorStyle = colorStyle.style.color = 'red';    
+            colorStyle = colorStyle.style.color = 'red';   
+            sessionStorage.setItem("praise","1"); 
         }else{
             buttonClasses = buttonClasses.replace(iconName,iconName + '-outline');
+            sessionStorage.setItem("praise","0");
         }
         $event.currentTarget.className = buttonClasses;
     }
+    
+
+    /* 导航设置 */ 
+    $("#navigation-nav-1-img").click(function () { 
+        $('.navigation-xian').animate({left:'2%'},600);
+        $('.navigation-xian').css('background-color', 'rgb(226, 116, 43)');
+        
+        $("#function-content2").css("display","block");
+        $("#function-content3").css("display","none");
+        $("#function-content4").css("display","none");
+        $("#function-content5").css("display","none");
+
+    });
+    $("#navigation-nav-2-img").click(function () { 
+        $('.navigation-xian').animate({left:'27%'},600);
+        $('.navigation-xian').css('background-color', 'blueviolet');
+        
+        $("#function-content3").css("display","block");
+        $("#function-content2").css("display","none");
+        $("#function-content4").css("display","none");
+        $("#function-content5").css("display","none");
+    });
+    $("#navigation-nav-3-img").click(function () { 
+        $('.navigation-xian').animate({left:'52%'},600);
+        $('.navigation-xian').css('background-color','rgb(226, 43, 43)');
+        
+        $("#function-content4").css("display","block");
+        $("#function-content3").css("display","none");
+        $("#function-content2").css("display","none");
+        $("#function-content5").css("display","none");
+    });
+    $("#navigation-nav-4-img").click(function () { 
+        $('.navigation-xian').animate({left:'77%'},600);
+        $('.navigation-xian').css('background-color','blueviolet');
+        
+        $("#function-content5").css("display","block");
+        $("#function-content4").css("display","none");
+        $("#function-content3").css("display","none");
+        $("#function-content2").css("display","none");
+    });
+
 })
 
 app.directive('focusInput', ['$ionicScrollDelegate', '$window', '$timeout', '$ionicPosition', function ($ionicScrollDelegate, $window, $timeout, $ionicPosition) {

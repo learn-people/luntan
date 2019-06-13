@@ -1,13 +1,13 @@
 a{
   text-decoration:none;
 }
-#detail .button{
+.button{
   min-height:28px;
   line-height:28px;
   font-size:16px;
   margin-top:10px;
 }
-#detail .icon{
+.icon{
   font-size:14px;
   line-height:0;
 }
