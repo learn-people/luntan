@@ -6,7 +6,7 @@ angular.module('register.service',['config'])
     return{
         getData:function(temp){
         //定义访问后台的接口
-        var url = configService.getHostUrl() + '/user/select.do?callback=JSON_CALLBACK';
+        var url = configService.getHostUrl() + '/user/select.json?callback=JSON_CALLBACK';
         // $http({
         //     method:jsonp,//就是请求方式get、post等
         //     url:url ,//向服务器请求的地址

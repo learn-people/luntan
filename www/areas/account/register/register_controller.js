@@ -15,14 +15,12 @@ angular.module('register.controller',['register.service'])
     }
     $scope.name = "hh"
 
-    console.log(str)
-
     $scope.subdate = function(){
         //var sex = $('input:radio[name="sex"]:checked').val();
         //str += ",sex:"+sex+'}'
         //console.log(str)
         //console.log(zz)
-        //RegisterService.getData(zz);
+        RegisterService.getData(str);
     }
 
     //RegisterService.
