@@ -2,7 +2,8 @@
  * 我的的子路由模块
 */
 
-angular.module('account.route',['account.controller','follow.controller','mydate.controller'])
+angular.module('account.route',['account.controller','follow.controller',
+'mydate.controller','register.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -37,13 +38,13 @@ angular.module('account.route',['account.controller','follow.controller','mydate
     .state('register',{
       url:'/register',
       templateUrl:'areas/account/register/register.html',
-      controller:'AccountController'
+      controller:'RegisterController'
     })
     //注册详情界面路由
     .state('registerDetail',{
       url:'/registerDetail',
       templateUrl:'areas/account/register/registerDetail.html',
-      controller:'AccountController'
+      controller:'RegisterController'
     })
     //我的关注界面路由
     .state('follow',{

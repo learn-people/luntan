@@ -6,7 +6,7 @@
     padding-top:10%;
     padding-left: 85%;
 }
-#registerNamer,#registerPw{
+#registerNm,#registerPw{
     width:80%;
     height:50px;
     margin-left: 10%;
@@ -72,7 +72,7 @@
     right: 1%;
 }
 /* 性别 */
-.infoSex{
+#infoSex{
     right:1%;
     top:75px;
     position: absolute;

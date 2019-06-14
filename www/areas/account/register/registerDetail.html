@@ -15,16 +15,16 @@
       </div>
       <div class="infoPart">
         <p>性别</p>
-        <div class="infoSex">
-          <input type="radio" name="sex" value="male" checked>男
-          <input type="radio" name="sex" value="female">女
+        <div id="infoSex">
+          <input type="radio" name="sex" value="男" checked>男
+          <input type="radio" name="sex" value="女">女
         </div>
       </div>
       <div class="infoPart">
         <p>生日</p>
         <input type="date" name="" id="infoDate">
       </div>
-      <a class="button button-balanced infoBtn" ng-href="#/tab/account">完成</a>
+      <a class="button button-balanced infoBtn" ng-click="subdate()">完成</a>
     </div>
   </form>
 </ion-view>
