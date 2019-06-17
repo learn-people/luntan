@@ -11,13 +11,13 @@ angular.module('massage.controller',[])
     $scope.showPopup = function () {
         var myPopup = $ionicPopup.show({
             titleText: '输入回复内容',
-            subTitle: '回复',
-            template: '<input type="password" ng-model="data.psw">',
+            subTitle: '信息',
+            template: '<div><i style="width:80%,height:150px,background-color:yellow,font-size:30px">123</i><input type="password" ng-model="data.psw"></div>',
             scope: $scope,          // 关联作用域对象
             buttons: [
                 { text: '取消' },
                 {
-                    text: '发送',
+                    text: '回复',
                     type: 'button-positive',
                     onTap: function (e) {
                         console.log($scope.data.psw)
