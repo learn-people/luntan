@@ -9,7 +9,9 @@ angular.module('guidePage.service',[])
     getData:function(callback){
       //定义访问后台的接口
       var url = configService.getHostUrl() + '/guidePage/get?callback=JSON_CALLBACK';
-      $http.jsonp(url)
+      $http.jsonp(url,{
+        
+      })
       .success(function(data){
         console.log(data);
         //将数据回调

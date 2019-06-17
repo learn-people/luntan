@@ -3,6 +3,12 @@
 .myCollectionContent{
     background-color: #bebebe;
 }
+.myCollectonBar{
+    font-size: 30px;
+    color:white;
+    padding-left: 1%;
+    padding-top:3px;
+}
 .myCollectionPart{
     width:98%;
     margin-left: 1%;
