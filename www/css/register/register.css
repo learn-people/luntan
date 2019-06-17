@@ -6,6 +6,13 @@
     padding-top:10%;
     padding-left: 85%;
 }
+
+#register .error{
+    color: red;
+    font-size: 16px;
+    margin: 5px 0 5px 40px;
+} 
+
 #registerNm,#registerPw{
     width:80%;
     height:50px;

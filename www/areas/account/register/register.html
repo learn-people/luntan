@@ -10,13 +10,33 @@
       <img ng-src="img/signin/steam.png">
       <div class="signin-name">steam</div>
     </div>
-    <div>
-      <input type="text" placeholder="请输入账号" id="registerNm">
-      <input type="text" placeholder="请输入密码" id="registerPw">
-      <a class="button button-balanced registerBtn" ng-click="see()" ng-href="#/registerDetail">
-        注册
-      </a>
-    </div>
+    <form name="registerForm">
+      <div>
+        <!-- 账号输入设置框 -->
+        <div>
+          <!-- 设置账号必须是3-11位的数字 -->
+          <input type="number" id="registerNm" name="registerNm" ng-model="$parent.registerNm" 
+                 ng-minlength="3" ng-maxlength="11" ensure-unique="registerNm" required placeholder="请输入要注册的账号" >
+          <!-- 验证账号的可用性 -->
+          <div class="error">
+            <div ng-show="registerForm.registerNm.$error.minlength">
+              账号长度不能小于3位
+            </div>
+            <div ng-show="registerForm.registerNm.$error.maxlength">
+              账号长度不能大于11位
+            </div>
+            <div ng-show="registerForm.registerNm.$error.unique">
+              用户名已被注册
+            </div>
+          </div>
+        </div>
+        <!-- 密码输入设置框 -->
+        <div>
+          <input type="password" placeholder="请输入密码" ng-model="$parent.registerPw" id="registerPw" required>
+        </div>   
+      </div>
+      <a onclick="see()" ng-href="#/registerDetail"><input type="submit" class="button button-balanced registerBtn" click="see()" ng-disabled="registerForm.$invalid" ng-href="#/registerDetail" value="注册" /></a>
+    </form>
   </div>
 
 </ion-view>
