@@ -1,7 +1,7 @@
 /**
  * 首页控制器模块
  */
-var app = angular.module('home.controller',[]);
+var app = angular.module('home.controller',['ionic']);
 
 app.controller('HomeController',function($scope,$window){
 

@@ -11,11 +11,9 @@ angular.module('account.controller',[])
   $scope.year = 19
   $scope.month = 6
   $scope.day = 10
-
   $(function (){
     //获取手机屏幕高度 
    // var phoneHeight = window.screen.availHeight;
-   
     //我的帖子 获取宽度并设置图片大小
     var myPostWidth = $(".myPostPartMiddleImg").innerWidth();
     var myPostImgWidth = (myPostWidth*0.9)/4;

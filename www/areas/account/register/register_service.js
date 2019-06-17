@@ -4,9 +4,10 @@ angular.module('register.service',['config'])
 
 .factory('RegisterService',function($http,configService){
     return{
-        getData:function(temp){
+        getData:function(temp,callback){
         //定义访问后台的接口
-        var url = configService.getHostUrl() + '/user/select.do?callback=JSON_CALLBACK';
+        //$scope.state = 0;
+        var url = configService.getHostUrl() + '/user/register.json?callback=JSON_CALLBACK';
         // $http({
         //     method:jsonp,//就是请求方式get、post等
         //     url:url ,//向服务器请求的地址
@@ -25,14 +26,16 @@ angular.module('register.service',['config'])
         // ).error()
         $http.jsonp(url,{
             //method:get,
-            params:{"name":temp},
+            params:{"data":temp},
+            //data:temp,
             cache:false,
             contentType:"application/json"
         })
         .success(function(data){
-          console.log(data);
+          //console.log(data);
+          //$scope.state = data;
           //将数据回调
-          //callback(data);
+          callback(data);
         })
    }
 }
