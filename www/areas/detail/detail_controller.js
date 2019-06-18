@@ -33,13 +33,13 @@ angular.module('detail.controller', [])
             }else{
                 $("#comment-like").removeClass("icon-like");
                 $("#comment-like").addClass("icon-like-outline");
-               
             }
         $("#comment-like").click(function () {
             if (flag == 1) {
                 $("#comment-like").removeClass("icon-like-outline");
                 $("#comment-like").addClass("icon-like");
                 flag = 0;
+                sessionStorage.setItem("hom","1");
             }else{
                 $("#comment-like").removeClass("icon-like");
                 $("#comment-like").addClass("icon-like-outline")

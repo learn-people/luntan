@@ -3,7 +3,17 @@
  */
 var app = angular.module('home.controller',[]);
 
-app.controller('HomeController',function($scope,$window){
+app.controller('HomeController',function($scope,$window, $location, $anchorScroll){
+
+    var hom = sessionStorage.getItem("hom");
+    if (hom == 1) {
+        $("#like").removeClass("icon-like-outline");
+        $("#like").addClass("icon-like");
+        hom = 0; 
+    }else{
+        $("#like").removeClass("icon-like");
+        $("#like").addClass("icon-like-outline");
+    }
 
     /* 点赞设置 */
     $scope.clickIcon = function($event,iconName){   
@@ -21,6 +31,7 @@ app.controller('HomeController',function($scope,$window){
         $event.currentTarget.className = buttonClasses;
     }
     
+   
 
     /* 导航设置 */ 
     $("#navigation-nav-1-img").click(function () { 
