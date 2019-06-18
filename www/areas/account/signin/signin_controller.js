@@ -30,8 +30,10 @@ angular.module('signin.controller',['signin.service'])
     }else{
     //获取登录框中的数据，并传给后台
     var data = {"userNumber":userNumber,"userPassword":userPassword};
-    SigninService.getData(data,function(userDate1){
-      $rootScope.userDate = userDate1;
+    SigninService.getData(data,function(userDate){
+      //session.setAttribute("userDate",userDate);
+      $rootScope.userDate = userDate;
+      console.log(userDate)
       if($rootScope.userDate == null){
         //提示账号或密码错误
         var failtext = '<div class="loginBody">'
@@ -49,16 +51,24 @@ angular.module('signin.controller',['signin.service'])
           }, 1000);
       }else{
         $location.path("/tab/account")
-        sessionStorage.setItem("UserAccount",$rootScope.userDate.userPassword)
-        //sessionStorage.setItem("nickName",$rootScope.userDate.nickName)
-        sessionStorage.setItem("userNumber",$rootScope.userDate.userNumber)
-        $scope.nickName = sessionStorage.getItem('UserAccount')
-        //$scope.userUrl = sessionStorage.getItem('userUrl')
-        $scope.account = sessionStorage.getItem('account')
-        $("#login").text($rootScope.userDate.userName)
-        console.log($rootScope.userDate.userName)
+        //设置session状态
+        localStorage.setItem("userNumber",userDate.userNumber)
+        //console.log(localStorage.getItem("userNumber"))
+        localStorage.setItem("userPassword",userDate.userPassword)
+        localStorage.setItem("userName",userDate.userName)
+        localStorage.setItem("imgUrl",userDate.imgUrl)
+        localStorage.setItem("grade",userDate.grade)
+        localStorage.setItem("exp",userDate.exp)
+        localStorage.setItem("jurisdiction",userDate.jurisdiction)
+        localStorage.setItem("fansNum",userDate.fansNum)
+        localStorage.setItem("followsNum",userDate.followsNum)
+        localStorage.setItem("postsNum",userDate.postsNum)
+        
+        //改变登录状态
+        localStorage.setItem("statue",1)
+        //console.log(localStorage.getItem("statue"))
+
       }
-      console.log($rootScope.userDate)
     });
   }
   }

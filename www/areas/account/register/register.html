@@ -16,7 +16,7 @@
         <div>
           <!-- 设置账号必须是3-11位的数字 -->
           <input type="number" id="registerNm" name="registerNm" ng-model="$parent.registerNm" 
-                 ng-minlength="3" ng-maxlength="11" ensure-unique="registerNm" required placeholder="请输入要注册的账号" >
+                 ng-minlength="3" ng-maxlength="11" ensure-unique="registerNm" required placeholder="请输入账号" >
           <!-- 验证账号的可用性 -->
           <div class="error">
             <div ng-show="registerForm.registerNm.$error.minlength">

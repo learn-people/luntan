@@ -8,7 +8,7 @@ angular.module('guidePage.service',[])
     //获取引导页数据
     getData:function(callback){
       //定义访问后台的接口
-      var url = configService.getHostUrl() + '/guidePage/get?callback=JSON_CALLBACK';
+      var url = '127.0.0.1:8080/MallWeb/guidePage/get?callback=JSON_CALLBACK';
       $http.jsonp(url,{
         
       })

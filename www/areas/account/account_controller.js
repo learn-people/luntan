@@ -7,11 +7,31 @@ angular.module('account.controller',[])
 .controller('AccountController',function($scope,$timeout,$ionicHistory){
   $scope.test = 0
   $scope.test1 = 1
-  $scope.userName = "hhh"
+  //$scope.userName = "hhh"
   $scope.year = 19
   $scope.month = 6
   $scope.day = 10
+  //$scope.imgUrl = "img/account/login.png"
+  //获得登录信息
+  var statue = localStorage.getItem('statue')
+  var userName = localStorage.getItem('userName')
+  var imgUrl = localStorage.getItem('imgUrl')
+  $scope.fansNum = localStorage.getItem('fansNum')
+  $scope.followsNum = localStorage.getItem('followsNum')
+  //console.log(userName)
   $(function (){
+    //判断登录状态
+    $('mydateFooter').addClass('hidden');
+    if(statue == 0){
+      $("#loginUserName").text("登录/注册");
+      $scope.imgUrl = imgUrl;
+      $scope.accountUrl = "#/signin"
+    }else{
+      $("#loginUserName").text(userName);
+      $scope.imgUrl =imgUrl;
+      $scope.accountUrl = "#/mydate"
+      $('mydateFooter').addClass('hidden');
+    }
     //获取手机屏幕高度 
    // var phoneHeight = window.screen.availHeight;
     //我的帖子 获取宽度并设置图片大小
