@@ -1,26 +1,25 @@
 <!-- 资料编辑界面 -->
 
 <ion-view id="mydateEdit">
-  <ion-header-bar class="bar-positive" align-title="center">
-    <a class="icon ion-chevron-left signinBar" ng-href="#/mydate"></a>
+  <ion-header-bar class="bar-dark" align-title="center">
+    <a class="icon ion-ios-arrow-back signinBar" ng-href="#/mydate"></a>
     <p class="title">编辑资料</p>
-    <a class="mydateEdithead" ng-href="#/">保存</a>
+    <a class="mydateEdithead" ng-click="HH()">保存</a>
   </ion-header-bar>
   <ion-content>
     <div >
       <div class="editTop">
         <p>图片{{test1}}/8</p>
         <div class="editPhoto">
-          <img src="img/account/2.png" class="editImg" />
-          <a id="editAddPhoto" onclick="changeEditAddBtnBg(this)">
-            <i class="icon ion-plus-round"></i>
-          </a>
+          <img ng-src="img/account/2.png" class="editImg" />
+          <button class="button icon ion-plus editAddPhoto button-light button-large"></button>
+          
         </div>
       </div>
 
       <div class="editMiddle">
         <p class="editFont">基本资料</p>
-        <div class="editMiddle1">
+        <div class="editMiddle1" ng-click="editName()">
           <p class="editMiddle1Name">昵称</p>
           <p class="mydateEditUserName">hhh</p>
         </div>

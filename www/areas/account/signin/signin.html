@@ -15,16 +15,16 @@
       </div>
 
       <div class="signin-input">
-        <label class="item item-input" id="userName">
-          <input type="text" placeholder="请输入账号">
+        <label class="item item-input userNumber" >
+          <input type="text" placeholder="请输入账号" id="userNumber">
         </label>
-        <label class="item item-input" id="userPw">
-          <input type="password" placeholder="请输入密码">
+        <label class="item item-input userPw" >
+          <input type="password" placeholder="请输入密码" id="userPw">
         </label>
       </div>
 
       <div class="signin-button">
-        <button id="signin-button-up" class="button button-balanced">登录</button>
+        <button id="signin-button-up" class="button button-balanced" ng-click="login()">登录</button>
         <a id="signin-button-down" class="button button-calm" ng-href="#/register">注册</a>
       </div>
     </div>

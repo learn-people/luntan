@@ -9,6 +9,7 @@
     top: 12px;
     right: 5%;
     margin: 0;
+    text-decoration: none;
   }
   
   /* 编辑资料头部 */
@@ -40,17 +41,12 @@
     border-radius: 5px;
   }
   
-  .editTop #editAddPhoto {
+  .editTop .editAddPhoto {
     width: 80px;
     height: 80px;
-    float: left;
-    font-size: 50px;
-    border: 1px dashed #D3D3D3;
-    text-align: center;
-    padding-top: 15px;
     margin-left: 10px;
+    border: 1px solid ;
     margin-top: -5px;
-    border-radius: 5px;
   }
   
   /* 基本资料 */

@@ -1,8 +1,8 @@
-// 注册界面服务
+// 资料编辑界面service
 
-angular.module('register.service',['config'])
+angular.module('mydateEdit.service',['config'])
 
-.factory('RegisterService',function($http,configService){
+.factory('MydateEditService',function($http,configService){
     return{
         getData:function(temp,callback){
         //定义访问后台的接口

@@ -8,6 +8,7 @@
 .myPostPart{
     width:100%;
     color:black;
+    text-decoration: none;
     border-bottom: 1px solid #D0D0D0;
 }
 .myPostPart .myPostPartTop{

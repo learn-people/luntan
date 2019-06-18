@@ -7,10 +7,10 @@
       <div class="btn-setting">
         <a class="icon ion-gear-b" ng-href="#/option" id="accountSettingBtn"></a>
       </div>
-      <a class="btn-login" ng-href="#/signin">
+      <a class="btn-login" ng-href="{{accountUrl}}">
         <span>
-          <img ng-src="img/account/login.png">
-          <p id="login">登录/注册</p>
+          <img ng-src='{{imgUrl}}'>
+          <p id="loginUserName">登录/注册</p>
         </span>
       </a>
       <div class="btn-signIn">
@@ -19,13 +19,13 @@
       <div class="header-down">
         <a id="headerDownLeft" ng-href="#/follow">
           <span>
-            <div class="left">{{test}}</div>
+            <div class="left">{{followsNum}}</div>
             <div class="right">关注</div>
           </span>
         </a>
         <a id="headerDownRight" ng-href="#/fans">
           <span>
-            <div class="left">{{test1}}</div>
+            <div class="left">{{fansNum}}</div>
             <div class="right">粉丝</div>
           </span>
         </a>

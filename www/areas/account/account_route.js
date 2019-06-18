@@ -3,7 +3,7 @@
 */
 
 angular.module('account.route',['account.controller','follow.controller',
-'mydate.controller','register.controller'])
+'mydate.controller','register.controller','signin.controller','mydateEdit.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -20,7 +20,7 @@ angular.module('account.route',['account.controller','follow.controller',
     .state('signin',{
       url:'/signin',
       templateUrl:'areas/account/signin/signin.html',
-      controller:'AccountController'
+      controller:'SigninController'
     })
     //设置的路由
     .state('option',{
@@ -68,7 +68,7 @@ angular.module('account.route',['account.controller','follow.controller',
     .state('mydateEdit',{
       url:'/mydateEdit',
       templateUrl:'areas/account/mydateEdit/mydateEdit.html',
-      controller:'AccountController'
+      controller:'MydateEditController'
     })
     //编辑签名界面路由
     .state('autography',{
