@@ -52,6 +52,8 @@ angular.module('signin.controller',['signin.service'])
       }else{
         $location.path("/tab/account")
         //设置session状态
+        localStorage.setItem("id",userDate.id)
+        //console.log(localStorage.getItem("id"))
         localStorage.setItem("userNumber",userDate.userNumber)
         //console.log(localStorage.getItem("userNumber"))
         localStorage.setItem("userPassword",userDate.userPassword)
