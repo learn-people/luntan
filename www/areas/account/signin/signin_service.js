@@ -22,7 +22,7 @@ angular.module('signin.service',[])
           console.log("账号或密码错误，请从新输入")
         }else{
           callback(data)
-          //console.log(data)
+         // console.log(data)
         }
       })
     }
