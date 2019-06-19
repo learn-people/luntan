@@ -7,7 +7,8 @@
     </div>
     <a class="headerBar-search"  ng-href="#">
       <span></span>
-      <div focus-input>
+      <div>
+        <input  maxlength="20" autocomplete="true" value=""/>
       </div>
     </a>
     <a class="headerBar-login" ng-href="#">
@@ -15,15 +16,11 @@
             签到
         </span>
     </a>
-  </div>
-
-  <ion-content id="home-content" class="scroll-content" scroll="false">
-
     <!-- 功能导航 -->
     <nav id="nav">
       <span ui-sref="tab.category" id="navigation-nav-1-img">
         <h2>分类查询</h2>
-        
+       
       </span>
       <span id="navigation-nav-2-img">
         <h2>物流查询</h2>
@@ -39,6 +36,11 @@
       </span>
       <hr class="navigation-xian">
     </nav>
+  </div>
+
+  <ion-content id="home-content" class="scroll-content" scroll="false">
+
+    
     <div>
       <div id="function-content2">
         <!-- 推荐贴子 -->

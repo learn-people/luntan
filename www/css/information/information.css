@@ -1,0 +1,35 @@
+#information a{
+  text-decoration:none;
+}
+#information .button{
+  min-height:28px;
+  line-height:28px;
+  font-size:16px;
+  margin-top:10px;
+}
+#information .icon{
+  font-size:14px;
+  line-height:0;
+}
+/* 对顶部的一些处理 */
+#information ion-header-bar {
+  background-color:#ffffff;
+  height:44px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  background-image: none;
+}
+
+#information ion-content{
+  background-color:#efefef;
+  overflow:scroll;
+}
+
+#information #headerBar a{
+  font-size:24px;
+  line-height: 44px;
+  margin-left:10px;
+  color:#696868;
+}

@@ -31,7 +31,7 @@ app.controller('HomeController',function($scope,$window, $location, $anchorScrol
         $event.currentTarget.className = buttonClasses;
     }
     
-   
+  
 
     /* 导航设置 */ 
     $("#navigation-nav-1-img").click(function () { 
