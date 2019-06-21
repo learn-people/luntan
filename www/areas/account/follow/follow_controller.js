@@ -1,11 +1,18 @@
-// 关注界面js
+// 关注界面控制器
 
-angular.module('follow.controller',[])
+angular.module('follow.controller',['follow.service'])
 
-.controller('FollowController',function($scope,$ionicPopup){
+.controller('FollowController',function($scope,$ionicPopup,FollowService){
     $scope.userName = "hh";
     var followBtn = 1;
     $scope.test = 12;
+    //获取登录的信息中的id,用于查询用户的关注列表以及粉丝列表
+    var userId = localStorage.getItem('id');
+    console.log(userId);
+    var data = {"userId":userId}
+    FollowService.getData(data,function(data){
+
+    })
     //点击关注/已关注按钮
     $scope.showConfirm = function() {
         followBtn = -1*followBtn;

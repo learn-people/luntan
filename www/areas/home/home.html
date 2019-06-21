@@ -7,7 +7,8 @@
     </div>
     <a class="headerBar-search"  ng-href="#">
       <span></span>
-      <div focus-input>
+      <div>
+        <input  maxlength="20" autocomplete="true" value=""/>
       </div>
     </a>
     <a class="headerBar-login" ng-href="#">
@@ -15,151 +16,77 @@
             签到
         </span>
     </a>
-  </div>
-
-  <ion-content id="home-content" class="scroll-content" scroll="false">
-
     <!-- 功能导航 -->
     <nav id="nav">
-      <span ui-sref="tab.category" id="navigation-nav-1-img">
-        <h2>分类查询</h2>
+      <span class="navigation-nav-1-img">
+        <h2>谈天说地</h2>
         
       </span>
-      <span id="navigation-nav-2-img">
-        <h2>物流查询</h2>
+      <span class="navigation-nav-2-img">
+        <h2>游戏资讯</h2>
         
       </span>
-      <span id="navigation-nav-3-img">
-        <h2>购物车</h2>
+      <span class="navigation-nav-3-img">
+        <h2>资源分享</h2>
        
       </span>
-      <span id="navigation-nav-4-img">
-        <h2>我的Mall</h2>
+      <span class="navigation-nav-4-img">
+        <h2>交易购物</h2>
        
       </span>
       <hr class="navigation-xian">
     </nav>
+  </div>
+
+  <ion-content id="home-content" class="scroll-content" scroll="false">
+
     <div>
-      <div id="function-content2">
-        <!-- 推荐贴子 -->
+      <!-- 谈天说地 -->
+      <div id="function-content2" ng-repeat="item in data">
         <!-- 点击事件跳转到贴子详情页 -->
-        <div class="post">
-          <a class="jump" ng-href="#/detail">
+        <div class="post" ng-click="jumpToDetail({{item.id}})">
+          <div class="jump">
             <!-- 贴纸的标题 -->
             <div class="title">
-              标题
+              <strong>{{item.postTitle}}</strong>
             </div>
             <!-- 贴子的内容 -->
             <div class="post-content">
-              <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+              <div class="content">{{item.postContent}}</div>
               <!-- 图片预留位 -->
-              <img src="img/home/home-headerSlide-1.jpg"/>
             </div>
             <!-- 贴子的作者及一些信息 -->
             <div class="auth">
-              <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
-              <span class="time">2019/5/1</span>&nbsp;
-              <span class="icon icon-eye">1</span>
+              <span class="name">{{item.userName}}</span>&nbsp;&nbsp;
+              <span class="time">{{item.postTime}}</span>&nbsp;&nbsp;
               <!-- 点赞和留言数 -->
               <div class="sign">
-                <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
-                <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
+                <!-- 观看 -->
+                <span class="icon icon-eye">1</span>&nbsp;
+                <!-- 留言 -->
+                <span class="icon icon-liuyan" >1</span>
+                <!-- <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a> -->
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
+      <!-- 游戏资讯 -->
       <div id="function-content3">
-        <div class="post">
-          <a class="jump" ng-href="#/detail">
-            <!-- 贴纸的标题 -->
-            <div class="title">
-              标题
-            </div>
-            <!-- 贴子的内容 -->
-            <div class="post-content">
-              <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
-              <!-- 图片预留位 -->
-              <img src="img/home/home-headerSlide-1.jpg"/>
-            </div>
-            <!-- 贴子的作者及一些信息 -->
-            <div class="auth">
-              <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
-              <span class="time">2019/5/1</span>&nbsp;
-              <span class="icon icon-eye">1</span>
-              <!-- 点赞和留言数 -->
-              <div class="sign">
-                <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
-                <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
-              </div>
-            </div>
-          </a>
-        </div>
+        
       </div>
+      <!-- 资源分享 -->
       <div id="function-content4">
-        <div class="post">
-          <a class="jump" ng-href="#/detail">
-            <!-- 贴纸的标题 -->
-            <div class="title">
-              标题
-            </div>
-            <!-- 贴子的内容 -->
-            <div class="post-content">
-              <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
-              <!-- 图片预留位 -->
-              <img src="img/home/home-headerSlide-1.jpg"/>
-            </div>
-            <!-- 贴子的作者及一些信息 -->
-            <div class="auth">
-              <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
-              <span class="time">2019/5/1</span>&nbsp;
-              <span class="icon icon-eye">1</span>
-              <!-- 点赞和留言数 -->
-              <div class="sign">
-                <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
-                <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
-              </div>
-            </div>
-          </a>
-        </div>
+        
       </div>
+      <!-- 交易购物 -->
       <div id="function-content5">
-        <div class="post">
-          <a class="jump" ng-href="#/detail">
-            <!-- 贴纸的标题 -->
-            <div class="title">
-              标题
-            </div>
-            <!-- 贴子的内容 -->
-            <div class="post-content">
-              <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
-              <!-- 图片预留位 -->
-              <img src="img/home/home-headerSlide-1.jpg"/>
-            </div>
-            <!-- 贴子的作者及一些信息 -->
-            <div class="auth">
-              <span class="icon icon-tubiaozhizuomoban">昵称</span>&nbsp;&nbsp;
-              <span class="time">2019/5/1</span>&nbsp;
-              <span class="icon icon-eye">1</span>
-              <!-- 点赞和留言数 -->
-              <div class="sign">
-                <span class="icon icon-liuyan" >1</span>&nbsp;&nbsp;
-                <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>
-              </div>
-            </div>
-          </a>
-        </div>
+        
       </div>
     </div>
-  
-
     
     <!--回到顶部的区块-->
     <div class="back_top" ></div>
   </ion-content>
-  
-
-
-  
 
 </ion-view>

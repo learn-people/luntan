@@ -2,8 +2,8 @@
  * 我的的子路由模块
 */
 
-angular.module('account.route',['account.controller','follow.controller',
-'mydate.controller','register.controller','signin.controller','mydateEdit.controller'])
+angular.module('account.route',['account.controller','follow.controller','fans.controller',
+  'mydate.controller','register.controller','signin.controller','mydateEdit.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -64,7 +64,7 @@ angular.module('account.route',['account.controller','follow.controller',
       url:'/fans',
       //cache:false,
       templateUrl:'areas/account/fans/fans.html',
-      controller:'AccountController'
+      controller:'FansController'
     })
     //资料详情界面路由
     .state('mydate',{
