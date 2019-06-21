@@ -33,3 +33,43 @@
   margin-left:10px;
   color:#696868;
 }
+
+/* 内容区 */
+#information .information-title{
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f0edc1
+}
+
+#information .information-content{
+  width: 100%;
+  height: 500px;
+  background-color: rgb(192, 224, 202);
+}
+
+/* 固定底边栏 */
+#information #comment-bar{
+  width:100%;
+  height:50px;
+  position: fixed;
+  bottom:0;
+  border-top:0.5px solid #d3cece;
+  background-color:#ffffff;
+}
+
+/* 图标功能区 */
+#information .commentRight{
+  width:25%;
+  height:50px;
+  float:left;
+  color:#696868;
+  text-align:center;
+  line-height:50px;
+}
+#information .commentRight a{
+  font-size: 30px;
+  height:20px;
+}

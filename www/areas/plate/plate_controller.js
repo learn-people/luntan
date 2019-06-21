@@ -8,4 +8,11 @@ angular.module('plate.controller',[])
   $scope.cartCount = {
     count:'0'             
   }
+
+
+  $("#content-theme-con-1").click(function () {
+    
+  })
+
+
 })
