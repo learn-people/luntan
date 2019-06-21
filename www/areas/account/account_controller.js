@@ -4,7 +4,7 @@
 
 angular.module('account.controller',[])
 
-.controller('AccountController',function($scope,$timeout,$ionicHistory){
+.controller('AccountController',function($scope,$timeout,$ionicHistory,$location){
   $scope.test = 0
   $scope.test1 = 1
   //$scope.userName = "hhh"
@@ -18,19 +18,25 @@ angular.module('account.controller',[])
   var imgUrl = localStorage.getItem('imgUrl')
   $scope.fansNum = localStorage.getItem('fansNum')
   $scope.followsNum = localStorage.getItem('followsNum')
-  //console.log(userName)
+  console.log(statue)
+  $scope.signOut = function(){
+    localStorage.setItem('statue',0);
+    localStorage.setItem('imgUrl',"img/account/login.png")
+    $location.path("/tab/account")
+  }
   $(function (){
     //判断登录状态
     $('mydateFooter').addClass('hidden');
-    if(statue == 0){
-      $("#loginUserName").text("登录/注册");
-      $scope.imgUrl = imgUrl;
-      $scope.accountUrl = "#/signin"
-    }else{
+    if(statue == 1){
       $("#loginUserName").text(userName);
       $scope.imgUrl =imgUrl;
       $scope.accountUrl = "#/mydate"
-      $('mydateFooter').addClass('hidden');
+      //$('mydateFooter').addClass('hidden');
+    }else{
+      $("#loginUserName").text("登录/注册");
+      $scope.imgUrl = imgUrl;
+      $scope.accountUrl = "#/signin"
+     
     }
     //获取手机屏幕高度 
    // var phoneHeight = window.screen.availHeight;

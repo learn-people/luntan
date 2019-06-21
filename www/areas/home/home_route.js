@@ -8,6 +8,7 @@ angular.module('home.route',['home.controller'])
   $stateProvider
     .state('tab.home',{
       url:'/home',
+      //cache:false,
       views:{           //配置导航标签页tab中的容器中的name属性
         'tab-home':{
           templateUrl:'areas/home/home.html',

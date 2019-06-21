@@ -10,7 +10,7 @@
     <div class="registerDetailInfo">
       <div class="infoPart">
         <p>头像</p>
-        <div class="icon ion-plus-circled addInfoIcon" ng-click="uploads('photo')"></div>
+        <div class="icon ion-plus-circled addInfoIcon" ng-click="func_getPicFromPicture()"></div>
         <input type="file" hidden  id="photo">
       </div>
       <div class="infoPart">
@@ -20,9 +20,9 @@
           <input type="radio" name="sex" value="女">女
         </div>
       </div>
-      <div class="infoPart">
+      <div class="infoPart" ng-click="registerBirthday()">
         <p>生日</p>
-        <input type="date" name="" id="infoDate">
+        <div id="infoDate">2019-06-21</div>
       </div>
       <a class="button button-balanced infoBtn" ng-click="subdate()">完成</a>
     </div>
