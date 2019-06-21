@@ -9,6 +9,7 @@ angular.module('guidePage.route',['guidePage.controller'])
   $stateProvider
   .state('guidePage',{
     url:'/guidePage',
+    //cache:false,
     //配置视图模板的相对路径，要以index.html为相对对象
     templateUrl:'areas/guidePage/guidePage.html',
     //配置控制器名称

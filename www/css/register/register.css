@@ -86,8 +86,9 @@
 }
 /* 出生日期 */
 #infoDate{
-    top:110px;
+    margin-top:25px;
     right:1%;
+    font-size: 16px;
     border:none;
     position:absolute;
 }

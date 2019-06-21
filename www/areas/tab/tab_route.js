@@ -8,6 +8,7 @@ angular.module('tab.route',['tab.controller'])
   $stateProvider
     .state('tab',{
       url:'/tab',
+      cache:false,
       abstract:true,
       templateUrl:'areas/tab/tab.html',
       controller:'TabController'

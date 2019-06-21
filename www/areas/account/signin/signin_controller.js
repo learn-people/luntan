@@ -52,8 +52,9 @@ angular.module('signin.controller',['signin.service'])
       }else{
         $location.path("/tab/account")
         //设置session状态
+        localStorage.setItem("id",userDate.id)
         localStorage.setItem("userNumber",userDate.userNumber)
-        //console.log(localStorage.getItem("userNumber"))
+        //console.log(localStorage.getItem("id"))
         localStorage.setItem("userPassword",userDate.userPassword)
         localStorage.setItem("userName",userDate.userName)
         localStorage.setItem("imgUrl",userDate.imgUrl)
@@ -63,7 +64,8 @@ angular.module('signin.controller',['signin.service'])
         localStorage.setItem("fansNum",userDate.fansNum)
         localStorage.setItem("followsNum",userDate.followsNum)
         localStorage.setItem("postsNum",userDate.postsNum)
-        
+        localStorage.setItem("sex",userDate.gender)
+        localStorage.setItem("birthday",userDate.birthday)
         //改变登录状态
         localStorage.setItem("statue",1)
         //console.log(localStorage.getItem("statue"))
