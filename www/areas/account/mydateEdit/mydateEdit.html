@@ -4,56 +4,57 @@
   <ion-header-bar class="bar-dark" align-title="center">
     <a class="icon ion-ios-arrow-back signinBar" ng-href="#/mydate"></a>
     <p class="title">编辑资料</p>
-    <a class="mydateEdithead" ng-click="HH()">保存</a>
+    <a class="mydateEdithead" ng-click="mydateEditSave()">保存</a>
   </ion-header-bar>
   <ion-content>
     <div >
       <div class="editTop">
-        <p>图片{{test1}}/8</p>
+        <p>图片{{test1}}</p>
         <div class="editPhoto">
           <img ng-src="img/account/2.png" class="editImg" />
-          <button class="button icon ion-plus editAddPhoto button-light button-large"></button>
+          <button class="button icon ion-plus editAddPhoto 
+          button-light button-large" ng-click="func_getPicFromPicture()"></button>
           
         </div>
       </div>
 
       <div class="editMiddle">
         <p class="editFont">基本资料</p>
-        <div class="editMiddle1" ng-click="editName()">
+        <div class="editMiddle1" ng-click="edit(1)">
           <p class="editMiddle1Name">昵称</p>
-          <p class="mydateEditUserName">hhh</p>
+          <p class="mydateEditUserName" id="mydateEditUserName">{{userName}}</p>
         </div>
         <div class="editMiddle1">
           <p class="editMiddle1Name">性别</p>
           <div class="mydateEditUserSex">
-            <input type="radio" name="sex" value="male" checked>男&nbsp
-            <input type="radio" name="sex" value="female">女
+            <input type="radio" name="sex" value="男" checked>男&nbsp
+            <input type="radio" name="sex" value="女">女
           </div>
         </div>
-        <div class="editMiddle2">
+        <div class="editMiddle2" ng-click="setBirthDay()">
           <p class="editMiddle1Name">生日</p>
-          <input type="date" class="mydateEditUserBir" />
+          <div class="mydateEditUserBir"><p>2019-06-20</p></div>
         </div>
       </div>
 
       <div class="editDown">
         <p class="editFont">个人信息</p>
-        <div class="editAutography" ng-click="">
+        <div class="editAutography" ng-click="edit(2)">
             <p class="editDownPart">个性签名</p>
-            <div class="editDownPart1">有没有像说的呢？</div>
+            <div class="editDownPart1" id="editAutography">{{autography}}</div>
         </div>
 
-        <div class="editHome" ng-click="">
+        <div class="editHome" ng-click="edit(3)">
             <p class="editHomeP1">家乡</p>
-            <p class="editHomeP2">无 无</p>
+            <p class="editHomeP2" id="editHome">{{hometown}}</p>
         </div>
-        <div class="editJob" ng-click="">
+        <div class="editJob" ng-click="edit(4)">
             <P class="editJobP1">职业</P>
-            <p class="editJobP2">选择行业</p>
+            <p class="editJobP2" id="editJob">{{job}}</p>
         </div>
-        <div class="editSchool" ng-click="" style="border:none">
+        <div class="editSchool" ng-click="edit(5)" >
             <p class="editSchoolP1">学校</p>
-            <p class="editSchoolP2">填写就读学校</p>
+            <p class="editSchoolP2" id="editSchool">{{school}}</p>
         </div>
       </div>
 

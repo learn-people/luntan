@@ -11,15 +11,15 @@
       <div class="mydateTop">
         <div class="mydateINLA">
           <div id="imgWidth">
-            <img src="img/account/2.png" alt="">
+            <img src="{{imgUrl}}" alt="">
           </div>
           <div class="INLAContain">
-            <p class="mydateName">hhh</p>
+            <p class="mydateName">{{userName}}</p>
             <div class="mydateBaseInfo">
-              <div class="mydateLevle ">LV{{test}}</div>
-              <div class="sexAgeBtnGirl mydateSAB">
-                <i class="icon ion-male"></i>
-                <p>{{test1}}</p>
+              <div class="mydateLevle ">LV{{level}}</div>
+              <div class="sexAgeBtnGirl mydateSAB" id ="sexStyle">
+                <i class="icon ion-female" id="sexIcon"></i>
+                <p>{{age}}</p>
               </div>
             </div>
           </div>
@@ -39,31 +39,31 @@
         <div class="myAll">
           <a class="mydatePart" ng-href="#/myPost">
             <div class="mydatePartA">
-              <p id="myAll1">{{test1}}</p>
+              <p id="myAll1">{{postsNum}}</p>
               <p class="myAllName">帖子</p>
             </div>
           </a>
           <a class="mydatePart" ng-href="#/myReply">
             <div class="mydatePartA">
-              <p id="myAll2">{{test1}}</p>
+              <p id="myAll2">{{myReplyNum}}</p>
               <p class="myAllName">回复</p>
             </div>
           </a>
           <a class="mydatePart" ng-href="#/follow">
             <div class="mydatePartA">
-              <p id="myAll3">{{test1}}</p>
+              <p id="myAll3">{{followsNum}}</p>
               <p class="myAllName">关注</p>
             </div>
           </a>
           <a class="mydatePart" ng-href="#/fans">
             <div class="mydatePartA">
-              <p id="myAll4">{{test1}}</p>
+              <p id="myAll4">{{fansNum}}</p>
               <p class="myAllName">粉丝</p>
             </div>
           </a>
           <a class="mydatePart" ng-href="#/myCollection">
             <div class="mydatePartA">
-              <p id="myAll5">{{test1}}</p>
+              <p id="myAll5">{{collectionNum}}</p>
               <p class="myAllName">收藏</p>
             </div>
           </a>
@@ -74,7 +74,7 @@
         <p class="mydateMiddle1">我的照片</p>
         <div class="mydateMiddle2">
           <div class="mydateMiddleImg">
-            <img src="img/account/9.png" id="mydatePhoto" alt="">
+            <img src="{{imgUrl}}" id="mydatePhoto" alt="">
           </div>
         </div>
       </div>
@@ -83,25 +83,25 @@
         <p class="mydateDownCon">个人信息</p>
         <div class="mydateDownPart">
           <div class="autograph">签名</div>
-          <div class="showAutograph">因为懒所以没有签名</div>
+          <div class="showAutograph">{{autography}}</div>
         </div>
         <div class="mydateDownPart">
           <div class="autograph">家乡</div>
-          <div class="showAutograph">无-无</div>
+          <div class="showAutograph">{{hometown}}</div>
         </div>
         <div class="mydateDownPart">
           <div class="autograph">职业</div>
-          <div class="showAutograph">打酱油的</div>
+          <div class="showAutograph">{{job}}</div>
         </div>
         <div class="mydateDownPart">
           <div class="autograph">学校</div>
-          <div class="showAutograph">填写学校，发现校友</div>
+          <div class="showAutograph">{{school}}</div>
         </div>
       </div>
     </div>
   </ion-content>
   
-  <ion-footer-bar id="mydateFooter" >
+  <ion-footer-bar id="mydateFooter" style = "display: none">
     <div class="mydateDownBtnL1 button" id="mydateFooterL"ng-click="mydateAdd()">
       <i class="icon ion-android-person" id="mydateDownBtnLI">已关注</i>
     </div>

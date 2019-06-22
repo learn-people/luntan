@@ -28,6 +28,12 @@ angular.module('guidePage.controller',['guidePage.service'])
     localStorage.setItem("fansNum",0)
     localStorage.setItem("followsNum",0)
     localStorage.setItem("postsNum",0)
+    localStorage.setItem('autography',"")
+    localStorage.setItem('hometown',"")
+    localStorage.setItem('job',"")
+    localStorage.setItem('school',"")
+    localStorage.setItem('collectionNum',0)
+    localStorage.setItem('myReplyNum',0)
     //下次打开APP直接进入首页
     localStorage["isFirst"] = true;
     //利用状态机制跳转到首页

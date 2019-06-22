@@ -2,7 +2,7 @@
 
 #mydate {
   background: url("../../img/account/2.png") no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .mydateBar {
@@ -87,7 +87,7 @@
   margin: 0;
   padding-top: 2%;
   margin-left: 15px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .mydateAll .INLAContain .mydateBaseInfo {

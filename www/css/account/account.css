@@ -2,6 +2,9 @@
 *我的 页面样式代码
 */
 /* 头部标题大小 */
+ion-tabs.tabs-color-active-assertive .tab-item.tab-item-active, ion-tabs.tabs-color-active-assertive .tab-item.active, ion-tabs.tabs-color-active-assertive .tab-item.activated {
+  color: #000;
+}
 .platform-android .bar .title{
   font-size: 16px;
 }
