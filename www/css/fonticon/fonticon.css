@@ -216,3 +216,75 @@
   content: "\e603";
   color:#1296db;
 }
+
+.icon-louzhu:before {
+  content: "\e66c";
+  color:#1296db;
+}
+
+.icon-xingbienan:before {
+  content: "\e71c";
+}
+
+.icon-sex-x:before {
+  content: "\e61f";
+}
+
+.icon-xingbienan1:before {
+  content: "\e601";
+}
+
+.icon-xingbie-nv:before {
+  content: "\e60d";
+  color:#1296db;
+}
+
+.icon-xingbie-nan:before {
+  content: "\e60e";
+}
+
+.icon-dengji-1:before {
+  content: "\e604";
+  color:#1afa29;
+}
+
+.icon-dengji-2:before {
+  content: "\e6a2";
+  color:#1296db;
+}
+
+.icon-dengji-3:before {
+  content: "\e605";
+  color:#ecb20d;
+}
+
+.icon-dengji-4:before {
+  content: "\e6a6";
+  color:#f907e3;
+}
+
+.icon-dengji-5:before {
+  content: "\e606";
+  color:#f9033c;
+}
+
+.icon-dengji-6:before {
+  content: "\e6a3";
+}
+
+.icon-dengji-7:before {
+  content: "\e6a7";
+}
+
+.icon-dengji-8:before {
+  content: "\e6a5";
+}
+
+.icon-dengji-9:before {
+  content: "\e6a4";
+}
+
+.icon-fasong:before {
+  content: "\e61d";
+  color:#1296db;
+}

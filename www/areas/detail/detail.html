@@ -2,61 +2,51 @@
 
   <ion-header-bar>
     <div id="headerBar" class="headerBar">
-        <a class="icon ion-chevron-left" ng-href="#/tab/home"></a>
+        <a class="icon ion-chevron-left" onclick="javascript:window.history.go(-1);"></a>
     </div>
   </ion-header-bar>
 
   <ion-content id="detail-content" scroll="false" delegate-handle="mainScroll">
     <div id="main">
       <div id="title">
-          <span>Croixleur Sigma已下架</span>
+          <span>{{data.postTitle}}</span>
       </div>
       <div class="other">
-        <span class="time">2019.6.4</span>
-        <span class="plate">游戏资讯</span>
+        <span class="time">{{data.postTime}}</span>
+        <span class="plate">{{data.sectionName}}</span>
       </div>
       <hr>
       <div id="post-content" style="margin:0 5px; overflow-y: hidden">
         <!-- 作者信息 -->
         <div class="auth">
-          <a href="#"><img src="img/cart/buy-logo.png"/><span>茶已凉夜未央</span></a>
+          <!-- 作者头像 -->
+          <div class="img">
+            <a href="#"><img src="{{data.imgUrl}}"/></a>
+          </div>
+          <!-- 作者信息 -->
+          <div class="info">
+            <div class="name">
+              <a href="#">
+                <strong>{{data.userName}}</strong>
+                <span class="icon icon-louzhu"></span>
+              </a> 
+            </div> 
+            <!-- 图标 -->
+            <div class="icon">
+              <span class="icon icon-dengji-1"></span>
+              <span class="icon icon-xingbie-nv"></span>
+            </div>
+          </div>
         </div>
         <!-- 贴子内容 -->
         <div class="content" style="white-space: pre-line; ">
-          继Croixleur Sigma版权到期 将于6月1号下架之后
-
-
-          下架的过程出了点小问题
-          
-          开发者必须要向V社提交申请才能下架游戏
-          
-          结果导致6月3号游戏还没下架
-          （评论区里好多催下架的可还行）
-          新闻：https://steamcommunity.com/gid/103582791435456378/announcements/detail/1600380362473154970
-          Well, this is embarrassing...
-          
-          6月3日上午1:56        - NYU MEDIA
-          
-          The delisting request is with Valve and will be actioned as soon as they get to it.
-          
-          不过，V社反应还算快（误）
-          
-          现在这款游戏已经彻底下架了
-          不过游戏至少不像我的世界：故事模式一样即将删库（版权方操作是真的骚），已购买用户以后还是可以下载的
-          
-          发一下已经不能购买的商店页面：https://store.steampowered.com/app/250640
-          
-          
-          
-          顺便补一下我的世界：故事模式的新闻
-          由Telltale发行的Minecraft: Story Mode两部曲现已无法购买
-          
-          《我的世界故事模式》可能要彻底移除下载
-          
-          V社客服关于《我的世界故事模式》以后不可下载的回复
+          {{data.postContent}}
         </div>
       </div>
     </div>
+
+
+
     <!-- 评论区 -->
     <div id="comment">
       <!-- 标题 -->
@@ -66,55 +56,65 @@
         </span>
       </div>
       <!-- 内容 -->
-      <div class="comment-content">
-        <!-- 头像 -->
-        <div class="avater">
-          <img src="img/cart/buy-logo.png" />
-        </div>
-        <div class="info">
-          <!-- 昵称和等级标识 -->
-          <div class="name">
-            <span>麦片加牛奶</span>
-            <img src="img/ww/dengji_0.png" >
+      <div class="comment-container" ng-repeat="comment in commentData track by $index">
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="pull-left">
+              <!-- 头像 -->
+              <a href="#"><img class="avater" src="{{comment.userImgUrl}}"/></a>
+            </div>
+            <div class="comment-content">
+              <div class="comment-trigger">
+                <div class="pull-right" ng-repeat="floor in floors">
+                  {{floor}}楼
+                </div>
+                <strong><a>{{comment.userName}}</a></strong>&nbsp;&nbsp;
+                <span class="comment-date">{{comment.commentTime}}</span>
+              </div>
+              <!-- 回复内容 -->
+              <div class="fmt">
+                <p>{{comment.commentContent}}</p>
+              </div>
+              <!-- 点赞和回复 -->
+              <p class="comment-ops">
+                <span class="comment-zan">
+                  <i class="fa icon icon-like-outline" ></i>
+                </span>
+                <span class="comment-zan-text">赞</span>
+                <span class="comment-reply-btn">回复</span>
+              </p>
+              <!-- 底部标记 -->
+            </div> 
           </div>
-          <!-- 回复内容 -->
-          <div class="talk">说的不错收藏了</div>
-        </div>
-      </div>
-      <!-- 底部标记 -->
-      <div class="symbol">
-        <span>第1楼</span>
-        <!-- 右边的功能图标 -->
-        <div class="pictures">
-          <!-- 分享 -->
-          <a id="share" class="icon icon-share" style="font-size:18px;"></a>
-          <!-- 回复 -->
-          <a id="replay" class="icon icon-message" style="font-size:18px;"></a>
-          <!-- 点赞 -->
-          <a id="like" class="icon icon-like-outline" 
-             ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a>    
         </div>
       </div>
     </div>
   </ion-content>
 
   <!-- 固定底边栏 -->
-  <div id="comment-bar">
+  <div id="comment-bar" style="display:block">
     <!-- 输入框 -->
     <div class="commentLeft">
       <div class="inp">
-        <input type="text" placeholder="评论" />
-      </div>
-      <div class="fason">
-        <button class="button button-positive" ng-click="to()" >发送</button>
+        <input type="text" placeholder="评论" ng-click="switch()" />
       </div>
     </div>
     <!-- 分享点赞 -->
     <div class="commentRight">
-      <a id="comment-share" class="icon icon-fenxiangfangshi" style="font-size:18px;"></a>
-      <a id="comment-replay" class="icon icon-message" style="font-size:18px;"
+      <a id="comment-collection" class="icon icon-shoucang" style="font-size:20px;"></a>
+      <a id="comment-replay" class="icon icon-message" style="font-size:20px;"
          ng-click="toComment('comment')"></a>
-      <a id="comment-like" class="icon icon-like-outline" style="font-size:20px;"></a>
+      <a id="comment-like" class="icon icon-like-outline" style="font-size:21px;"></a>
+    </div>
+  </div>
+  <div id="comment-send" style="display:none">
+    <!-- 输入框 -->
+    <div class="send-input">
+      <textarea name="message" class="in-text" placeholder="说两句吧"></textarea>
+    </div>
+    <!-- 发送按钮 -->
+    <div class="send-btn">
+      <a class="icon icon-fasong" ng-click="send()" style="font-size:30px;"></a>
     </div>
   </div>
 </ion-view>

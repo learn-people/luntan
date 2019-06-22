@@ -2,10 +2,7 @@
   text-decoration:none;
 }
 #detail .button{
-  min-height:28px;
-  line-height:28px;
-  font-size:16px;
-  margin-top:10px;
+  
 }
 #detail .icon{
   font-size:14px;
@@ -34,9 +31,12 @@
   color:#696868;
 }
 
-/* 贴子内容区 */
+/**
+* 贴子内容区
+ */
 #detail #detail-content #main{
   background-color:#ffffff;
+  padding:15px 15px;
 }
 #detail #detail-content #main #title{
   min-height:30px;
@@ -65,70 +65,100 @@
 }
 
 #detail #detail-content #main hr{
-  border:0.5px solid #cfcfcf;
+  border: 1px dotted #f0f1f2;
   width:97%;
 }
+/* 作者信息 */
+#detail #detail-content #main #post-content .auth{
+  display:block;
+  color:#999;
+  padding-top:10px;
+}
 
-#detail #detail-content #main #post-content .auth img{
-  height:36px;
-  width:36px;
-  vertical-align:middle;
+#detail #detail-content #main #post-content .auth .img{
+  position: absolute;
 }
-#detail #detail-content #main #post-content .auth  span{
-  font-size:20px;
+
+#detail #detail-content #main #post-content .auth .img img{
+  height:40px;
+  width:40px;
+  border-radius:50%;
+}
+
+#detail #detail-content #main #post-content .auth .info{
+  float: right;;
+  font-size:16px;
+  padding-left:50px;
+  width:100%
+}
+
+#detail #detail-content #main #post-content .auth .info span{
+  font-size:16px;
   margin-left:5px;
-  line-height:36px;
-  vertical-align:middle;
 }
+
 #detail #detail-content #main #post-content .content{
+  margin-top:35px;
   margin-bottom:25px;
 }
-/* 评论区 */
+/**
+ *评论区
+ */
 #detail #comment{
   margin-top:10px;
+  margin-bottom:50px;
 }
 #detail #comment .comment-title{
   background-color:#ffffff;
-  height:30px;
-  line-height: 30px;
-  border-bottom:1px solid #eeeeee;
+  height:40px;
+  line-height: 40px;
 }
 #detail #comment .comment-title span{
-  margin-left:5px;
+  margin-left:5px; 
 }
 /* 评论区内容设置 */
-#detail #comment .comment-content{
+#comment .comment-container{
   background-color:#ffffff;
+  border-top:1px solid rgba(0,0,0,0.09);
+}
+#comment .comment-container .comment-list .comment-item{
+  padding: 15px 20px;
+}
+#comment .comment-container .comment-list .comment-item .pull-left{
+  float:left !important;
+}
+#comment .comment-container .comment-list .comment-item .pull-left .avater{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+#comment .comment-container .comment-content{
+  padding-left:47px;
   min-height:70px;
-  /* 但事实是，当不指定容器的高度时，overflow: hidden
-   会自动撑开容器的高度，以便使浮动层不发生溢出现象。 */
-  overflow: hidden;
-  width:100%;
 }
-#detail #comment .comment-content .avater{
-  width:12%;
-  float:left;
-  margin-top:5px;
+#comment .comment-container .comment-content .comment-trigger{
+  padding-bottom:10px;
 }
-#detail #comment .comment-content .avater img{
-  width:36px;
-  height:36px;
+#comment .comment-container .comment-content .pull-right{
+  float:right !important;
 }
-/* 评论者信息 */
-#detail #comment .comment-content .info{
-  float:left;
-  width:88%;
-  margin-top:5px;
+#comment .comment-container .comment-content .fmt{
+  line-height: 1.6;
+  word-wrap: break-word;
+  margin-bottom:10px !important;
 }
-#detail #comment .comment-content .info .name span{
-  font-family:"华文新魏";
-  font-size:20px;
-  /* 是图片居中 */
-  vertical-align: middle;
+#comment .comment-container .comment-content .comment-ops{
+  margin: 0;
+  color: #999;
+  font-size: 13px;
 }
-#detail #comment .comment-content .info .name img{
-  vertical-align: middle;
+#comment .comment-container .comment-content .comment-zan .fa{
+  margin-right: 4px !important;
 }
+#comment .comment-container .comment-content .comment-ops .comment-reply-btn{
+  margin-left: 15px !important;
+}
+
 #detail #comment .symbol{
   height:25px;
   margin-bottom:50px;
@@ -152,12 +182,11 @@
   height:50px;
   position: fixed;
   bottom:0;
-  border-top:0.5px solid #d3cece;
   background-color:#ffffff;
 }
 /* 输入框 */
 #detail .commentLeft{
-  width:70%;
+  width:60%;
   height:50px;
   float:left;
 }
@@ -167,25 +196,18 @@
 }
 #detail .commentLeft .inp input{
   margin:10px 0 0 10px;
-  width:180px;
+  width:200px;
   font-size:16px;
   line-height: 30px;
   padding-inline-start: 10px;
   background-color:#ebebeb;
   height:30px;
-  color:#555555;
-  border-radius:15px;
-}
-#detail .commentLeft .fason{
-  width:25%;
-  float:left;
-}
-#detail .commentLeft .fason .button{
-  border-radius:15px;
+  color: #007dff;
+  border-radius:5px;
 }
 /* 图标功能区 */
 #detail .commentRight{
-  width:30%;
+  width:40%;
   height:50px;
   float:left;
   color:#696868;
@@ -193,8 +215,59 @@
   line-height:50px;
 }
 #detail .commentRight a{
-  margin-right:5px;
+  margin-right:20px;
   height:20px;
+}
+/* 发送框 */
+#detail #comment-send{
+  width:100%;
+  min-height: 50px;
+  max-height: 66px;
+  position: fixed;
+  bottom:0;
+  background-color:#ffffff;
+}
+#detail #comment-send .send-input{
+  margin-left: 10px;
+  position: relative;
+  top: 8px;
+}
+#detail #comment-send .send-input .in-text{
+  height: 32px;
+  overflow-y: scroll;
+  border: 0;
+  outline: none;
+  padding: 7px 16px;
+  font-size: 13px;
+  width: 73%;
+  min-height: 32px;
+  max-height: 58px;
+  box-sizing: border-box;
+  background-color: #efefef;
+  border-radius: 24px;
+  color: #007dff;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+  -webkit-text-fill-color: transparent;
+  padding-top: 9px;
+  resize:none ;
+}
+
+textarea:focus{
+  border-color: #2196f3;
+  box-shadow: 0 0 2px #03a9f4;
+}
+
+#detail #comment-send .send-btn{
+  float: right;
+  left: 300px;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 9px;
 }
 
 /* 隐藏滚轮 */

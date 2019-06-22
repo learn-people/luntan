@@ -8,6 +8,7 @@ angular.module('detail.route',['detail.controller'])
   $stateProvider
    .state('detail',{
      url:'/detail',
+     cache:false,
      templateUrl:'areas/detail/detail.html',
      controller:'DetailController'
    })
