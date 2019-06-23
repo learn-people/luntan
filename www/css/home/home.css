@@ -8,12 +8,11 @@
 
 
 #home {
-  background-color:#f6f6f6;
+  background-color:#ffffff;
 }
 
 #home ion-content{
   overflow:scroll;
-  margin-top:80px;
 }
 /*搜索区域*/
 #home .headerBar {
@@ -141,31 +140,38 @@
     border: 0;
 }
 
+/* 贴子内容列表*/
+#home #home-content{
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top:80px;
+}
+#home #home-content .content-item{
+  margin-top: 32px !important;
+}
+/* 有图片时显示 */
+#home #home-content .content-item .news-img{
+  width: 80px;
+  height: 60px;
+  border-radius: 4px;
+  float: right;
+  margin-left: 30px;
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+#home #home-content .content-item .news{
+  width: 0px;
+  height: 0px;
+}
+
 #home #function-content2{
   width: 100%;
   display: block; 
+  padding: 0 0 15px 0;
 }
-/* #home #function-content3{
-  width: 100%;
-  height: 540px;
-  display: none;
-  background-color: rgb(210, 181, 221);
-  
-}
-#home #function-content4{
-  width: 100%;
-  height: 540px;
-  display: none;
-  background-color: rgb(206, 224, 182);
-  
-}
-#home #function-content5{
-  width: 100%;
-  height: 540px;
-  display: none;
-  background-color: rgb(221, 192, 192);
-} */
-
 /* 贴子模块 */
 #home .post{
   background-color:#ffffff;
@@ -184,32 +190,32 @@
   overflow:hidden; /* 超出的文本隐藏*/
   text-overflow:ellipsis; /*溢出用省略号显示*/
   white-space:nowrap; /*溢出不换行*/
-  height:35px;
-  width:100%;
-  line-height: 35px;
-  padding-left:10px;
-  padding-right: 5px;
-  font-size:18px;
+  margin-bottom: 5px !important;
+  margin-top: 5px !important
 }
 
-#home .post .post-content{
-  position: relative; 
-  min-height:20px;
-  max-height:100px;
-  width:100%;
-  padding-left:10px;
-  padding-right:5px;
-  color:#636363;
+#home .post .title h4{
+  display: inline;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #212121;
+  position: relative;
+  vertical-align: middle;
 }
+
 
 #home .post .post-content .content{
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;  /*这里是在第几行有省略号*/
+  margin-bottom: 15px;
   overflow: hidden;
-  font-size:16px;
-  font-family:微软雅黑;
-  min-height: 20px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  color: #888;
+  font-size: 13px;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
 }
 
 /* 内容中的图片 */
@@ -219,12 +225,7 @@
 }
 
 #home .post .auth{
-  position:relative;
-  height:35px;
   font-size:14px;
-  margin-left:10px;
-  line-height: 35px;
-  color:#7e7e7e;
 }
 
 /* 标志 */

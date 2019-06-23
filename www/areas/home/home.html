@@ -17,71 +17,63 @@
         </span>
     </a>
     <!-- 功能导航 -->
-    <nav id="nav">
-      <span class="navigation-nav-1-img">
+    <div id="nav">
+      <span id="One" class="navigation-nav-1-img" ng-click="toOne('One')" >
         <h2>谈天说地</h2>
         
       </span>
-      <span class="navigation-nav-2-img">
+      <span id="Two" class="navigation-nav-2-img" ng-click="toTwo('Two')">
         <h2>游戏资讯</h2>
         
       </span>
-      <span class="navigation-nav-3-img">
+      <span id="Three" class="navigation-nav-3-img" ng-click="toThree('Three')">
         <h2>资源分享</h2>
-       
+        
       </span>
-      <span class="navigation-nav-4-img">
+      <span id="Four" class="navigation-nav-4-img" ng-click="toFour('Four')">
         <h2>交易购物</h2>
-       
+        
       </span>
       <hr class="navigation-xian">
-    </nav>
+    </div>
   </div>
 
   <ion-content id="home-content" class="scroll-content" scroll="false">
-
-    <div>
+  
+    <div class="content-list">
       <!-- 谈天说地 -->
       <div id="function-content2" ng-repeat="item in data">
-        <!-- 点击事件跳转到贴子详情页 -->
-        <div class="post" ng-click="jumpToDetail({{item.id}})">
-          <div class="jump">
-            <!-- 贴纸的标题 -->
-            <div class="title">
-              <strong>{{item.postTitle}}</strong>
-            </div>
-            <!-- 贴子的内容 -->
-            <div class="post-content">
-              <div class="content">{{item.postContent}}</div>
-              <!-- 图片预留位 -->
-            </div>
-            <!-- 贴子的作者及一些信息 -->
-            <div class="auth">
-              <span class="name">{{item.userName}}</span>&nbsp;&nbsp;
-              <span class="time">{{item.postTime}}</span>&nbsp;&nbsp;
-              <!-- 点赞和留言数 -->
-              <div class="sign">
-                <!-- 观看 -->
-                <span class="icon icon-eye">1</span>&nbsp;
-                <!-- 留言 -->
-                <span class="icon icon-liuyan" >1</span>
-                <!-- <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a> -->
+        <div class="content-item">
+          <!-- 使用ng-if查看是否有图片 -->
+          <a ng-class="{'news-img':flag}" style="background-image:url({{item.imgUrl}})"></a>
+          <!-- 点击事件跳转到贴子详情页 -->
+          <div class="post" ng-click="jumpToDetail({{item.id}})">
+            <div class="jump">
+              <!-- 贴纸的标题 -->
+              <div class="title">
+                <h4>{{item.postTitle}}</h4>
+              </div>
+              <!-- 贴子的内容 -->
+              <div class="post-content">
+                <div class="content">{{item.postContent}}</div>
+                
+              </div>
+              <!-- 贴子的作者及一些信息 -->
+              <div class="auth">
+                <span class="name">{{item.userName}}</span>&nbsp;&nbsp;
+                <span class="time">{{item.postTime}}</span>&nbsp;&nbsp;
+                <!-- 点赞和留言数 -->
+                <div class="sign">
+                  <!-- 观看 -->
+                  <span class="icon icon-eye">&nbsp;{{item.lookNum}}</span>&nbsp;
+                  <!-- 留言 -->
+                  <span class="icon icon-liuyan" >&nbsp;{{item.purview}}</span>
+                  <!-- <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:20px;"></a> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- 游戏资讯 -->
-      <div id="function-content3">
-        
-      </div>
-      <!-- 资源分享 -->
-      <div id="function-content4">
-        
-      </div>
-      <!-- 交易购物 -->
-      <div id="function-content5">
-        
       </div>
     </div>
     

@@ -8,16 +8,16 @@
   </ion-header-bar>
 
   <ion-content class="myCollectionContent">
-    <div class="myCollectionPart">
-      <p class="myCollectionTitle">【吾爱破解】网易云音乐下载器清爽版</p>
+    <div class="myCollectionPart" ng-repeat="item in collection" ng-click="toDetail({{item.postId}})">
+      <h4 class="myCollectionTitle">{{item.postTitle}}</h4>
       <div class="myCollectionCon">
-        <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-        <img src="img/account/1.png" alt="" class="myCollectionImg">
+        <p>{{item.postContent}}</p>
       </div>
+      <img src="{{item.imgUrl}}" alt="" class="myCollectionImg">
       <div class="myCollectionDown">
-        <p class="myCollectionDate">{{userName}}&nbsp&nbsp{{year}}年{{month}}月{{day}}日</p>
-        <p class="myCollectionSeeNum"><i class="icon ion-ios-eye myCollectionI1"></i> {{test1}}</p>
-        <p class="myCollectionCommetNum"><i class="icon ion-ios-chatboxes myCollectionI1"></i> {{test1}}</p>
+        <p class="myCollectionDate">{{item.postTime}}</p>
+        <p class="myCollectionSeeNum"><i class="icon ion-ios-eye myCollectionI1"></i> {{item.lookNum}}</p>
+        <p class="myCollectionCommetNum"><i class="icon ion-ios-chatboxes myCollectionI1"></i> {{item.purview}}</p>
       </div>
     </div>
   </ion-content>

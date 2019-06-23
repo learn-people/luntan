@@ -17,13 +17,24 @@
     background-color: white;
 }
 .myCollectionTitle{
-    width:100%;
-    padding-top:10px;
+    width: 100%;
+    padding-top: 10px;
     font-size: 16px;
+    min-height: 30px;
+    max-height: 50px;
+    margin-top:5px;
 }
 .myCollectionCon{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     width:100%;
     font-size: 14px;
+}
+.myCollectionCon p{
+    margin:0;
 }
 .myCollectionImg{
     width:80px;
@@ -52,4 +63,7 @@
     right: 5%;
     font-size: 14px;
     position: absolute;
+}
+::-webkit-scrollbar {/*隐藏滚轮*/
+    display: none;
 }

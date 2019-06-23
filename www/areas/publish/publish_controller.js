@@ -22,4 +22,9 @@ angular.module('publish.controller',[])
         var imgWidth = $("#imgWidth").innerHeight();
         $("#imgWidth").css('width',imgWidth);
     })
+
+    
+
+
+
 })

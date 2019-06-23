@@ -3,19 +3,136 @@
  */
 var app = angular.module('home.controller',['ionic','home.service']);
 
-app.controller('HomeController',function($scope,$window, $location, $anchorScroll,homeService){
+app.controller('HomeController',function($scope,$state,$window, $location, $anchorScroll,homeService,historyUrlService){
+    /* 导航设置 */
+    /* 谈天说地 */
+    $scope.toOne = function (location) { 
+        var sectionId = 1;
+        var section = {"sectionId":sectionId}
+        //获取后台传回的数据
+        homeService.getData(section,function(data){
+            $scope.data = data
+            /* 使用forEach循环遍历对象数组，判断数据中是否含有图片并设置Boolean变量 */
+            angular.forEach($scope.data,function(img){
+                if(img.imgUrl != ""){
+                    $scope.flag = true;
+                }else{
+                    $scope.flag = false;
+                }
+            })
+        })
 
-    $scope.jumpToDetail = function(id){
-        console.log(id);
-        $location.path("/detail");
+        localStorage.setItem("location",location);
+
+        $('.navigation-xian').animate({left:'2%'},200);
+        $('.navigation-xian').css('background-color', 'rgb(226, 116, 43)');
         
-    }
-    //获取后台传回的数据
-    homeService.getData(function(data){
-        console.log(data);
-        $scope.data = data
-    })
+        $("#function-content2").css("display","block");
 
+    };
+    /* 游戏资讯 */
+    $scope.toTwo = function (location) { 
+        var sectionId = 2;
+        var section = {"sectionId":sectionId}
+        //获取后台传回的数据
+        homeService.getData(section,function(data){
+            $scope.data = data
+            angular.forEach($scope.data,function(img){
+                if(img.imgUrl != ""){
+                    $scope.flag = true;
+                }else{
+                    $scope.flag = false;
+                }
+            })
+        })
+
+        localStorage.setItem("location",location);
+
+        $('.navigation-xian').animate({left:'27%'},200);
+        $('.navigation-xian').css('background-color', 'blueviolet');
+        
+        $("#function-content2").css("display","block");
+    };
+    /* 资源分享 */
+    $scope.toThree = function (location) { 
+        var sectionId = 4;
+        var section = {"sectionId":sectionId}
+        //获取后台传回的数据
+        homeService.getData(section,function(data){
+            $scope.data = data
+            angular.forEach($scope.data,function(img){
+                if(img.imgUrl != ""){
+                    $scope.flag = true;
+                }else{
+                    $scope.flag = false;
+                }
+            })
+        })
+
+        localStorage.setItem("location",location);
+
+        $('.navigation-xian').animate({left:'52%'},200);
+        $('.navigation-xian').css('background-color','rgb(226, 43, 43)');
+        
+        $("#function-content2").css("display","block");
+    };
+    /* 交易购物 */
+    $scope.toFour = function (location) { 
+        var sectionId = 3;
+        var section = {"sectionId":sectionId}
+        //获取后台传回的数据
+        homeService.getData(section,function(data){
+            $scope.data = data
+            angular.forEach($scope.data,function(img){
+                if(img.imgUrl != ""){
+                    $scope.flag = true;
+                }else{
+                    $scope.flag = false;
+                }
+            })
+        })
+
+        localStorage.setItem("location",location);
+
+        $('.navigation-xian').animate({left:'77%'},200);
+        $('.navigation-xian').css('background-color','blueviolet');
+        
+        $("#function-content2").css("display","block");
+    };
+
+    //回退时记录上一次的点击
+    var Num = localStorage.getItem("location");
+    if(Num == "Four"){
+        console.log("4")
+        $scope.toFour();
+        localStorage.setItem("location",Num)
+    }else if(Num == "Two"){
+        console.log("2")
+        $scope.toTwo();
+        localStorage.setItem("location",Num)
+    }else if(Num == "Three"){
+        console.log("3")
+        $scope.toThree();
+        localStorage.setItem("location",Num)
+    }else{
+        console.log("1")
+        $scope.toOne();
+        localStorage.setItem("location",Num)
+    }
+
+    //获取数据，进行页面跳转到贴子详情页面
+    $scope.jumpToDetail = function(id){
+        //将数据挂载在hemeService服务器上
+        homeService.id = id;
+        historyUrlService.setBackUrl(window.location.href);
+        $state.go("detail");
+        //更新后台信息
+        var id = {"id":id}
+        homeService.updateLook(id);
+    }
+
+    //获取数据，更新贴子观看人数
+    
 
     /* 点赞设置 */
     $scope.clickIcon = function($event,iconName){
@@ -31,43 +148,5 @@ app.controller('HomeController',function($scope,$window, $location, $anchorScrol
         $event.currentTarget.className = buttonClasses;
     }
 
-    /* 导航设置 */ 
-    $(".navigation-nav-1-img").click(function () { 
-        $('.navigation-xian').animate({left:'2%'},200);
-        $('.navigation-xian').css('background-color', 'rgb(226, 116, 43)');
-        
-        $("#function-content2").css("display","block");
-        $("#function-content3").css("display","none");
-        $("#function-content4").css("display","none");
-        $("#function-content5").css("display","none");
-
-    });
-    $(".navigation-nav-2-img").click(function () { 
-        $('.navigation-xian').animate({left:'27%'},200);
-        $('.navigation-xian').css('background-color', 'blueviolet');
-        
-        $("#function-content3").css("display","block");
-        $("#function-content2").css("display","none");
-        $("#function-content4").css("display","none");
-        $("#function-content5").css("display","none");
-    });
-    $(".navigation-nav-3-img").click(function () { 
-        $('.navigation-xian').animate({left:'52%'},200);
-        $('.navigation-xian').css('background-color','rgb(226, 43, 43)');
-        
-        $("#function-content4").css("display","block");
-        $("#function-content3").css("display","none");
-        $("#function-content2").css("display","none");
-        $("#function-content5").css("display","none");
-    });
-    $(".navigation-nav-4-img").click(function () { 
-        $('.navigation-xian').animate({left:'77%'},200);
-        $('.navigation-xian').css('background-color','blueviolet');
-        
-        $("#function-content5").css("display","block");
-        $("#function-content4").css("display","none");
-        $("#function-content3").css("display","none");
-        $("#function-content2").css("display","none");
-    });
-
 })
+

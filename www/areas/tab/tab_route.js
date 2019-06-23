@@ -10,6 +10,7 @@ angular.module('tab.route',['tab.controller'])
       url:'/tab',
       cache:false,
       abstract:true,
+      cache:false,
       templateUrl:'areas/tab/tab.html',
       controller:'TabController'
     })
