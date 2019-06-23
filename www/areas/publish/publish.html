@@ -1,45 +1,45 @@
 <ion-view id="publish" view-title="发布" cache-view="false">
-    <!--头部-->
-    <ion-header-bar align-title="left">
-      <div class="bar bar-header">
-        <a class="button-icon icon ion-chevron-left" ng-href="#/tab/home"></a>
-        <h1 class="title1">发新帖</h1>
-        <button class="title2">发布</button>
+  <!--头部-->
+  <ion-header-bar class="bar-dark" align-title="center">
+    <a class="icon ion-ios-arrow-left mydateBar" ng-click="goBack()" ng-href="#/tab/home"></a>
+    <p class="title">发新帖</p>
+    <a class="mydateEdithead" ng-click="mydateEditSave()">发布</a>
+  </ion-header-bar>
+  <ion-content>
+
+    <div class="add">
+      <div class="add-title">
+        <span class="add-title-span">主题：</span>
+        <input type="text" class="add-title-input" placeholder="不超过30字(可选)" size="10" maxlength="30">
       </div>
-    </ion-header-bar>
-    <ion-content>
-     
-        <div class="add">
-            <div class="add-title">
-                <span class="add-title-span">主题：</span>
-                <input type="text" class="add-title-input" placeholder="不超过30字(可选)" size="10" maxlength="30">
-            </div>
-            
-            <textarea name="" id="" cols="57" rows="20" placeholder="说点什么"></textarea>
-            
-        </div>
-        <div class="choice">
-            <div class="choice-title">
-                选择板块模块
-            </div>
-            <div class="choice-button">
-                <a class="button-icon icon ion-chevron-right" ng-href="#/plate"></a>
-            </div>
-        </div>
-        <div class="upload">
-            <div class="upload-1">
-                <button  class="button-icon icon icon-folder-add" id="upload-button1">
-                </button>
-            </div>
-            <div class="upload-1">
-                <button  class="button-icon icon icon-gengduotupian" id="upload-button2">
-                </button>
-            </div>
-            <div class="upload-1">
-                <button  class="button-icon icon icon-cameraaddfill" id="upload-button3">
-                </button>
-            </div>
-        </div>
-    </ion-content>
-    
+
+      <textarea name="" id="publishTextInput" cols="57" rows="20" maxlength="400" placeholder="说点什么,最多400字"></textarea>
+
+    </div>
+    <div class="choice" ng-click="toplate()">
+      <div class="choice-title">
+        请选择板块
+      </div>
+      <div class="choice-button">
+        <div class="button-icon icon ion-ios-arrow-right"></div>
+      </div>
+    </div>
+
+    <div class="upload">
+      <!-- <div class="upload-1">
+        <i class="icon icon-folder-add" id="upload-button1">
+        </i>
+      </div> -->
+      <div class="upload-1">
+        <i class="icon icon-gengduotupian" id="upload-button2" ng-click="test()">
+        </i>
+      </div>
+      <div class="upload-1">
+        <i class="icon ion-ios-reverse-camera-outline" ng-click=""id="upload-button3">
+        </i>
+      </div>
+    </div>
+    <div class="publishImg"></div>
+  </ion-content>
+
 </ion-view>
