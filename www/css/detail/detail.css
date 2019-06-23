@@ -141,6 +141,7 @@
 }
 #comment .comment-container .comment-content .pull-right{
   float:right !important;
+  color:#a8a8a8;
 }
 #comment .comment-container .comment-content .fmt{
   line-height: 1.6;

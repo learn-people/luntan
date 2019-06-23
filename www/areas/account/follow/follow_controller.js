@@ -11,7 +11,7 @@ angular.module('follow.controller',['follow.service'])
     console.log(userId);
     var data = {"userId":userId}
     FollowService.getData(data,function(data){
-
+      console.log(data);
     })
     //点击关注/已关注按钮
     $scope.showConfirm = function() {

@@ -2,7 +2,7 @@
 
   <ion-header-bar>
     <div id="headerBar" class="headerBar">
-        <a class="icon ion-chevron-left" onclick="javascript:window.history.go(-1);"></a>
+        <a class="icon ion-chevron-left" ng-click="goBack()"></a>
     </div>
   </ion-header-bar>
 
@@ -65,11 +65,11 @@
             </div>
             <div class="comment-content">
               <div class="comment-trigger">
-                <div class="pull-right" ng-repeat="floor in floors">
-                  {{floor}}楼
+                <div class="pull-right" >
+                  {{comment.commentTime}}
                 </div>
                 <strong><a>{{comment.userName}}</a></strong>&nbsp;&nbsp;
-                <span class="comment-date">{{comment.commentTime}}</span>
+                <span class="comment-date"></span>
               </div>
               <!-- 回复内容 -->
               <div class="fmt">
@@ -81,7 +81,7 @@
                   <i class="fa icon icon-like-outline" ></i>
                 </span>
                 <span class="comment-zan-text">赞</span>
-                <span class="comment-reply-btn">回复</span>
+                <span class="comment-reply-btn" ng-click="deleteComment({{comment.id}})">删除</span>
               </p>
               <!-- 底部标记 -->
             </div> 
@@ -101,20 +101,20 @@
     </div>
     <!-- 分享点赞 -->
     <div class="commentRight">
-      <a id="comment-collection" class="icon icon-shoucang" style="font-size:20px;"></a>
+      <a id="comment-collection" class="icon icon-shoucang-outline" ng-click="clickCol($event,'icon-shoucang')" style="font-size:20px;"></a>
       <a id="comment-replay" class="icon icon-message" style="font-size:20px;"
          ng-click="toComment('comment')"></a>
-      <a id="comment-like" class="icon icon-like-outline" style="font-size:21px;"></a>
+      <a id="like" class="icon icon-like-outline" ng-click="clickIcon($event,'icon-like')" style="font-size:21px;"></a>
     </div>
   </div>
   <div id="comment-send" style="display:none">
     <!-- 输入框 -->
     <div class="send-input">
-      <textarea name="message" class="in-text" placeholder="说两句吧"></textarea>
+      <textarea name="message" ng-model="in1" class="in-text" placeholder="说两句吧"></textarea>
     </div>
     <!-- 发送按钮 -->
     <div class="send-btn">
-      <a class="icon icon-fasong" ng-click="send()" style="font-size:30px;"></a>
+      <a class="icon icon-fasong" ng-model="input" ng-click="send()" style="font-size:30px;"></a>
     </div>
   </div>
 </ion-view>

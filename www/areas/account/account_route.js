@@ -3,7 +3,7 @@
 */
 
 angular.module('account.route',['account.controller','follow.controller','fans.controller',
-  'mydate.controller','register.controller','signin.controller','mydateEdit.controller'])
+  'mydate.controller','register.controller','signin.controller','mydateEdit.controller','myCollection.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -106,7 +106,7 @@ angular.module('account.route',['account.controller','follow.controller','fans.c
       url:'/myCollection',
       //cache:false,
       templateUrl:'areas/account/myCollection/myCollection.html',
-      controller:'AccountController'
+      controller:'MyCollectionController'
     })
     //我的愿望单界面路由
     .state('myHope',{

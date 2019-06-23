@@ -171,11 +171,12 @@
   content: "\eca1";
 }
 
-.icon-shoucang_shixin:before {
+.icon-shoucang:before {
   content: "\eca6";
+  color:#ffd700;
 }
 
-.icon-shoucang:before {
+.icon-shoucang-outline:before {
   content: "\eca7";
 }
 
