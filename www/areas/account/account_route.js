@@ -3,8 +3,10 @@
 */
 
 angular.module('account.route',['account.controller','follow.controller','fans.controller',
-  'mydate.controller','register.controller','signin.controller','mydateEdit.controller',
-  'myCollection.controller','otherdate.controller'])
+  'mydate.controller','register.controller',
+  'signin.controller','mydateEdit.controller',
+  'myCollection.controller','myPost.controller',
+  'myReply.controller','otherdata.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -100,14 +102,14 @@ angular.module('account.route',['account.controller','follow.controller','fans.c
       url:'/myPost',
      // cache:false,
       templateUrl:'areas/account/myPost/myPost.html',
-      controller:'AccountController'
+      controller:'MyPostController'
     })
     //我的回复界面路由
     .state('myReply',{
       url:'/myReply',
       //cache:false,
       templateUrl:'areas/account/myReply/myReply.html',
-      controller:'AccountController'
+      controller:'MyReplyController'
     })
     //我的收藏界面路由
     .state('myCollection',{

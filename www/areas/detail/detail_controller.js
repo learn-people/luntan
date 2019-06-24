@@ -332,5 +332,7 @@ angular.module('detail.controller', ['home.service','detail.service'])
             }
             $event.currentTarget.className = buttonClasses;
         }
-
+    
+    /*******************我的贴子****************************************************************** */
+    
     })

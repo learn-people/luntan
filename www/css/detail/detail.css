@@ -100,7 +100,14 @@
 #detail #detail-content #main #post-content .content{
   margin-top:35px;
   margin-bottom:25px;
+  font-size:14px;
+  line-height: 1.6;
 }
+#detail #detail-content #main #post-content .content .new-img{
+  width:80%;
+  margin-left:35px;
+}
+
 /**
  *评论区
  */

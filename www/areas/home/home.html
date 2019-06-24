@@ -12,9 +12,6 @@
       </div>
     </a>
     <a class="headerBar-login" ng-href="#">
-        <span>
-            签到
-        </span>
     </a>
     <!-- 功能导航 -->
     <div id="nav">
@@ -38,14 +35,16 @@
     </div>
   </div>
 
-  <ion-content id="home-content" class="scroll-content" scroll="false">
+  <ion-content id="home-content" class="scroll-content" scroll="true">
   
     <div class="content-list">
       <!-- 谈天说地 -->
       <div id="function-content2" ng-repeat="item in data">
         <div class="content-item">
           <!-- 使用ng-if查看是否有图片 -->
-          <a ng-class="{'news-img':flag}" style="background-image:url({{item.imgUrl}})"></a>
+          <div ng-if="item.imgUrl != '' ">
+            <a class="news-img" style="background-image:url({{item.imgUrl}})"></a>
+          </div>
           <!-- 点击事件跳转到贴子详情页 -->
           <div class="post" ng-click="jumpToDetail({{item.id}})">
             <div class="jump">
@@ -56,7 +55,6 @@
               <!-- 贴子的内容 -->
               <div class="post-content">
                 <div class="content">{{item.postContent}}</div>
-                
               </div>
               <!-- 贴子的作者及一些信息 -->
               <div class="auth">

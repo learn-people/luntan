@@ -12,14 +12,19 @@ app.controller('HomeController',function($scope,$state,$window, $location, $anch
         //获取后台传回的数据
         homeService.getData(section,function(data){
             $scope.data = data
+            console.log(data);
             /* 使用forEach循环遍历对象数组，判断数据中是否含有图片并设置Boolean变量 */
+            /* var i = 0;
+            console.log(data);
             angular.forEach($scope.data,function(img){
-                if(img.imgUrl != ""){
-                    $scope.flag = true;
+            if(img.imgUrl == ""){
+                data[i].imgUrl = "";
+                i = i + 1;
                 }else{
-                    $scope.flag = false;
+                i= i+1;
                 }
-            })
+                console.log(data[0].imgUrl);
+            }) */
         })
 
         localStorage.setItem("location",location);
@@ -37,13 +42,7 @@ app.controller('HomeController',function($scope,$state,$window, $location, $anch
         //获取后台传回的数据
         homeService.getData(section,function(data){
             $scope.data = data
-            angular.forEach($scope.data,function(img){
-                if(img.imgUrl != ""){
-                    $scope.flag = true;
-                }else{
-                    $scope.flag = false;
-                }
-            })
+            
         })
 
         localStorage.setItem("location",location);
@@ -60,13 +59,7 @@ app.controller('HomeController',function($scope,$state,$window, $location, $anch
         //获取后台传回的数据
         homeService.getData(section,function(data){
             $scope.data = data
-            angular.forEach($scope.data,function(img){
-                if(img.imgUrl != ""){
-                    $scope.flag = true;
-                }else{
-                    $scope.flag = false;
-                }
-            })
+           
         })
 
         localStorage.setItem("location",location);
@@ -83,13 +76,7 @@ app.controller('HomeController',function($scope,$state,$window, $location, $anch
         //获取后台传回的数据
         homeService.getData(section,function(data){
             $scope.data = data
-            angular.forEach($scope.data,function(img){
-                if(img.imgUrl != ""){
-                    $scope.flag = true;
-                }else{
-                    $scope.flag = false;
-                }
-            })
+            console.log(data);
         })
 
         localStorage.setItem("location",location);
