@@ -5,12 +5,18 @@
 
 angular.module('massage.service',[])
 
+.factory('massageService',function($http,configService){
+    function getUserPost(select,callback){
+        var url = configService.getHostUrl() + '/post/selectUser.json?callback=JSON_CALLBACK'
+        $http.jsonp(url,{
+            params:select
+        })
+        .success(function(data){
+            callback(data)
+          })   
+    }
 
-
-.factory('massageService',function(){
     return{
-    getDate:function(){
-
-        }
+        "getUserPost":getUserPost
     }
 })

@@ -1,54 +1,53 @@
 <ion-view id="massage" view-title="信息" cache-view="false">
     
     <div id="headerBar" class="headerBar">
-        <!-- 分类导航 -->
-        <nav id="nav">
-            <span ui-sref="tab.category" class="massage-navigation-1">
-                <h2>个人信息</h2>
-            </span>
-
-            <span class="massage-navigation-2">
-                <h2>系统信息</h2>
-            </span>
-            
-            <hr class="massage-navigation-xian">
-        </nav>
+      <div id="headerBar-bg"></div>
+      <div class="headerBar-logo">
+        <i class="icon icon-steam" id="steam"></i>
+      </div>
+      <a class="headerBar-search"  ng-href="#">
+        <span></span>
+        <div>
+        <input  maxlength="20" autocomplete="true" value=""/>
+        </div>
+      </a>
+      <a class="headerBar-login" ng-href="#">
+      </a>
+      <!-- 分类导航 -->
+      <div id = "nav">
+        <span id="notice" class="notice-nav-1-img" >
+          <h2>通知消息</h2> 
+        </span>
+        <span id="system" class="system-nav-2-img" >
+          <h2>系统信息</h2>  
+        </span>
+      </div>
     </div>
       
-    <ion-content>
-        <div>
-            <div id="massage-content2">
-
-                <div class="content">
-                    <div class="post">
-                        <a class="jump" ng-href="#/information">
-                            <div class="massage-content-left">
-                                <i class="icon icon-weixin" id="head-image"></i>
-                            </div>
-                            <div class="massage-content-right">
-                                <div class="content-button-head">
-                                    <div class="content-button-head-from">
-                                        昵称
-                                    </div>
-                                    <div class="content-button-head-time">
-                                        6月19日
-                                    </div>
-                                </div>
-                                <div class="content-button-content">
-                                    人民网悉尼6月19日电 由悉尼大学中国研究中心与澳大利亚会计师事务所BDO联合主办的“中国人工智能与大数据应用”研讨会19日在悉尼举行。
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    
+    <ion-content id="massage-content" >
+      <div class="massage-list">
+        <div id="massage-content2" >
+          <div class="content-item" ng-repeat="item in userPost">
+            <div class="massage" ng-click="massateToDetail({{item.id}})">
+              <div class="massage-content-left">
+                <img id="head-img" src="{{item.userImgUrl}}" />
+              </div>
+              <div class="massage-content-right">
+                <div class="content-button-head">
+                <div class="content-button-head-from">
+                    您发表了贴子
                 </div>
-
-                
+                <div class="content-button-head-time">
+                  {{item.postTime}}
+                </div>
+                </div>
+                <div class="content-button-content">
+                  {{item.postTitle}}
+                </div>
+              </div>
             </div>
-            <div id="massage-content3">
-                <h2>2</h2>
-            </div>
-        </div>  
+          </div>
+        </div>
+      </div>  
     </ion-content>
 </ion-view>

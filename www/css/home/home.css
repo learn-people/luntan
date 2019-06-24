@@ -6,7 +6,6 @@
   font-size:14px;
 }
 
-
 #home {
   background-color:#ffffff;
 }
@@ -94,12 +93,6 @@
   height:inherit;
   position: absolute;
   right: 7px;
-  display: inline-block;
-}
-#home .headerBar-login span{
-  margin-top: 7px;
-  color:#fa1b1b;
-  font-size: 15px;
   display: inline-block;
 }
 
@@ -203,7 +196,6 @@
   position: relative;
   vertical-align: middle;
 }
-
 
 #home .post .post-content .content{
   margin-bottom: 15px;

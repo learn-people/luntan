@@ -6,30 +6,36 @@
     </div>
   </ion-header-bar>
   <!--内容区-->
-  <ion-content id="information-content" scroll="false" delegate-handle="mainScroll">
-      
-
-
+  <ion-content class="information-container" scroll="false" delegate-handle="mainScroll">
+    <div class="information-list">
+      <div class="information-item">
+        <div class="information-time">
+          显示回复的时间
+        </div>
+        <div class="pull-left">
+          <a href="#"><img class="people-img"></a>
+        </div>
+        <div class="information-content">
+          <div class="information-trigger">
+            回复的内容
+          </div>
+          <div class="fmt">
+            <div class="information-post" ng-click="toDetail()">
+              <div class="jump">
+                <div class="post-title">
+                  <h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+                </div>
+                <!-- 内容 -->
+                <div class="post-coyyyyntent">
+                  <div class="content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 
-  <!--底部按钮-->
-  <div id="comment-bar">
-    
-    <!-- 分享点赞 -->
-    <div class="commentRight">
-      <a id="comment-collection" class="icon icon-shoucang"></a>
-    </div>
-
-    <div class="commentRight">
-      <a id="comment-delete" class="icon ion-trash-a"></a>
-    </div> 
-
-    <div class="commentRight">
-      <a id="comment-replay" class="icon icon-message" ng-click="toComment('comment')"></a>
-    </div>
-
-    <div class="commentRight">
-      <a id="comment-share" class="icon icon-fenxiangfangshi"></a>
-    </div>
-  </div>
+  
 </ion-view>

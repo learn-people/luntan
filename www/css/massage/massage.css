@@ -5,6 +5,7 @@
   background-color:#efefef;
 }
 
+/*搜索区域*/
 #massage .headerBar {
   position:absolute;
   background-color: rgb(255, 255, 255);
@@ -14,6 +15,85 @@
   width: 100%;
   height: 40px;
 }
+#massage #headerBar-bg{
+  height: 40px;
+  position: absolute;
+  width: 100%;
+}
+#massage .headerBar-logo {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 56px;
+  height: 40px;
+  display: inline-block;
+}
+
+#steam::before{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#massage .headerBar-logo i {
+  display: inline-block;
+  height:21px;
+  width: 56px;
+  margin-left: 7px;
+  margin-top: 7px;
+}
+#massage .headerBar-search {
+  position:absolute;
+  left: 60px;
+  right: 65px;
+  width: auto;
+  height: 25px;
+  margin-top:5px;
+  color: #fffafa;
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+}
+#massage .headerBar-search span{
+  display: inline-block;
+  height:20px;
+  width: 20px;
+  background: url("../../img/common/sprites.png") no-repeat;
+  background-position: -60px -109px;
+  background-size: 200px 200px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+#massage .headerBar-search div{
+  display:inline-block;
+  height:100%;
+  width: auto;
+}
+#massage .headerBar-search div input{
+  border: 0;
+  display: inline-block;
+  background: 0;
+  font-size: 13px;
+  line-height: 18px;
+  height: 18px;
+  width: 100%;
+  vertical-align: middle;
+  margin-top: -15px;
+  color: #0a0a0a;
+}
+#massage .headerBar-login {
+  width: 30px;
+  height:inherit;
+  position: absolute;
+  right: 7px;
+  display: inline-block;
+}
+#massage .headerBar-login span{
+  margin-top: 7px;
+  color:#fa1b1b;
+  font-size: 15px;
+  display: inline-block;
+}
+
 /* 信息导航 */
 #massage #nav{
   height:80px;
@@ -22,7 +102,6 @@
   background-color:#fff;
   overflow:hidden;
   box-shadow:0 1px 1px #ebebeb;
-  margin-top: -40px; 
 }
 #massage #nav span{
   display:block;
@@ -54,20 +133,15 @@
 
 
 /* 内容区 */
+#massage #massage-content{
+  margin-top:80px;
+  background-color:#ffffff;
+}
 #massage #massage-content2{
   width: 100%;
-  height: 1000px;
   display: block; 
-  
+  padding:0 0 15px 0; 
 }
-#massage #massage-content3{
-  width: 100%;
-  height: 1000px;
-  display: none; 
-  background-color: rgb(202, 221, 196);
-  
-}
-
 /* 信息 */
 /* 贴子模块 */
 #massage .post{
@@ -83,7 +157,11 @@
   color:black;
 }
 
-
+#massage .massage #head-img{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+}
 /* 内容区 */
 #massage .content{
   width: 100%;
@@ -96,6 +174,12 @@
   height: 80px;
   background-color: white;
   margin-top: 10px;
+}
+#massage #massage-content{
+  min-height: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top:80px;
 }
 /* 头像 */
 #massage .massage-content-left{
@@ -127,41 +211,45 @@
   width: 100%;
   height: 30px;
   border-width: 1px;
-  
+  margin-top:10px;
 }
 
 #massage .content-button-head-from{
-  width: 60%;
   height: 100%;
   font-size: 20px;
   text-align: left;
   float: left;
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
-
-
 #massage .content-button-head-time{
-  width: 33%;
+  margin-left:40px;
   height: 100%;
-  font-size: 13px;
+  font-size: 16px;
   text-align: right;
   float: left;
-  margin-top: 5px;
-  padding-top: 5px;
+  margin-top: 3px;
   padding-right: 10px;
+  color:#808080
 }
 
 #massage .content-button-content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   width: 95%;
-  height: 60px;
-  font-size: 10px;
+  height: 50px;
+  font-size: 16px;
+  margin:5 0 0 0 ;
   text-align: left;
   float: left;
   margin-left: 2%;
   border-width: 1px;
   overflow:hidden;
+  margin:0 0 5px 5px;
 }
 
 

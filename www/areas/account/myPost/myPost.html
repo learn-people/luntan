@@ -5,45 +5,24 @@
     <a class="icon ion-ios-arrow-left myPostBar" ng-href="#/tab/account"></a>
     <p class="title">我的帖子</p>
   </ion-header-bar>
-  <ion-content>
-    <div>
-      <a class="myPostPart" ng-href="#/detail">
-        <div class="myPostPartTop">
-          <p class="myPostPartTopTitle">【求助】好看的动漫</p>
+  <ion-content class="scroll-content" scroll="true">
+    <div class="myPast" ng-repeat="data in post">
+      <a class="myPostPart" ng-click="myPostToDetail({{data.id}})">
+        <div class="myPostPartTop" >
+          <p class="myPostPartTopTitle"><h4>{{data.postTitle}}</h4></p>
         </div>
         <div class="myPostPartMiddle">
-          <p class="myPostPartMiddleContent">好看的动漫</p>
-          <div class="myPostPartMiddleImg">
-            <img src="img/account/1.png" alt="" class="myPostImg1">
-            <img src="img/account/1.png" alt="" class="myPostImg">
-            <img src="img/account/1.png" alt="" class="myPostImg">
-            <img src="img/account/1.png" alt="" class="myPostImg">
+          <p class="myPostPartMiddleContent">{{data.postContent}}</p>
+          <div class="myPostPartMiddleImg" ng-if="data.imgUrl != ''||data.imgUrl ==null">
+            <img src="{{data.imgUrl}}" alt="" class="myPostImg1">
           </div>
         </div>
         <div class="myPostPartDown">
           <span>
-            <p class="myPostUserName">{{userName}}</p>
-            <p class="myPostDate" name="myPostDate">{{year}}年{{month}}月{{day}}日</p>
-            <p class="myPostSeeNum"><i class="icon ion-ios-eye myPostI1"></i> {{test1}}</p>
-            <p class="myPostCommetNum"><i class="icon ion-ios-chatboxes myPostI1"></i> {{test1}}</p>
-          </span>
-        </div>
-      </a>
-
-      <a class="myPostPart" ng-href="#/detail">
-        <div class="myPostPartTop">
-          <p class="myPostPartTopTitle">【求助】好看的动漫</p>
-        </div>
-        <div class="myPostPartMiddle">
-          <p class="myPostPartMiddleContent">好看的动漫</p>
-          <div class=""></div>
-        </div>
-        <div class="myPostPartDown">
-          <span>
-            <p class="myPostUserName">{{userName}}</p>
-            <p class="myPostDate" name="myPostDate">{{year}}年{{month}}月{{day}}日</p>
-            <p class="myPostSeeNum"><i class="icon ion-ios-eye myPostI1"></i> {{test1}}</p>
-            <p class="myPostCommetNum"><i class="icon ion-ios-chatboxes myPostI1"></i> {{test1}}</p>
+            <p class="myPostUserName">{{post.userName}}</p>
+            <p class="myPostDate" name="myPostDate">{{data.postTime}}</p>
+            <p class="myPostSeeNum"><i class="icon ion-ios-eye myPostI1"></i>&nbsp;{{data.lookNum}}</p>
+            <p class="myPostCommetNum"><i class="icon ion-ios-chatboxes myPostI1"></i>&nbsp;{{data.purview}}</p>
           </span>
         </div>
       </a>
