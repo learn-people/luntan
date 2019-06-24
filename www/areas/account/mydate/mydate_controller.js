@@ -46,34 +46,7 @@ angular.module('mydate.controller',[])
       $("#sexStyle").addClass("sexAgeBtnGirl mydateSAB")
       $("#sexIcon").addClass("icon ion-female")
     }
-    function cage(){
-      var age;
-      var bir = "2016-01-12"//localStorage.getItem("birthday")+""
-      var year = bir.slice(0,4)
-      var month = bir.slice(5,7)
-      var day = bir.slice(8,10)
-      var d = new Date()
-      var nyear = d.getFullYear()
-      var nmonth = d.getMonth()
-      var nday =d.getDate()
-      if(year == nyear){
-        age = 0;
-      }else{
-        if(month < nmonth){
-          age = nyear - year
-        }else if(month > nmonth){
-          age = nyear - year -1
-        }else{
-          if(day <= nday){
-            age = nyear - year
-          }else{
-            age = nyear - year -1
-          }
-        }
-      }
-      console.log(age)
-      return age;
-    }
+    
     var cancelText;
     var mydateflag = -1;         //接受的状态 
     $(function(){
@@ -150,7 +123,34 @@ angular.module('mydate.controller',[])
        }
    });
  }
-   
+ function cage(){
+  var age;
+  var bir = "2016-01-12"//localStorage.getItem("birthday")+""
+  var year = bir.slice(0,4)
+  var month = bir.slice(5,7)
+  var day = bir.slice(8,10)
+  var d = new Date()
+  var nyear = d.getFullYear()
+  var nmonth = d.getMonth()
+  var nday =d.getDate()
+  if(year == nyear){
+    age = 0;
+  }else{
+    if(month < nmonth){
+      age = nyear - year
+    }else if(month > nmonth){
+      age = nyear - year -1
+    }else{
+      if(day <= nday){
+        age = nyear - year
+      }else{
+        age = nyear - year -1
+      }
+    }
+  }
+  console.log(age)
+  return age;
+}
  
  $scope.showAdd = function() {
 

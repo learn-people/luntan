@@ -3,28 +3,26 @@
 <ion-view id="plate" view-title="板块" cache-view="false">
     <!--头部-->
 
-    <ion-header-bar>
-        <div class="bar bar-header">
-            <a class="button-icon icon ion-chevron-left" ng-href="#/tab/publish"></a>
-            <h1 class="title1">全部板块</h1>
-        </div>
-    </ion-header-bar>
+    <ion-header-bar class="bar-dark" align-title="center">
+        <a class="icon ion-ios-arrow-left followBar"  ng-href="#/tab/publish"></a>
+        <p class="title">版块选择</p>
+      </ion-header-bar>
 
     <ion-content>
         <div class="content">
             <div class="content-theme">
-                <div class="content-theme-title">
+                <div class="content-theme-title" id="part1" ng-click="change(1)">
                     <i class="icon icon-message"></i>
                     谈天说地
                 </div>
                 <div class="content-theme-con">
-                    <div class="content-theme-con-1">潜水杂谈</div>
+                    <div class="content-theme-con-1" >潜水杂谈</div>
                     <div class="content-theme-con-1">心情交流</div>
                     <div class="content-theme-con-1">游戏资讯</div>
                 </div>
             </div>
-            <div class="content-theme">
-                <div class="content-theme-title">
+            <div class="content-theme" >
+                <div class="content-theme-title" id="part2" ng-click="change(2)">
                     <i class="icon icon-message"></i>
                     游戏交流
                 </div>
@@ -37,7 +35,7 @@
                 </div>
             </div>
             <div class="content-theme">
-                <div class="content-theme-title">
+                <div class="content-theme-title" id="part3" ng-click="change(3)">
                     <i class="icon icon-message"></i>
                     游戏攻略
                 </div>
@@ -46,6 +44,17 @@
                     <div class="content-theme-con-1">游戏mod</div>
                     <div class="content-theme-con-1">游戏资源</div>
                     <div class="content-theme-con-1">游戏优化</div>
+                </div>
+            </div>
+            <div class="content-theme">
+                <div class="content-theme-title" id="part4" ng-click="change(4)">
+                    <i class="icon icon-message"></i>
+                    交易购物
+                </div>
+                <div class="content-theme-con">
+                    <div class="content-theme-con-1">热销游戏</div>
+                    <div class="content-theme-con-1">史低价格</div>
+                    <div class="content-theme-con-1">游戏代购</div>
                 </div>
             </div>
         </div>

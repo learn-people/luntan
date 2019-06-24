@@ -3,7 +3,8 @@
 */
 
 angular.module('account.route',['account.controller','follow.controller','fans.controller',
-  'mydate.controller','register.controller','signin.controller','mydateEdit.controller','myCollection.controller'])
+  'mydate.controller','register.controller','signin.controller','mydateEdit.controller',
+  'myCollection.controller','otherdate.controller'])
 
 .config(function($stateProvider){
   $stateProvider
@@ -72,6 +73,13 @@ angular.module('account.route',['account.controller','follow.controller','fans.c
       //cache:false,
       templateUrl:'areas/account/mydate/mydate.html',
       controller:'MydateController'
+    })
+    //资料详情界面路由
+    .state('otherdate',{
+      url:'/otherdate',
+      //cache:false,
+      templateUrl:'areas/account/otherdate/otherdate.html',
+      controller:'OtherdateController'
     })
     //编辑资料界面路由
     .state('mydateEdit',{

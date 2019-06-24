@@ -11,7 +11,10 @@
         params:data
       })
       .success(function(data){
-        console.log(data)
+        //console.log(data)
+        var resultData = JSON.stringify(data)
+        var resultData1 = JSON.parse(resultData)
+        callback(resultData1)
       })
       .error(function(){
         console.log("错误，请求失败")

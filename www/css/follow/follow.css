@@ -43,6 +43,7 @@
   width: 40px;
   height: 40px;
   float: left;
+  border-radius: 50%;
 }
 
 .myFollow .myFollowNSA {
@@ -75,4 +76,10 @@
   min-height: 0px;
   line-height: 10px;
   font-size: 14px;
+}
+.myFollow .myFansNSA {
+  width: 80%;
+  height: 60px;
+  float: left;
+  margin-left: 15px;
 }

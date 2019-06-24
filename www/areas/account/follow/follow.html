@@ -9,23 +9,28 @@
   <ion-content>
     <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" pulling-icon="icon ion-arrow-up-c">
     </ion-refresher>
-    <div>
-    <a ng-href="#/mydate">
+    <div  class="content-list">
+    <div id="followPart" ng-repeat="item in data track by $index">
+    <div ng-click=toOther(item.id)>
     <div class="myFollow" >
         <div class="myFollowPhoto">
-          <img ng-src="img/signin/steam.png" alt="图片丢失">
+          <img ng-src="{{item.imgUrl}}" alt="">
         </div>
-        <div class="myFollowNSA">
-          <div class="myFollowName">木木晶华开</div>
-          <div class="sexAgeBtnGirl">
+        <div class="myFollowNSA" id='myicon{{item.id}}'>
+          <div class="myFollowName">{{item.userName}}</div>
+          <div class="sexAgeBtnBoy" ng-if="item.gender=='男'">
+            <i class="icon ion-male"></i>
+            <p >{{age[$index]}}</p>
+          </div>
+          <div class="sexAgeBtnGirl"  ng-if="item.gender=='女'">
             <i class="icon ion-female"></i>
-            <p>{{test}}</p>
+            <p>{{age[$index]}}</p>
           </div>
         </div>
       </div>
-    </a>
-    <button class="myFollowBtn"id="myfollowBtn" ng-click="showConfirm()">已关注</button>
+    </div>
+    <button class="myFollowBtn"id="myfollowBtn{{item.id}}" ng-click="showConfirm({{item.id}},{{item.userName}})">已关注</button>
   </div>
-
+</div>
   </ion-content>
 </ion-view>

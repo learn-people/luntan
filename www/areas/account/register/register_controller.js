@@ -15,8 +15,51 @@ function see(){
 angular.module('register.controller',['register.service'])
 
 .controller('RegisterController',function($scope,$timeout,$ionicPopup,
-    RegisterService,$rootScope,$location,$cordovaCamera){
-    
+    RegisterService,$rootScope,$location,$cordovaCamera,$cordovaDatePicker){
+        $scope.sex = "./img/defaultphoto/2.png"
+        //选择男或女时更改默认图像
+        $(":radio").click(function(){
+            // console.log($(this).val())
+            // console.log($scope.sex)
+            if($(this).val()=="男"){
+                $scope.sex = "./img/defaultphoto/2.png"
+            }else{
+                $scope.sex = "./img/defaultphoto/3.png"
+            }
+            
+           });
+    //生日配置    android 已实现
+    var options = {
+      date: new Date(),
+      mode: 'date', // or 'time'
+      maxDate: new Date() - 10000,
+      allowOldDates: true,
+      //allowFutureDates: false,
+      doneButtonLabel: 'DONE',
+      doneButtonColor: '#F2F3F4',
+      cancelButtonLabel: 'CANCEL',
+      cancelButtonColor: '#000000',
+      //androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
+    };
+    if(status == 0){
+    //var d = new Date();
+    localStorage.setItem('birthday',"2019-06-23")
+    $scope.date = localStorage.getItem('birthday')
+    }
+    $scope.registerBirthday = function(){
+        $cordovaDatePicker.show(options).then(function(date){
+            var str = date+""
+            var day = str.slice(8,10)
+            var d = new Date(date);
+            var year = d.getUTCFullYear()
+            var month = d.getUTCMonth()+1
+            if (month < 10) {
+              month = "0" + month;
+            }
+            $scope.date = ""+year+"-"+month+"-"+day+""
+            console.log(d.getDate())
+        })
+    }
     $scope.name = "hh"
     $scope.subdate = function(){
         var sex = $('input:radio[name="sex"]:checked').val();
@@ -76,26 +119,27 @@ angular.module('register.controller',['register.service'])
         
     }
     // 从相册获取图片
-    var options;
-    $scope.func_getPicFromPicture = function () {
-          options = {
-          quality: 100,
-          destinationType: Camera.DestinationType.DATA_URL,
-          sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-          allowEdit: true,
-          encodingType: Camera.EncodingType.JPEG,
-          targetWidth: 100,
-          targetHeight: 100,
-          popoverOptions: CameraPopoverOptions,
-          saveToPhotoAlbum: false,
-          correctOrientation: true
-        };
+    $scope.chosePhoto = function(){
+       var options = {
+        quality: 100,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+        allowEdit: true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 100,
+        targetHeight: 100,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: false,
+        correctOrientation: true
+      };
+        $cordovaCamera.getPicture(options).then(function (imageData) {
+        var image = document.getElementById('photo');
+        image.src = "data:image/jpeg;base64," + imageData;
+        localStorage["photo"] = imageData;
+      });
     }
-    // $cordovaCamera.getPicture(options).then(function (imageData) {
-    //     var image = document.getElementById('touxiang');
-    //     image.src = "data:image/jpeg;base64," + imageData;
-    //     localStorage["touxiang"] = imageData;
-    //   });
+    
+    
 
 })
 
@@ -129,29 +173,3 @@ angular.module('register.controller',['register.service'])
     };
 }]);
 
-//生日配置    android 已实现
-   /* var options = {
-      date: new Date(),
-      mode: 'date', // or 'time'
-      maxDate: new Date() - 10000,
-      allowOldDates: true,
-      //allowFutureDates: false,
-      doneButtonLabel: 'DONE',
-      doneButtonColor: '#F2F3F4',
-      cancelButtonLabel: 'CANCEL',
-      cancelButtonColor: '#000000',
-      androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
-    };*/
-    /*$scope.registerBirthday = function(){
-        $cordovaDatePicker.show(options).then(function(date){
-            var str = date+""
-            var day = str.slice(8,10)
-            var d = new Date(date);
-            var year = d.getUTCFullYear()
-            var month = d.getUTCMonth()+1
-            if (month < 10) {
-              month = "0" + month;
-            }
-            $scope.date = ""+year+"-"+month+"-"+day+""
-        })
-    }*/

@@ -3,14 +3,15 @@
   <ion-header-bar class="bar-dark" align-title="center">
     <a class="icon ion-ios-arrow-left mydateBar" ng-click="goBack()" ng-href="#/tab/home"></a>
     <p class="title">发新帖</p>
-    <a class="mydateEdithead" ng-click="mydateEditSave()">发布</a>
+    <a class="mydateEdithead" ng-click="publish()">发布</a>
   </ion-header-bar>
   <ion-content>
 
     <div class="add">
       <div class="add-title">
         <span class="add-title-span">主题：</span>
-        <input type="text" class="add-title-input" placeholder="不超过30字(可选)" size="10" maxlength="30">
+        <input id="publicTitle" type="text" class="add-title-input" 
+            placeholder="不超过30字(可选)" size="10" maxlength="30">
       </div>
 
       <textarea name="" id="publishTextInput" cols="57" rows="20" maxlength="400" placeholder="说点什么,最多400字"></textarea>
@@ -31,15 +32,20 @@
         </i>
       </div> -->
       <div class="upload-1">
-        <i class="icon icon-gengduotupian" id="upload-button2" ng-click="test()">
+        <i class="icon icon-gengduotupian" id="upload-button2" ng-click="openAlbum()">
         </i>
       </div>
       <div class="upload-1">
-        <i class="icon ion-ios-reverse-camera-outline" ng-click=""id="upload-button3">
+        <i class="icon ion-ios-reverse-camera-outline" ng-click="openCamera()"id="upload-button3">
         </i>
       </div>
     </div>
-    <div class="publishImg"></div>
+    <div id="publishImg">
+      <img src="./img/account/1.png" alt="" class="publishImg">
+      <img src="./img/account/1.png" alt="" class="publishImg">
+      <img src="./img/account/1.png" alt="" class="publishImg">
+      <img src="./img/account/1.png" alt="" class="publishImg">
+    </div>
   </ion-content>
 
 </ion-view>

@@ -2,44 +2,40 @@
 
 <ion-view id="fans" view-title="我的粉丝" cache-view="false">
 
-        <ion-header-bar class="bar-dark" align-title="center">
-          <a class="icon ion-ios-arrow-left followBar"  ng-href="#/tab/account"></a>
-          <p class="title">我的粉丝</p>
-        </ion-header-bar>
-        <ion-content>
-          <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" pulling-icon="icon ion-arrow-up-c">
-          </ion-refresher>
-          <a ng-href="#/mydate">
-            <div class="myFollow" >
-      
-              <div class="myFollowPhoto">
-                <img ng-src="img/signin/steam.png" alt="图片丢失">
-              </div>
-      
-              <div class="myFollowNSA">
-                <div class="myFollowName">木木晶华开</div>
-                <div class="sexAgeBtnBoy">
+  <ion-header-bar class="bar-dark" align-title="center">
+    <a class="icon ion-ios-arrow-left followBar" ng-href="#/tab/account"></a>
+    <p class="title">我的粉丝</p>
+  </ion-header-bar>
+  <ion-content>
+    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" pulling-icon="icon ion-arrow-up-c">
+    </ion-refresher>
+    <div class="content-list">
+      <div id="fansPart" ng-repeat="item in data track by $index">
+
+        <div ng-click="toOther(item.id)">
+          <div class="myFollow">
+
+            <div class="myFollowPhoto">
+              <img ng-src="{{item.imgUrl}}" alt="失">
+            </div>
+
+            <div class="myFansNSA">
+              <div class="myFollowNSA" id='myicon{{item.id}}'>
+                <div class="myFollowName">{{item.userName}}</div>
+                <div class="sexAgeBtnBoy" ng-if="item.gender=='男'">
                   <i class="icon ion-male"></i>
-                  <p>{{test1}}{{test}}</p>
+                  <p>{{age[$index]}}</p>
+                </div>
+                <div class="sexAgeBtnGirl" ng-if="item.gender=='女'">
+                  <i class="icon ion-female"></i>
+                  <p>{{age[$index]}}</p>
                 </div>
               </div>
             </div>
-          </a>
-      
-          <a ng-href="#/mydate">
-          <div class="myFollow">
-            <div class="myFollowPhoto">
-              <img ng-src="img/signin/steam.png" alt="图片丢失">
-            </div>
-            <div class="myFollowNSA">
-              <div class="myFollowName">木木晶华开</div>
-              <div class="sexAgeBtnGirl">
-                <i class="icon ion-female"></i>
-                <p>{{test1}}</p>
-              </div>
-            </div>
-            </a>
-      
-        </ion-content>
-      </ion-view>
-      
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

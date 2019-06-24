@@ -103,10 +103,13 @@
     position: relative;
     background-color: rgb(228, 224, 224);
 }
-#publish .publishImg{
+#publish #publishImg{
     width:100%;
     height:100px;
-    background-color: aqua;
+}
+#publish .publishImg{
+    width:24%;
+    height:100px;
 }
 #publish .upload-1{
     width: 50%;
