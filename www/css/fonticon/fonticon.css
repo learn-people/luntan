@@ -289,3 +289,59 @@
   content: "\e61d";
   color:#1296db;
 }
+
+.icon-yonghu:before {
+  content: "\e639";
+}
+
+.icon-yonghu1:before {
+  content: "\e626";
+}
+
+.icon-ios-yonghu:before {
+  content: "\e609";
+}
+
+.icon-yonghu3:before {
+  content: "\e7a5";
+}
+
+.icon-xinxi:before {
+  content: "\e667";
+}
+
+.icon-message1:before {
+  content: "\e63a";
+}
+
+.icon-xinxi1:before {
+  content: "\e63f";
+}
+
+.icon-xinxi2:before {
+  content: "\e616";
+}
+
+.icon-zhuye1:before {
+  content: "\e635";
+}
+
+.icon-zhuye:before {
+  content: "\e636";
+}
+
+.icon-fabiao1:before {
+  content: "\e6e9";
+}
+
+.icon-fabiao:before {
+  content: "\e6d5";
+}
+
+.icon-xinxi3:before {
+  content: "\e911";
+}
+
+.icon-iconfontcommentfill:before {
+  content: "\e60f";
+}

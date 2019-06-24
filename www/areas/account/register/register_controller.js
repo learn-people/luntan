@@ -2,20 +2,22 @@
 var userNum="";
 var userPw = "";
 var temp;
-function see(){
-    userNum = $("#registerNm").val();
-    userPw = $("#registerPw").val();
 
-    temp = '[{"userNumber"='+"'"+userNum+"'"+',"userPassword"='+"'"+userPw+"'"+',"userName"='+'"用户"'
-    +',"imgUrl"='+'"agasf"'+',"grade"='+0+',"exp"='+0+',"jurisdiction"='+0
-    +',"fansNum"='+0+',"followsNum"='+0+',"postsNum"='+0
-}
 
 
 angular.module('register.controller',['register.service'])
 
 .controller('RegisterController',function($scope,$timeout,$ionicPopup,
     RegisterService,$rootScope,$location,$cordovaCamera,$cordovaDatePicker){
+        $scope.see = function(){
+            userNum = $("#registerNm").val();
+            userPw = $("#registerPw").val();
+            console.log(userNum)
+            temp = '[{"userNumber"='+"'"+userNum+"'"+',"userPassword"='+"'"+userPw+"'"+',"userName"='+'"用户"'
+            +',"imgUrl"='+'"agasf"'+',"grade"='+0+',"exp"='+0+',"jurisdiction"='+0
+            +',"fansNum"='+0+',"followsNum"='+0+',"postsNum"='+0
+            $location.path("/registerDetail")
+        }
         $scope.sex = "./img/defaultphoto/2.png"
         //选择男或女时更改默认图像
         $(":radio").click(function(){
@@ -153,7 +155,7 @@ angular.module('register.controller',['register.service'])
                 if (!n) return;
                 $timeout.cancel($window.timer);
                 $window.timer = $timeout(function(){
-                    url = 'http://127.0.0.1:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
+                    url = 'http://192.168.43.250:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
                     $http.jsonp(url,{
                         params:{
                             "userNumber":n
