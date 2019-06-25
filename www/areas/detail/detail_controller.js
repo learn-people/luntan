@@ -111,6 +111,8 @@ angular.module('detail.controller', ['home.service','detail.service'])
                         });
                         $timeout(function() {
                             myPopup.close(); // 1秒后关闭弹窗
+                            $('#comment-bar').css('display','block');
+                            $('#comment-send').css('display','none');
                         }, 1000);
 
                         //console.log($scope.input);

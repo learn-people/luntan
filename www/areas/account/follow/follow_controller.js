@@ -51,6 +51,7 @@ angular.module('follow.controller',['follow.service','otherdate.service'])
       for(var i=0;i<followData.length;i++){
         //var id = followData[i].id
         var age = cage(followData[i].birthday)
+        console.log(age)
         arr.push(age)
         followBtn.push(followData[i].id)
         followBtn1.push(1)

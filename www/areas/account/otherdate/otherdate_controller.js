@@ -45,6 +45,7 @@ angular.module('otherdate.controller',['otherdate.service'])
       $scope.grade = data.grade
       sex = data.gender
       birthday = data.birthday
+      console.log(birthday)
       $scope.age = cage(birthday)
       if(sex == "男"){
         $("#sexStyle").removeClass("sexAgeBtnGirl mydateSAB")

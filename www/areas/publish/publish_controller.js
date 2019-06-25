@@ -31,8 +31,8 @@ angular.module('publish.controller',['publish.service'])
     }) 
     //传输数据给后台进行插入
     var userNumber = localStorage.getItem("userNumber")
-    var postTitle = $("#publishTextInput").val()
-    var postContent = $("#publicTitle").val()
+    var postTitle = $("#publicTitle").val()
+    var postContent = $("#publishTextInput").val()
     var data = '[{"userNumber"='+'"'+userNumber+'"'+',"postTitle"='+'"'+postTitle+'"'
     +',"postContent"="'+postContent+'"'
     var sectionId = sessionStorage.getItem("part")
