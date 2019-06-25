@@ -41,7 +41,7 @@ angular.module('register.controller',['register.service'])
       doneButtonColor: '#F2F3F4',
       cancelButtonLabel: 'CANCEL',
       cancelButtonColor: '#000000',
-      //androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
+      androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
     };
     if(status == 0){
     //var d = new Date();
@@ -155,7 +155,7 @@ angular.module('register.controller',['register.service'])
                 if (!n) return;
                 $timeout.cancel($window.timer);
                 $window.timer = $timeout(function(){
-                    url = 'http://192.168.43.250:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
+                    url = 'http://192.168.43.48:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
                     $http.jsonp(url,{
                         params:{
                             "userNumber":n

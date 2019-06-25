@@ -12,7 +12,7 @@ angular.module('publish.controller',['publish.service'])
     $scope.goBack = function(){
         $ionicHistory.goBack();
     }
-    
+    $scope.imgUrl;
     //console.log(title)
     //标题栏失去焦点时，保存之前信息
     $("#publicTitle").val(sessionStorage.getItem("publishTitle"))
@@ -61,7 +61,8 @@ angular.module('publish.controller',['publish.service'])
             seconds = "0" + seconds 
         }
         var publishTime =d.getFullYear()+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds
-        data += ',"posttime"="'+publishTime +'","sectionId"='+sectionId+'}]'
+        data += ',"posttime"="'+publishTime +'","sectionId"='+sectionId+
+        ',"imgUrl"="'+$scope.imgUrl+'"}]'
         console.log(data)
         //发布存储到数据库
         if(postTitle==""||postTitle==null||postContent==""||postContent==null){
@@ -122,7 +123,7 @@ angular.module('publish.controller',['publish.service'])
     // 从相册获取图片
     $scope.openAlbum = function () {
         var options = {  
-          maximumImagesCount: 6,    // 最多传几张
+          maximumImagesCount: 1,    // 最多传几张
           width: 800,  
           height: 800,  
           quality: 80      // 图片质量
@@ -130,19 +131,11 @@ angular.module('publish.controller',['publish.service'])
         
         $cordovaImagePicker.getPictures(options)
         .then(function(imageData) {     //获取头像图片并上传
-
-
-        var image = document.getElementById('touxiang');
-        image.src = "data:image/jpeg;base64," + imageData;
-        // 保存我们获取的头像数据，下次登录的时候就可以显示了
-        localStorage["touxiang"] = imageData;
-
-
-
           //  如果之前没有设置头像，那么用时间戳指定新添加头像的key
           var key = (new Date()).valueOf() + '.jpg'
           //  获取上传凭证并上传图片到七牛，imageData是Base64编码后的图片字符串
-          accountService.getToken(key, function (data) {
+          publishService.getToken(key, function (data) {
+            console.log("data.token:"+data.token)
             putb64(imageData, key, data.token)
           })
         });
@@ -165,8 +158,8 @@ angular.module('publish.controller',['publish.service'])
           //  如果之前没有设置头像，那么用时间戳指定新添加头像的key
           var  key = (new Date()).valueOf() + '.jpg'
           //  获取上传凭证并上传图片到七牛，imageData是Base64编码后的图片字符串
-          accountService.getToken(key, function (data) {
-            console.log("data:"+data)
+          publishService.getToken(key, function (data) {
+            console.log("data.token:"+data.token)
             putb64(imageData, key, data.token)
           })
         });
@@ -185,9 +178,12 @@ angular.module('publish.controller',['publish.service'])
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {    // 监听上传响应
           if (xhr.readyState == 4) {                   // 上传成功
+            console.log("上传成功")
             var data = JSON.parse(xhr.responseText)     // 获取图片key
-            $scope.userInfo.imgUrl = domain + data.key
-            updateUserInfo()      // 更新用户头像
+            $scope.imgUrl = domain + data.key
+            //updateUserInfo()      // 更新用户头像
+          }else{
+            console.log("上传失败")
           }
         }
         // 配置上传参数
@@ -206,21 +202,16 @@ angular.module('publish.controller',['publish.service'])
         var picLength = parseInt(imageData.length - (imageData.length / 8) * 2);
         return picLength;
       }
-    
+
+    //跳转到版块页面
     $scope.toplate = function(){
         $location.path("/plate")
     }
-    $scope.test = function(){
-        alert("zz")
-    }
+    
     //mydate中设置图像宽度与高度一致
     $(function (){
         var imgWidth = $("#imgWidth").innerHeight();
         $("#imgWidth").css('width',imgWidth);
     })
-
-    
-
-
 
 })

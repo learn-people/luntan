@@ -5,11 +5,37 @@ angular.module('mydateEdit.controller',['mydateEdit.service'])
 
 .controller('MydateEditController',function($scope,$ionicPopup,$cordovaDatePicker,
   $timeout,$location,MydateEditService){
-    console.log(localStorage.getItem("hometown"))
+    //console.log(localStorage.getItem("hometown"))
     window.flag = 0;    //判断是否点击保存按钮
     window.t = [0,0,0,0,0]    //判断点击修改了那个按钮
-    //console.log(t)
-    
+    console.log(flag)
+    //生日配置    android 已实现
+    var options = {
+      date: new Date(),
+      mode: 'date', // or 'time'
+      maxDate: new Date() - 10000,
+      allowOldDates: true,
+      //allowFutureDates: false,
+      doneButtonLabel: 'DONE',
+      doneButtonColor: '#F2F3F4',
+      cancelButtonLabel: 'CANCEL',
+      cancelButtonColor: '#000000',
+      androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
+    };
+    //点击生日修改
+    $scope.setBirthDay =function(){
+      $cordovaDatePicker.show(options).then(function(date){
+        var str = date+""
+        var day = str.slice(8,10)
+        var d = new Date(date);
+        var year = d.getUTCFullYear()
+        var month = d.getUTCMonth()+1
+        if (month < 10) {
+          month = "0" + month;
+        }
+        $scope.date = ""+year+"-"+month+"-"+day+""
+      })
+    }
   //编辑昵称
     $scope.userName = localStorage.getItem('userName')
     if(localStorage.getItem('autography')==""){
@@ -87,6 +113,7 @@ angular.module('mydateEdit.controller',['mydateEdit.service'])
           }, 1000);
         }else{
           //修改失败时的提示
+
           var failtext = '<div class="addSuccessBodyU">'
                 +'<i class="icon  ion-ios-close-empty addSuccessI"></i>'
                 +'</div>'
@@ -199,30 +226,3 @@ angular.module('mydateEdit.controller',['mydateEdit.service'])
   }
     
 })
-//生日配置    android 已实现
-   /* var options = {
-      date: new Date(),
-      mode: 'date', // or 'time'
-      maxDate: new Date() - 10000,
-      allowOldDates: true,
-      //allowFutureDates: false,
-      doneButtonLabel: 'DONE',
-      doneButtonColor: '#F2F3F4',
-      cancelButtonLabel: 'CANCEL',
-      cancelButtonColor: '#000000',
-      androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
-    };*/
-    //点击生日修改
-    /*$scope.setBirthDay =function(){
-      $cordovaDatePicker.show(options).then(function(date){
-        var str = date+""
-        var day = str.slice(8,10)
-        var d = new Date(date);
-        var year = d.getUTCFullYear()
-        var month = d.getUTCMonth()+1
-        if (month < 10) {
-          month = "0" + month;
-        }
-        $scope.date = ""+year+"-"+month+"-"+day+""
-      })
-    }*/
