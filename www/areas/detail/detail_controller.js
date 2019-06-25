@@ -53,21 +53,21 @@ angular.module('detail.controller', ['home.service','detail.service'])
             $('#comment-send').css('display','block');
         }
 /****************************评论设置**************************************************************** */
-        //添加评论
-        //获取时间
-        $scope.dt = new Date();
-        var commentTime = $filter("date")($scope.dt, "yyyy-MM-dd HH:mm:ss");
-        //获取内容
-        var commentContent = "";
-        commentContent = $(".in-text").val();
-        //console.log(typeof(commentContent));
-        //获取账号
-        var userNum = localStorage.getItem('userNumber')+""; 
-        //console.log(userNum);
-        //获取贴子id
-        var postId = id;
-        //console.log(typeof(id));
         $scope.send = function(){
+            //添加评论
+            //获取时间
+            $scope.dt = new Date();
+            var commentTime = $filter("date")($scope.dt, "yyyy-MM-dd HH:mm:ss");
+            //获取内容
+            var commentContent = "";
+            commentContent = $(".in-text").val();
+            console.log(commentContent);
+            //获取账号
+            var userNum = localStorage.getItem('userNumber')+""; 
+            //console.log(userNum);
+            //获取贴子id
+            var postId = id;
+            //console.log(typeof(id));
             if(commentContent == ""){
                 //失败时的提示
                 var failtext = '<div class="addSuccessBodyU">'
@@ -107,6 +107,8 @@ angular.module('detail.controller', ['home.service','detail.service'])
                         });
                         $timeout(function() {
                             myPopup.close(); // 1秒后关闭弹窗
+                            $('#comment-bar').css('display','block');
+                            $('#comment-send').css('display','none');
                         }, 1000);
 
                         //console.log($scope.input);

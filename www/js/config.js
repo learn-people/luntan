@@ -5,7 +5,7 @@
 angular.module('config',[])
 
 .factory('configService',function(){
-  var hostUrl = 'http://192.168.43.250:8080/luntanSSM';
+  var hostUrl = 'http://127.0.0.1:8080/luntanSSM';
   return {
     getHostUrl:function () { 
       return hostUrl;
