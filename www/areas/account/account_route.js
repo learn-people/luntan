@@ -6,7 +6,7 @@ angular.module('account.route',['account.controller','follow.controller','fans.c
   'mydate.controller','register.controller',
   'signin.controller','mydateEdit.controller',
   'myCollection.controller','myPost.controller',
-  'myReply.controller','otherdata.controller'])
+  'myReply.controller','otherdate.controller'])
 
 .config(function($stateProvider){
   $stateProvider

@@ -2,9 +2,10 @@
 *我的标签页的控制器模块
 */
 
-angular.module('account.controller',[])
+angular.module('account.controller',['account.service','fans.service','follow.service'])
 
-.controller('AccountController',function($scope,$timeout,$ionicHistory,$location){
+.controller('AccountController',function($scope,$timeout,$ionicPopup,FollowService
+  ,$ionicHistory,$location,AccountService){
   $scope.test = 0
   $scope.test1 = 1
   //$scope.userName = "hhh"
@@ -13,15 +14,94 @@ angular.module('account.controller',[])
   $scope.day = 10
   //$scope.imgUrl = "img/account/login.png"
   //获得登录信息
+  var id = localStorage.getItem("id")
+  // 自定义弹窗
+  
+  $scope.changePw = function(){
+    if(localStorage.getItem("statue") == 0){
+      //处与未登录状态
+    }else{
+    var oldPw = $("#oldPw").val()
+    var newPw = $("#newPw").val()
+    var newPw1 = $("#newPw1").val()
+    if(newPw != newPw1){
+      //新密码不一致
+      var canceltext = canceltext = "<div class='followBody'>"
+      +"<p class='popupContent'>"
+      +"密码不一致<p>"
+      +"</div>"
+      var myPopup = $ionicPopup.show({
+        cssClass:'myFollow-popup',
+        template: canceltext
+      });
+      myPopup.then(function(res) {
+        console.log('Tapped!', res);
+      });
+      $timeout(function() {
+         myPopup.close(); // 1秒后关闭弹窗
+      }, 800);
+    }else{
+    AccountService.check(id,oldPw,function(data){
+      if(data == 1){
+        //更改密码
+        AccountService.change(id,newPw,function(data){
+          if(data == 1){
+            var canceltext = canceltext = "<div class='followBody'>"
+      +"<p class='popupContent'>"
+      +"更新成功<p>"
+      +"</div>"
+      var myPopup = $ionicPopup.show({
+        cssClass:'myFollow-popup',
+        template: canceltext
+      });
+      myPopup.then(function(res) {
+        console.log('Tapped!', res);
+      });
+      $timeout(function() {
+        $location.path("/tab/account")
+         myPopup.close(); // 1秒后关闭弹窗
+      }, 800);
+          }
+        })
+      }else{
+        //原密码不对
+        var canceltext = canceltext = "<div class='followBody'>"
+      +"<p class='popupContent'>"
+      +"密码错误<p>"
+      +"</div>"
+      var myPopup = $ionicPopup.show({
+        cssClass:'myFollow-popup',
+        template: canceltext
+      });
+      myPopup.then(function(res) {
+        console.log('Tapped!', res);
+      });
+      $timeout(function() {
+         myPopup.close(); // 1秒后关闭弹窗
+      }, 800);
+      }
+    })
+  }
+}
+}
   var statue = localStorage.getItem('statue')
   var userName = localStorage.getItem('userName')
   var imgUrl = localStorage.getItem('imgUrl')
   $scope.fansNum = localStorage.getItem('fansNum')
   $scope.followsNum = localStorage.getItem('followsNum')
   console.log(statue)
+  //设置js
   $scope.signOut = function(){
     localStorage.setItem('statue',0);
     localStorage.setItem('imgUrl',"img/account/login.png")
+    localStorage.setItem("grade",0)
+    localStorage.setItem("exp",0)
+    localStorage.setItem("jurisdiction",0)
+    localStorage.setItem("fansNum",0)
+    localStorage.setItem("followsNum",0)
+    localStorage.setItem("postsNum",0)
+    localStorage.setItem('collectionNum',0)
+    localStorage.setItem('myReplyNum',0)
     $location.path("/tab/account")
   }
   $(function (){
@@ -32,6 +112,7 @@ angular.module('account.controller',[])
       $scope.imgUrl =imgUrl;
       $scope.accountUrl = "#/mydate"
       //$('mydateFooter').addClass('hidden');
+      //FansService.get
     }else{
       $("#loginUserName").text("登录/注册");
       $scope.imgUrl = imgUrl;
@@ -79,9 +160,7 @@ angular.module('account.controller',[])
   }
 })
 
-function openuploads(id){
-    
-}
+
 
 function changeEditAddBtnBg(temp){
   temp.style.background = "#fff";
