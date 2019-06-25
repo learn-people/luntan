@@ -47,16 +47,16 @@
 }
 
 .myFollow .myFollowNSA {
-  width: 30%;
+  width: 100%;
   height: 60px;
-  float: left;
-  margin-left: 15px;
+  padding-top:3px;
 }
 
 .myFollow .myFollowName {
   color: black;
   margin-top: 10px;
   font-size: 18px;
+  margin-left:60px;
 }
 
 .myFollowBtn {
