@@ -89,6 +89,9 @@ angular.module('account.controller',['account.service','fans.service','follow.se
   var imgUrl = localStorage.getItem('imgUrl')
   $scope.fansNum = localStorage.getItem('fansNum')
   $scope.followsNum = localStorage.getItem('followsNum')
+  var sex = localStorage.getItem('sex')
+  
+
   console.log(statue)
   //设置js
   $scope.signOut = function(){

@@ -123,7 +123,7 @@ angular.module('publish.controller',['publish.service'])
     // 从相册获取图片
     $scope.openAlbum = function () {
         var options = {  
-          maximumImagesCount: 1,    // 最多传几张
+          maximumImagesCount: 2,    // 最多传几张
           width: 800,  
           height: 800,  
           quality: 80      // 图片质量

@@ -10,7 +10,7 @@
     <div class="registerDetailInfo">
       <div class="infoPart">
         <img src="{{sex}}"  id="photo">
-        <div class="icon ion-plus-circled addInfoIcon" ng-click="func_getPicFromPicture()"></div>
+        <div class="icon ion-plus-circled addInfoIcon" ng-click="chosePhoto()"></div>
       </div>
       <div class="infoPart">
         <p>性别</p>
@@ -21,7 +21,7 @@
       </div>
       <div class="infoPart" ng-click="registerBirthday()">
         <p>生日</p>
-        <div id="infoDate">2019-06-21</div>
+        <div id="infoDate">{{date}}</div>
       </div>
       <a class="button button-balanced infoBtn" ng-click="subdate()">完成</a>
     </div>
