@@ -80,6 +80,7 @@ angular.module('register.controller',['register.service'])
                 localStorage.setItem("userNumber",userNum)
                 localStorage.setItem("userPassword",userPw)
                 localStorage.setItem("sex",sex)
+                localStorage.setItem("statue",1)
                 localStorage.setItem("userName","用户")
                 /**/ 
                 localStorage.setItem("birthday",$scope.date)
