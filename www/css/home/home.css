@@ -27,6 +27,7 @@
   height: 40px;
   position: absolute;
   width: 100%;
+  background-color:rgb(66, 66, 66);
 }
 #home .headerBar-logo {
   position: absolute;
@@ -56,16 +57,12 @@
   width: auto;
   height: 25px;
   margin-top:5px;
-  color: #fffafa;
   display: inline-block;
-  background-color: #f1f1f1;
-  border-radius: 15px;
 }
 #home .headerBar-search span{
   display: inline-block;
   height:20px;
   width: 20px;
-  background: url("../../img/common/sprites.png") no-repeat;
   background-position: -60px -109px;
   background-size: 200px 200px;
   margin-left: 5px;
@@ -114,7 +111,7 @@
   margin-top:10px;
 }
 #home #nav span h2{
-  font-size:13.5px;
+  font-size:14px;
   font-weight:300;
   text-align:center;
   margin-top: 35px;

@@ -13,7 +13,7 @@ angular.module('otherdate.controller',['otherdate.service'])
     var toid = sessionStorage.getItem("toId")
     var id = localStorage.getItem("id")
     //检测是否关注
-    //console.log(id)
+    console.log(toid)
     OtherdateService.checkRelation(id,toid,function(data){
       var data = data
       console.log(data)
@@ -34,7 +34,7 @@ angular.module('otherdate.controller',['otherdate.service'])
       }
     })
     OtherdateService.getData(toid,function(data){
-      //console.log(data)
+      console.log(data)
       $scope.data = data
       $scope.postsNum = data.postsNum
       $scope.fansNum = data.followsNum
@@ -156,8 +156,9 @@ angular.module('otherdate.controller',['otherdate.service'])
        buttonClicked: function(index) {//自定义按钮组的监听
          if(index==0){
           OtherdateService.delete(id,toid,function(data){
-            console.log(data)
+            //console.log(data)
             if(data == 1){
+              
             }else{////
               console.log("取消失败")
             }

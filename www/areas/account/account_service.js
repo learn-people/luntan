@@ -2,19 +2,51 @@
 * 我的的服务器模块
 */
 
-angular.module('account.service',[])
+angular.module('account.service',['config'])
 
-.factory('AccountService',function(){
+.factory('AccountService',function($http,configService){
   return{
-    getData:function(){
-      //定义访问后台的接口
-      var url = configService.getHostUrl() + '/guidePage/get?callback=JSON_CALLBACK';
-      $http.jsonp(url)
-      .success(function(data){
-        console.log(data);
-        //将数据回调
-        callback(data);
-      }
-    )}
+    check:function(id,oldPw,callback){
+     $http.jsonp(url=configService.getHostUrl() + "/user/check.json?callback=JSON_CALLBACK",{
+       params:{"id":id,"oldPw":oldPw}
+     })
+     .success(function(data){
+       //console.log(data)
+       //var resultData = JSON.stringify(data)
+       //var resultData1 = JSON.parse(resultData)
+       callback(data)
+     })
+     .error(function(){
+       console.log("错误，请求失败")
+     })
+    },
+    change:function(id,newPw,callback){
+     $http.jsonp(url=configService.getHostUrl() + "/user/change.json?callback=JSON_CALLBACK",{
+       params:{"id":id,"newPw":newPw}
+     })
+     .success(function(data){
+       //console.log(data)
+       //var resultData = JSON.stringify(data)
+       //var resultData1 = JSON.parse(resultData)
+       callback(data)
+     })
+     .error(function(){
+       console.log("错误，请求失败")
+     })
+    },
+    get:function(id,oldPw,callback){
+     $http.jsonp(url=configService.getHostUrl() + "/followed/selectOne.json?callback=JSON_CALLBACK",{
+       params:{"id":id,"oldPw":oldPw}
+     })
+     .success(function(data){
+       //console.log(data)
+       //var resultData = JSON.stringify(data)
+       //var resultData1 = JSON.parse(resultData)
+       callback(data)
+     })
+     .error(function(){
+       console.log("错误，请求失败")
+     })
+    }
   }
 })

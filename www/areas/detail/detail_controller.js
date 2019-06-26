@@ -17,7 +17,11 @@ angular.module('detail.controller', ['home.service','detail.service'])
                historyUrlService.goUrlBuyUrl(url);
            }
         }
-
+        //点击图片跳转到个人信息界面
+        $scope.toOther = function(id){
+            sessionStorage.setItem("toId",id)
+            $location.path("/otherdate")
+        }
         /*获取home页面中利用homeService挂载的数据 */
         var id = homeService.id;
         var temp = {"id":id}
@@ -54,20 +58,20 @@ angular.module('detail.controller', ['home.service','detail.service'])
         }
 /****************************评论设置**************************************************************** */
         //添加评论
-        //获取时间
-        $scope.dt = new Date();
-        var commentTime = $filter("date")($scope.dt, "yyyy-MM-dd HH:mm:ss");
-        //获取内容
-        var commentContent = "";
-        commentContent = $(".in-text").val();
-        //console.log(typeof(commentContent));
-        //获取账号
-        var userNum = localStorage.getItem('userNumber')+""; 
-        //console.log(userNum);
-        //获取贴子id
-        var postId = id;
-        //console.log(typeof(id));
         $scope.send = function(){
+            //获取时间
+            $scope.dt = new Date();
+            var commentTime = $filter("date")($scope.dt, "yyyy-MM-dd HH:mm:ss");
+            //获取内容
+            var commentContent = "";
+            commentContent = $(".in-text").val();
+            //console.log(typeof(commentContent));
+            //获取账号
+            var userNum = localStorage.getItem('userNumber')+""; 
+            //console.log(userNum);
+            //获取贴子id
+            var postId = id;
+            //console.log(typeof(id));
             if(commentContent == ""){
                 //失败时的提示
                 var failtext = '<div class="addSuccessBodyU">'
@@ -107,6 +111,8 @@ angular.module('detail.controller', ['home.service','detail.service'])
                         });
                         $timeout(function() {
                             myPopup.close(); // 1秒后关闭弹窗
+                            $('#comment-bar').css('display','block');
+                            $('#comment-send').css('display','none');
                         }, 1000);
 
                         //console.log($scope.input);

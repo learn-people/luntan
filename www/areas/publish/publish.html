@@ -40,11 +40,8 @@
         </i>
       </div>
     </div>
-    <div id="publishImg">
-      <img src="./img/account/1.png" alt="" class="publishImg">
-      <img src="./img/account/1.png" alt="" class="publishImg">
-      <img src="./img/account/1.png" alt="" class="publishImg">
-      <img src="./img/account/1.png" alt="" class="publishImg">
+    <div id="publishImg" ng-if="imgUrl != null">
+      <img ng-src="{{imgUrl}}" alt="" class="publishImg">
     </div>
   </ion-content>
 

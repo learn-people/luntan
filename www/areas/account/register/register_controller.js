@@ -2,20 +2,22 @@
 var userNum="";
 var userPw = "";
 var temp;
-function see(){
-    userNum = $("#registerNm").val();
-    userPw = $("#registerPw").val();
 
-    temp = '[{"userNumber"='+"'"+userNum+"'"+',"userPassword"='+"'"+userPw+"'"+',"userName"='+'"用户"'
-    +',"imgUrl"='+'"agasf"'+',"grade"='+0+',"exp"='+0+',"jurisdiction"='+0
-    +',"fansNum"='+0+',"followsNum"='+0+',"postsNum"='+0
-}
 
 
 angular.module('register.controller',['register.service'])
 
 .controller('RegisterController',function($scope,$timeout,$ionicPopup,
     RegisterService,$rootScope,$location,$cordovaCamera,$cordovaDatePicker){
+        $scope.see = function(){
+            userNum = $("#registerNm").val();
+            userPw = $("#registerPw").val();
+            console.log(userNum)
+            temp = '[{"userNumber"='+"'"+userNum+"'"+',"userPassword"='+"'"+userPw+"'"+',"userName"='+'"用户"'
+            +',"imgUrl"="'+"test"+'","grade"='+0+',"exp"='+0+',"jurisdiction"='+0
+            +',"fansNum"='+0+',"followsNum"='+0+',"postsNum"='+0
+            $location.path("/registerDetail")
+        }
         $scope.sex = "./img/defaultphoto/2.png"
         //选择男或女时更改默认图像
         $(":radio").click(function(){
@@ -23,8 +25,10 @@ angular.module('register.controller',['register.service'])
             // console.log($scope.sex)
             if($(this).val()=="男"){
                 $scope.sex = "./img/defaultphoto/2.png"
+                localStorage.setItem("imgUrl",$scope.sex)
             }else{
                 $scope.sex = "./img/defaultphoto/3.png"
+                localStorage.setItem("imgUrl",$scope.sex)
             }
             
            });
@@ -39,7 +43,7 @@ angular.module('register.controller',['register.service'])
       doneButtonColor: '#F2F3F4',
       cancelButtonLabel: 'CANCEL',
       cancelButtonColor: '#000000',
-      //androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
+      androidTheme:window.datePicker.ANDROID_THEMES.THEME_HOLO_LIGHT
     };
     if(status == 0){
     //var d = new Date();
@@ -76,9 +80,11 @@ angular.module('register.controller',['register.service'])
                 localStorage.setItem("userNumber",userNum)
                 localStorage.setItem("userPassword",userPw)
                 localStorage.setItem("sex",sex)
+                localStorage.setItem("statue",1)
+                localStorage.setItem("userName","用户")
                 /**/ 
-                //localStorage.setItem("birthday",birthday)
-                //localStorage.setItem("imgUrl",imgUrl)
+                localStorage.setItem("birthday",$scope.date)
+                //localStorage.setItem("imgUrl",$scope.imgUrl)
                 var canceltext = '<div class="addSuccessBodyU">'
                 +'<i class="icon ion-ios-checkmark-empty addSuccessI"></i>'
                 +'</div>'
@@ -119,23 +125,27 @@ angular.module('register.controller',['register.service'])
         
     }
     // 从相册获取图片
+   
+    // 从相册获取图片
     $scope.chosePhoto = function(){
-       var options = {
-        quality: 100,
-        destinationType: Camera.DestinationType.DATA_URL,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-        allowEdit: true,
-        encodingType: Camera.EncodingType.JPEG,
-        targetWidth: 100,
-        targetHeight: 100,
-        popoverOptions: CameraPopoverOptions,
-        saveToPhotoAlbum: false,
-        correctOrientation: true
-      };
+        var options = {
+            quality: 100,
+            destinationType: Camera.DestinationType.DATA_URL,
+            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 100,
+            targetHeight: 100,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false,
+            correctOrientation: true
+          };
+          
         $cordovaCamera.getPicture(options).then(function (imageData) {
         var image = document.getElementById('photo');
         image.src = "data:image/jpeg;base64," + imageData;
         localStorage["photo"] = imageData;
+        $scope.imgUrl = imageData;
       });
     }
     
@@ -153,7 +163,7 @@ angular.module('register.controller',['register.service'])
                 if (!n) return;
                 $timeout.cancel($window.timer);
                 $window.timer = $timeout(function(){
-                    url = 'http://127.0.0.1:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
+                    url = 'http://192.168.43.251:8080/luntanSSM' + '/user/checkNumber.json?callback=JSON_CALLBACK', //根据换成自己的url
                     $http.jsonp(url,{
                         params:{
                             "userNumber":n

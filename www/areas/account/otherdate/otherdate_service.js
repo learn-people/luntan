@@ -88,6 +88,38 @@ angular.module('otherdate.service',['config'])
     var data = JSON.parse(resultdata)
       callback(data);
     })
+  },
+    up:function(id,callback){
+      //定义访问后台的接口
+      var url = configService.getHostUrl() + '/user/up.json?callback=JSON_CALLBACK';
+      $http.jsonp(url,{
+        //method:get,
+        params:{"id":id},
+        //data:temp,
+        cache:false,
+        contentType:"application/json"
+    })
+    .success(function(data){
+    var resultdata = JSON.stringify(data)
+    var data = JSON.parse(resultdata)
+      callback(data);
+    })
+  },
+    down:function(id,toid,callback){
+      //定义访问后台的接口
+      var url = configService.getHostUrl() + '/user/down.json?callback=JSON_CALLBACK';
+      $http.jsonp(url,{
+        //method:get,
+        params:{"id":id},
+        //data:temp,
+        cache:false,
+        contentType:"application/json"
+    })
+    .success(function(data){
+    var resultdata = JSON.stringify(data)
+    var data = JSON.parse(resultdata)
+      callback(data);
+    })
   }
 }
 })

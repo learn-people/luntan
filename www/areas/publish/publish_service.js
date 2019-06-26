@@ -25,7 +25,7 @@ angular.module('publish.service',['config'])
         get: function (userInfo, callback) {
             //  向后台发起请求，获取个人信息
             //  注意：使用手机调试时，host需要设置为电脑的ip值
-            var url = "http://169.254.220.1:8080/MallWeb/user/get?callback=JSON_CALLBACK"
+            var url = "http://192.168.43.48:8080/luntanSSM/user/get?callback=JSON_CALLBACK"
             $http.jsonp(url,
               {
                 params: userInfo
@@ -36,7 +36,7 @@ angular.module('publish.service',['config'])
           },
           update: function (userInfo, callback) {
             //  向后台发起请求，更新个人信息
-            var url = "http://169.254.220.1:8080/MallWeb/user/update?callback=JSON_CALLBACK"
+            var url = "http://192.168.43.48:8080/luntanSSM/user/update?callback=JSON_CALLBACK"
             $http.jsonp(url,
               {
                 params: userInfo
@@ -46,7 +46,7 @@ angular.module('publish.service',['config'])
           },
           getToken: function (key, callback) {
             //  请求后台获取七牛上传凭证token
-            var url = 'http://169.254.220.1:8080/MallWeb/token/get?callback=JSON_CALLBACK'
+            var url = 'http://192.168.43.48:8080/luntanSSM/token/getImg.json?callback=JSON_CALLBACK'
             console.log('getToken：' + key)
             $http.jsonp(url,
               {

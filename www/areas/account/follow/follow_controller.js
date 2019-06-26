@@ -1,8 +1,8 @@
 // 关注界面控制器
 
-angular.module('follow.controller',['follow.service'])
+angular.module('follow.controller',['follow.service','otherdate.service'])
 
-.controller('FollowController',function($scope,$ionicPopup,FollowService,$location){
+.controller('FollowController',function($scope,$ionicPopup,FollowService,$location,OtherdateService){
     var followBtn;
     var followBtn1;
     $scope.toOther = function(id){
@@ -67,6 +67,7 @@ angular.module('follow.controller',['follow.service'])
     $scope.showConfirm = function(id,name) {
       //判断点击那个按钮
       var temp;
+      var myid = localStorage.getItem("id")
         for(var i=0;i<followBtn1.length;i++){
           if(followBtn[i] == id){
             temp = i
@@ -75,7 +76,7 @@ angular.module('follow.controller',['follow.service'])
         }
         followBtn1[temp] = -1*followBtn1[temp]
         if(followBtn1[temp] == -1){
-        var confirmPopup = $ionicPopup.confirm({
+          var confirmPopup = $ionicPopup.confirm({
             cssClass:'myFollow-popup',
             template: "<div class='followBody'>"
             +"<p class='popupContent'>"
@@ -84,9 +85,13 @@ angular.module('follow.controller',['follow.service'])
             cancelText:"否",
             okText:"是",
             scope:$scope
-        });
-        confirmPopup.then(function(res) {
+          });
+          confirmPopup.then(function(res) {
+            
           if(res) {
+            OtherdateService.delete(myid,id,function(data){
+              console.log(data)
+            })
             console.log('You are sure');
             $("#myfollowBtn"+id).text("关注");
             $("#myfollowBtn"+id).css('color',"#F9F900");
@@ -97,6 +102,9 @@ angular.module('follow.controller',['follow.service'])
           }
         });
       }else{
+        OtherdateService.insert(myid,id,function(data){
+          
+        })
         $("#myfollowBtn"+id).text("已关注");
         $("#myfollowBtn"+id).css('color',"#ADADAD");
         $("#myfollowBtn"+id).css('border',"1px solid #ADADAD");
